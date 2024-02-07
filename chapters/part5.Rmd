@@ -1,0 +1,6 @@
+# <i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;"> Hybrid Population Modelling </i> {-}
+
+This section provides methodological details for hybrid population mapping that combines Bottom-Up and Top-Down population modelling approaches for producing gridded population estimates.
+
+
+

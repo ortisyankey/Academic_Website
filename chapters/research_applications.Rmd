@@ -1,0 +1,107 @@
+# Research Applications
+
+<h2>Introduction to Applications of Gridded Population Estimates</h2>
+
+## Introduction
+Demographic data is key to every decision that governments, planners and humanitarian and development agencies make. Such decisions might be around election preparation, GDP calculation, local governance, health systems, financial services, agricultural subsidies, energy/transport strategies, or controlling infectious diseases and delivering routine vaccination. Population data also underlie in some form all SDGs indicators, and achieving these would be very difficult without the understanding of the distribution and characteristics of people.  
+
+Demographic data can include a range of information, including the size, age, density and location of the population. The lack of recent and reliable demographic data at subnational scales can hinder policy or programme effectiveness. In resource-poor settings, demographic data can often be lacking or incomplete, due to the lack of infrastructure, capacity or financial resources, or for security reasons. In such cases, decision makers need to use assumptions on fertility, mortality, life expectancy, migration rates and displacement to create projected total population numbers from often outdated census baselines so that they can make decisions for today. Further, accurate boundary data can be limited, and high rates of migration and urban growth make existing data quickly outdated at subnational scales. Finally, population data and projections are often released at aggregate scales (e.g. province or district level) that can mask important subnational variations.  
+
+It is worth emphasising that conducting and modernising the regular population and housing census is essential, but in many cases, population modelling can support both census processes, development decision making and humanitarian response in crises. Modelled population estimates should not be seen as a replacement for a census, national survey or strong registry system. Such traditional data collection approaches provide a wealth of vital data to support governance, and are also a requirement for building reliable and robust models upon.  
+
+This chapter introduces two key areas where high resolution population estimates can be useful: supporting census processes and vaccination programmes. But there are many more application areas that include maternal and newborn health (e.g. Dotse-Gborgbortsi et al. 2020, Wigley et al. 2020), epidemiological modelling (e.g. Lai et al. 2020, Ruktanonchai et al. 2020), access to markets (e.g. Floyd et al. 2020), disaster resilience (e.g. Wilson et al. 2016, Wilkin et al. 2019), etc. Many of these areas will be introduced in detail in the forthcoming “WorldPop Book of Methods” Volume 3.  
+
+## Population modelling to support census
+A population and housing census is typically the enumeration of the total population of a country providing vital data on the spatial distribution and numbers of people, age and sex structure, living conditions and other key socioeconomic characteristics, and usually conducted once every decade. In most low income countries census is the primary source of data for governance, development, risk reduction and crisis response, social welfare programmes and business market analyses. Census is a significant operation that often faces challenges. New data sources and geographical methodologies (e.g. satellite imagery, geo-located field surveys, etc.) in combination with innovative statistical approaches (detailed in the next chapters) can effectively support census planning and implementation and offer opportunities for further applications.  
+
+Geostatistical models are built on observations and link the observed population patterns to spatial geographical data (e.g. ground slope, land use, distance to major cities, etc.) to predict the population numbers for the entire study area with high resolution. Modelled population estimates are subject to imprecisions, yet they may still be useful at different stages of the census process:  
+
+-	Input for census planning and census cartography: The planning process for census and cartographic field work (funds, time allocation, lab and field personnel, etc.) is fundamentally reliant upon population counts and generally are based upon projections from the previous census. Population projections at regional level can be statistically disaggregated (Stevens et al. 2015), or if projections are considered highly uncertain (e.g. due to displacements), the most recent survey data can be also utilised in tailored statistical models (Leasure et al. 2020) to create high resolution population maps enabling a more informed planning of resource distributions during cartography. To make cartography more efficient (optimal size, clear boundaries), modelled population estimates together with data on river and road networks can be used to derive new or to refine existing enumeration areas (Qader et al. 2020, Qader et al. 2021). This can reduce overall costs and amount of time required to complete cartography (more efficient routing, more accurate resource planning).  
+
+-	A substitute for enumeration in inaccessible areas: When security or access challenges in certain countries prevent full national coverage, it is possible to estimate population numbers and densities of inaccessible areas with custom-based modelling approaches by using either the census enumeration data (WorldPop and Institut National de la Statistique et de la Démographie du Burkina Faso in prep), or specially designed microcensus survey data (Wardrop et al. 2018, Leasure et al. 2020). The accuracy of the estimates will depend upon the quality of the enumeration in the accessible parts, the similarity of the enumerated areas to the unsurveyed areas, the intrinsic performance of the model and the likelihood of the modelling assumptions.  
+
+-	Support the evaluation of census coverage, under certain circumstances: If the population estimation (i) used data from enumeration areas with full coverage and good data quality, (ii) the model performance is high and (iii) the underlying assumptions are realistic, these modelled estimates can also serve as an additional input to census coverage assessment to find unexplained gaps and signals of coverage problems.  
+
+-	Input data to update the master sampling frame: Gridded population estimates can also provide an update of the master sampling frame (used during the intercensal period to conduct the major socioeconomic and demographic surveys), if the model is robust enough to reflect changes in population parameters (Qader et al. 2021). 
+
+-	Anonymization of census results: Individual observations can be easily aggregated up to gridded high resolution population totals using GIS software. If such ‘gridding’ cannot take place for data privacy reasons, the published admin totals can be disaggregated statistically (Stevens et al. 2015) and be usable by the government for decision making and survey planning and by the general public, if publicly released.  
+
+-	Other characteristics: Certain population characteristics can be calculated/modelled with high resolution to enhance development and humanitarian programmes by enabling to target the population in need and reporting (Bosco et al. 2017): age/sex groups (Pezzulo et al. 2017, Boo et al. 2020); poverty (Steele et al. 2017), vaccination coverage (Utazi et al. 2018) and population mobility (Wesolowski et al. 2015, Zagatti et al. 2018).  
+
+Although modelled population estimates can never replace the rich production of data generated by a traditional population and housing census, but they have the potential to complement the census processes and aid their analysis and dissemination if the population model is purpose built and robust. Limitations and uncertainties, nevertheless, remain and thus caution and collaboration are needed between modellers, statisticians and field experts throughout the model development and evaluation.
+
+## Population modelling to support vaccination programmes
+Vaccination is an essential humanitarian intervention. Routine immunization aims to achieve sustained decreases in morbidity and mortality from vaccine-preventable diseases, whereas vaccination campaigns focus primarily on emergency situations or where routine delivery systems are weak. The success of both vaccination program types depend largely on the mechanisms used in vaccine delivery. However, successful delivery and achievement of high coverage rates relies on having denominator data that is accurate and up-to-date. Such population data are essential to cost effectively and reliably plan, implement and evaluate the campaigns.  
+
+Typically every country in the World has routine immunization programmes for children, but recent efforts aim to monitor and provide scheduled vaccination for everyone throughout their lives (WHO 2016). With regards to population modelling, there are two notable recommendations in this report that are:  
+
+-	“Invest in tailored strategies that identify under-vaccinated and un-vaccinated persons and regularly provide them with the vaccines they need.” and  
+
+-	“Invest in a coherent planning cycle, with strategic, comprehensive, multi-year and operational annual plans outlining and coordinating strategies and activities, which are monitored quarterly.”  
+
+Population models can maximise the reach by mapping the location of population with high resolution and detect the unreached pockets of communities. Thus, they can support budget planning and optimise resource use, and help monitor and communicate the programme effectiveness. WorldPop has also developed methodologies to undertake geospatial analyses of post-campaign coverage surveys (PCCS) and Demographic and Health Survey (DHS) data to produce estimates of vaccination coverage at 1×1 km and the Local Government Area (LGA) level. A Bayesian geostatistical model is ﬁtted for selected PCCS indicators assessing the individual and combined performance of routine immunisation and the campaign, to produce coverage estimates at different spatial scales (Bharti et al. 2016, Utazi et al. 2018, Utazi et al. 2020).  
+
+The emergency vaccination programmes generally start when a situation analysis indicate low coverage or a new threat emerges (WHO 2014). The process of implementation is sequential and starts with the establishment of the objectives and milestones linked to national, regional and international goals. The planning process establishes timelines, analyse the costs, staff and material needs. After resource mobilisation, the delivery can start and the effectiveness (i.e. coverage) is measured afterwards. There are a number of challenges that can cause significant issues: lack of population denominator data or outdated data, lack of adequate staffing and transportation, missed communities during the outreach events due to inadequate planning, coordination or inaccessibility.  
+
+During the planning phase, the amount of vaccine needed, the number of vaccination posts and storage locations are designed based on the known population totals. By knowing also the population distribution, the location of these posts can be selected, and logistical and resource requirements refined. To leave no one behind, sufficient vaccines must be delivered to each vaccination post, and to be time and cost effective, the number of vaccines should not be significantly over- or under-estimated. If recent census data exist, it can be disaggregated to high resolution using the top-down approach (Stevens et al. 2015, Bondarenko et al. 2020). If the census is incomplete or outdated, the bottom-up approach is preferred (Wardrop et al. 2018, Leasure et al. 2020) as it utilises the most recent survey datasets and also quantifies the uncertainties that can be invaluable to calculate the needed resources accurately. Vaccination effectiveness is an important indicator of the performance of the campaigns (Utazi et al. 2020).  
+
+## Contribution{-}
+The “Population modelling to support the census processes” section of the paper has been built on two Technical Briefs jointly prepared by UNFPA and WorldPop (UNFPA 2019, UNFPA 2020) - Sabrina Juran, Andy Tatem, Heather Chamberlain, Attila N. Lazar, Doug R. Leasure, Mathias Kupie, Maureen Jones and Lorant Czaran. The present chapter was written by Attila N. Lazar and Andy Tatem.
+
+## References {-}
+
+Bharti, N., A. Djibo, A. J. Tatem, B. T. Grenfell and M. J. Ferrari (2016). "Measuring populations to improve vaccination coverage." Scientific Reports 6(1): 34541.  
+
+Bondarenko, M., J. J. Nieves, F. R. Stevens, A. E. Gaughan, A. Tatem and A. Sorichetta (2020). wpgpRFPMS: Random Forests population modelling R scripts, version 0.1.0. , University of Southampton: Southampton, UK. https://dx.doi.org/10.5258/SOTON/WP00665.  
+
+Boo, G., E. C. Darin, D. R. Leasure, C. A. Dooley, H. R. Chamberlain, A. N. Lazar and A. J. Tatem (2020). Bottom-up gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo, version 2.0. WorldPop Research Group, University of Southampton. doi:10.5258/SOTON/WP00669.  
+
+Bosco, C., V. Alegana, T. Bird, C. Pezzulo, L. Bengtsson, A. Sorichetta, J. Steele, G. Hornby, C. Ruktanonchai, N. Ruktanonchai, E. Wetter and A. J. Tatem (2017). "Exploring the high-resolution mapping of gender-disaggregated development indicators." Journal of The Royal Society Interface 14(129): 20160825.  
+
+Dotse-Gborgbortsi, W., D. Dwomoh, V. Alegana, A. Hill, A. J. Tatem and J. Wright (2020). "The influence of distance and quality on utilisation of birthing services at health facilities in Eastern Region, Ghana." BMJ Global Health 4(Suppl 5): e002020.  
+
+Floyd, J. R., J. Ogola, E. M. Fèvre, N. Wardrop, A. J. Tatem and N. W. Ruktanonchai (2020). "Activity-specific mobility of adults in a rural region of western Kenya." PeerJ 8:e8798.  
+
+Lai, S., I. I. Bogoch, N. W. Ruktanonchai, A. Watts, X. Lu, W. Yang, H. Yu, K. Khan and A. J. Tatem (2020). "Assessing spread risk of Wuhan novel coronavirus within and beyond China, January-April 2020: a travel network-based modelling study." medRxiv: 2020.2002.2004.20020479.  
+
+Leasure, D. R., W. C. Jochem, E. M. Weber, V. Seaman and A. J. Tatem (2020). "National population mapping from sparse survey data: A hierarchical Bayesian modeling framework to account for uncertainty." Proceedings of the National Academy of Sciences: 201913050.  
+
+Pezzulo, C., G. M. Hornby, A. Sorichetta, A. E. Gaughan, C. Linard, T. J. Bird, D. Kerr, C. T. Lloyd and A. J. Tatem (2017). "Sub-national mapping of population pyramids and dependency ratios in Africa and Asia." Scientific Data 4: 170089.  
+
+Qader, S., V. Lefebvre, A. Tatem, U. Pape, K. Himelein, A. Ninneman, L. Bengtsson and T. Bird (2021). "Semi-automatic mapping of pre-census enumeration areas and population sampling frames." Humanities and Social Sciences Communications 8(1): 3.  
+
+Qader, S. H., V. Lefebvre, A. J. Tatem, U. Pape, W. Jochem, K. Himelein, A. Ninneman, P. Wolburg, G. Nunez-Chaim, L. Bengtsson and T. Bird (2020). "Using gridded population and quadtree sampling units to support survey sample design in low-income settings." International Journal of Health Geographics 19(1): 10.  
+
+Ruktanonchai, N. W., J. R. Floyd, S. Lai, C. W. Ruktanonchai, A. Sadilek, P. Rente-Lourenco, X. Ben, A. Carioli, J. Gwinn, J. E. Steele, O. Prosper, A. Schneider, A. Oplinger, P. Eastham and A. J. Tatem (2020). "Assessing the impact of coordinated COVID-19 exit strategies across Europe." Science 369(6510): 1465-1470.  
+
+Steele, J. E., P. R. Sundsøy, C. Pezzulo, V. A. Alegana, T. J. Bird, J. Blumenstock, J. Bjelland, K. Engø-Monsen, Y.-A. d. Montjoye, A. M. Iqbal, K. N. Hadiuzzaman, X. Lu, E. Wetter, A. J. Tatem and L. Bengtsson (2017). "Mapping poverty using mobile phone and satellite data." Journal of The Royal Society Interface 14(127): 20160690.  
+
+Stevens, F. R., A. E. Gaughan, C. Linard and A. J. Tatem (2015). "Disaggregating Census Data for Population Mapping Using Random Forests with Remotely-Sensed and Ancillary Data.  10(2): . ." PLoS ONE 10(2): e0107042.  
+
+UNFPA (2019). Hybrid Census. Technical Brief. United Nations Population Fund (UNFPA), https://www.unfpa.org/resources/new-methodology-hybrid-census-generate-spatially-disaggregated-population-estimates.  
+
+UNFPA (2020). The Value of Modeled Population Estimates for Census Planning and Preparation. Technical Guidance note. United Nations Population Fund (UNFPA), https://www.unfpa.org/resources/value-modelled-population-estimates-census-planning-and-preparation.  
+
+Utazi, C. E., J. Thorley, V. A. Alegana, M. J. Ferrari, S. Takahashi, C. J. E. Metcalf, J. Lessler and A. J. Tatem (2018). "High resolution age-structured mapping of childhood vaccination coverage in low and middle income countries." Vaccine 36(12): 1583-1591.  
+
+Utazi, C. E., J. Wagai, O. Pannell, F. T. Cutts, D. A. Rhoda, M. J. Ferrari, B. Dieng, J. Oteri, M. C. Danovaro-Holliday, A. Adeniran and A. J. Tatem (2020). "Geospatial variation in measles vaccine coverage through routine and campaign strategies in Nigeria: Analysis of recent household surveys." Vaccine 38(14): 3062-3071.  
+
+Wardrop, N. A., W. C. Jochem, T. J. Bird, H. R. Chamberlain, D. Clarke, D. Kerr, L. Bengtsson, S. Juran, V. Seaman and A. J. Tatem (2018). "Spatially disaggregated population estimates in the absence of national population and housing census data." Proceedings of the National Academy of Sciences 115(14): 3529-3537.  
+
+Wesolowski, A., T. Qureshi, M. F. Boni, P. R. Sundsøy, M. A. Johansson, S. B. Rasheed, K. Engø-Monsen and C. O. Buckee (2015). "Impact of human mobility on the emergence of dengue epidemics in Pakistan." Proceedings of the National Academy of Sciences 112(38): 11887-11892.  
+
+WHO (2014). WHO-UNICEF Guidelines for Comprehensive Multi-Year Planning for Immunization - Update September 2013. WHO/IVB/14.01. World Health Organization, Geneva, Switzerland. https://apps.who.int/iris/bitstream/handle/10665/100618/WHO_IVB_14.01_eng.pdf   
+
+WHO (2016). Global Routine Immunization Strategies and Practices (GRISP): a companion document to the Global Vaccine Action Plan (GVAP). World Health Organization: 80 pages, ISBN 978 992 974 151010 151013.  
+
+Wigley, A. S., N. Tejedor-Garavito, V. Alegana, A. Carioli, C. W. Ruktanonchai, C. Pezzulo, Z. Matthews, A. J. Tatem and K. Nilsen (2020). "Measuring the availability and geographical accessibility of maternal health services across sub-Saharan Africa." BMC Medicine 18(1): 237.  
+
+Wilkin, J., E. Biggs and A. J. Tatem (2019). "Measurement of Social Networks for Innovation within Community Disaster Resilience." Sustainability 11(7): 1943.  
+
+Wilson, R., E. Erbach-Schoenberg, M. Albert, D. Power, S. Tudge, M. Gonzalez, S. Guthrie, H. Chamberlain, C. Brooks, C. Hughes, L. Pitonakova, C. Buckee, X. Lu, E. Wetter, A. Tatem and L. Bengtsson (2016) "Rapid and Near Real-Time Assessments of Population Displacement Using Mobile Phone Data Following Disasters: The 2015 Nepal Earthquake.".  
+
+WorldPop and Institut National de la Statistique et de la Démographie du Burkina Faso (in prep). Census-based gridded population estimates for Burkina Faso (2019), version 1.0. . WorldPop Book of Methods, Vol 1. WorldPop, University of Southampton. doi: 10.5258/SOTON/WP00687.  
+
+Zagatti, G. A., M. Gonzalez, P. Avner, N. Lozano-Gracia, C. J. Brooks, M. Albert, J. Gray, S. E. Antos, P. Burci, E. zu Erbach-Schoenberg, A. J. Tatem, E. Wetter and L. Bengtsson (2018). "A trip to work: Estimation of origin and destination of commuting patterns in the main metropolitan regions of Haiti using CDR." Development Engineering 3: 133-165.
+
+

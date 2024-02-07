@@ -1,0 +1,89 @@
+# Data Access
+
+You can access WorldPop data sets in a variety of ways that could include downloading individual files from WorldPop.org, downloading in bulk from the WorldPop FTP server, or creating dynamic links to population data from your own web server using REST API. The best way to access population estimates may depend on how you intend to use the data and the characteristics of the specific data set that you are accessing.
+
+## Websites
+
+<a href="https://www.worldpop.org" target="_blank">WorldPop.org</a> is the central location to access WorldPop data that has been produced across a range of projects. This includes gridded population estimates for most countries from the WorldPop Global Project [WorldPop et al -@worldpop2018global] along with gridded estimates of births, pregnancies, age-sex structure, urban change, development indicators and other population-related variables. 
+
+We are also now developing the <a href="https://wopr.worldpop.org" target="_blank">WorldPop Open Population Repository</a> to publish bespoke population data for individual countries, to provide Bayesian estimates of uncertainty, and to link these data sets to web applications and other tools.
+
+## Web Applications  
+
+WorldPop web applications are available from <a href="https://apps.worldpop.org" target="_blank">apps.worldpop.org</a>. 
+
+These applications allow you to explore population data using interactive web maps and other tools to maximize the information you get from population data.  
+
+
+**Global Demographics Portal**  
+
+The WorldPop Demographics app is available at <a href="https://www.portal.worldpop.org/demographics" target="_blank">portal.worldpop.org/demographics</a>. This application allows you to visualize age-sex proportions estimated for small areas and mapped across every country.
+
+
+
+**Global Population Data Portal**  
+
+The WorldPop Global Data Portal is available from <a href="https://www.portal.worldpop.org" target="_blank">portal.worldpop.org</a>. This web portal allows you to visualize and download top-down gridded population estimates for most countries in the world [WorldPop et al -@worldpop2018global].
+
+
+**peanutButter**  
+
+The peanutButter application [@leasure2020peanutButter] is available from <a href="https://apps.worldpop.org/peanutButter" target="_blank">apps.worldpop.org/peanutButter</a>. This application allows you to produce gridded population estimates from building footprints using the peanut butter method. This simple approach requires you to provide estimates of the average number of people per building in each settlement type (e.g. urban and rural). Your estimates are mapped across buildings using high resolution maps of building footprints [@ecopia2020digitize] that are based on recent satellite imagery.
+
+
+**woprVision**  
+
+The woprVision application [@leasure2020wopr] is available from <a href="https://apps.worldpop.org/woprVision" target="_blank">apps.worldpop.org/woprVision</a>. This app is an interactive web map that allows you to query population estimates for specific locations and demographic groups from the <a href="https://wopr.worldpop.org" target="_blank">WorldPop Open Population Repository</a>. This can be used to download population data, query population estimates for specific locations and demographic groups, and retrieve probabilistic Bayesian estimates of uncertainty.
+
+## FTP Server   
+
+The <a href="ftp://ftp.worldpop.org" target="_blank">WorldPop FTP server</a> provides a good resource for downloading files in bulk. Most data available from the "DATA" tab at <a href="http://www.worldpop.org" target="_blank">worldpop.org</a> can also be downloaded from the <a href="ftp://ftp.worldpop.org/GIS" target="_blank">"GIS"</a> folder on the FTP server.  
+
+This includes <a href="ftp://ftp.worldpop.org/GIS/Population" target="_blank">gridded population estimates</a> produced using the top-down method for most countries in the world as well as the <a href="ftp://ftp.worldpop.org/GIS/Covariates" target="_blank">gridded spatial covariates</a> used for modelling [WorldPop et al. -@worldpop2018global].
+
+The <a href="ftp://ftp.worldpop.org/repo" target="_blank">"repo"</a> folder on the FTP server contains permanent archives of data sets and code from worldpop.org sub-domains including "wopr", "apps", and "docs". For example, the "wopr" sub-directory contains archived data from <a href="https://wopr.worldpop.org" target="_blank">wopr.worldpop.org</a>.
+
+## GIS Plugins   
+
+**wpgpDataAPD**  
+This Esri plugin / ArcPy Python toolbox allows you to download WorldPop gridded population estimates produced using the top-down method for most countries globally [WorldPop et al -@worldpop2018global] directly from Esri ArcGIS software. See <a href=" https://github.com/wpgp/wpgpDataAPD" target="_blank">wpgpDataAPD</a> on GitHub.
+
+**wpgpDataQPD**  
+This QGIS plugin allows you to download WorldPop gridded population estimates produced using the top-down method for most countries globally [WorldPop et al -@worldpop2018global] directly from QGIS software. See <a href="https://github.com/wpgp/wpgpDataQPD" target="_blank">wpgpDataQPD</a> on GitHub.
+
+
+## R Packages   
+
+**peanutButter**  
+This package allows you to create your own gridded population estimates using the peanut butter method and high resolution building footprints [@ecopia2020digitize]. See <a href="https://github.com/wpgp/peanutButter" target="_blank">peanutButter</a> on GitHub.
+
+**wopr**  
+The wopr package [@leasure2020wopr] allows you to download bottom-up gridded population estimates from the <a href="https://wopr.worldpop.org" target="_blank">WorldPop Open Population Repository</a> from your R console and submit spatial queries (i.e. points or polygons) to retrieve population estimates for specific locations and demographic groups with statistical estimates of uncertainty. It also allows you to run the <a href="https://apps.worldpop.org/woprVision" target="_blank">woprVision</a> web application from your R console. See <a href="https://github.com/wpgp/wopr" target="_blank">wopr</a> on GitHub.
+
+**wpgpCovariates**  
+This package provides access to gridded spatial covariates [WorldPop et al. -@worldpop2018global] for most countries. See <a href="https://github.com/wpgp/wpgpCovariates" target="_blank">wpgpCovariates</a> on GitHub.  
+
+**wpgpDownloadR**   
+This package provides access to top-down gridded population estimates [WorldPop et al. -@worldpop2018global] for most countries from your R console. See <a href="https://github.com/wpgp/wpgpDownloadR" target="_blank">wpgpDownloadR</a> on GitHub.  
+
+## Python Packages   
+
+**wpgpDownloadPy**  
+This Python package provides access to top-down gridded population estimates [WorldPop et al. -@worldpop2018global] from the Python console. See <a href="https://github.com/wpgp/wpgpDownloadPy" target="_blank">wpgpDownloadPy</a> on GitHub.
+
+
+
+## REST API   
+
+REST API is a way for computers to communicate with one another to request data downloads or query databases. Many WorldPop datasets can be accessed using REST API requests. This makes it possible to automatically sync remote servers with WorldPop population data and to develop web applications that use API to query WorldPop servers.
+
+**WOPR API**  
+This can be used to query bottom-up population estimates from the <a href="https://wopr.worldpop.org" target="_blank">WorldPop Open Population Repository</a>. These API endpoints can be used to download entire data sets for each country or to submit spatial queries to the WorldPop server to request population estimates for specific locations and demographic groups. The WOPR API endpoints return Bayesian estimates of uncertainty for all population estimates. See the chapter [WOPR API] for more information.
+
+**WorldPop API**  
+This can be used to download top-down gridded population estimates from the WorldPop Global Project [WorldPop et al -@worldpop2018global]. See <a href="https://www.worldpop.org/sdi/introapi" target="_blank">WorldPop API documentation</a> for more information.
+
+## Contribution{-}
+This chapter was written by Doug Leasure, [contributors, please add your name here]. Funding for the work described in this chapter was provided by [please add funders and grant numbers here].
+
+

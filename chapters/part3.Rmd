@@ -1,0 +1,3 @@
+# <i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Top-Down Population Mapping Method</i> {-}
+
+This section provides methodological details for the Top-Down population modelling approach that WorldPop has developed for producing gridded population estimates.

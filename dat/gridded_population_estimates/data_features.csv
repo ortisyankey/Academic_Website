@@ -1,0 +1,14 @@
+,Peanut Butter,Census Projections,UN-adjusted,Constrained,Custom,Bottom-up Bayesian
+Expert opinion (e.g. people per building),X,,,,,
+Population totals for admin units,,X,X,X,X,
+Geolocated household survey data,,,,,,X
+Gridded population estimates (~100 m),X,X,X,X,X,X
+Sum to match projected census totals,?,X,,X,?,
+Adjusted to match UN admin unit totals,?,,X,,?,
+Constrained to buildings,X,,,X,X,X
+Include estimates of uncertainty,,,,,,X
+www.worldpop.org,,X,X,X,,
+ftp.worldpop.org,,X,X,X,X,X
+wopr.worldpop.org,,,,,X,X
+apps.worldpop.org/woprVision,,,,,X,X
+apps.worldpop.org/peanutButter,X,,,,,

@@ -1,0 +1,18 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: "chapter"
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li><a href="http://srv02481.soton.ac.uk/docs.html">WorldPop Book of Methods</a></li>
+      after: |
+        <li><a href="https://www.worldpop.org" target="_blank"><img src="dat/wp_logotype.png" width="110" alt="WorldPop"/></a></li>
+    # download: [["book.pdf", "pdf"],["book.epub", "epub"]]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default

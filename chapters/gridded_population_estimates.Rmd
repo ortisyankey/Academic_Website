@@ -1,0 +1,78 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Gridded Population Estimates
+
+WorldPop produces population estimates for every 100 x 100 meter grid square with national coverage for countries throughout the world. Gridded data allow end-users to aggregate grid cells to estimate the total population within any boundaries that meet their needs. It also provides a consistent grid to facilitate combining data sets like population, age-sex structure, vaccinations, maternal health, poverty, etc.
+
+There are three broad categories of methods that WorldPop uses to produce gridded population estimates:  
+
+1. Top-down  
+2. Bottom-up  
+3. Peanut butter
+
+These approaches require different inputs (i.e. population data) and the gridded population estimates that they produce have different characteristics (Fig. \@ref(fig:pop-methods)). Top-down methods require data from a complete recent census or use other admin totals in each administrative unit (or other geographic unit). Bottom-up methods require data from geolocated household surveys that contain a representative sample of locations across the country. For top-down approaches, the population totals for adminstrative units are pre-defined by the input data, whereas in bottom-up approaches, the population totals are an emergent property that is not pre-defined.  
+
+The peanut butter method is different because it relies solely on expert opinion (rather than hard data) to define the average number of people per building. The strength of this method lies in the quality of the high resolution building footprints that are used [@ecopia2020digitize]. This approach may be a good option when recent and reliable data from a national census and/or household surveys are not available. 
+
+```{r, pop-methods, echo=F, fig.align='center', out.width='95%', fig.cap='Comparison of inputs and outputs for four types of gridded population estimates (from bottom-left to bottom-right): peanut butter, top-down, top-down constrained, and bottom-up.'}
+knitr::include_graphics('dat/gridded_population_estimates/pop_methods.png')
+```
+
+## Top-down
+
+The top-down method [@stevens2015disaggregating] disaggregates known population totals for each administrative unit (e.g. states or local government areas) into 100 m gridded population estimates (Fig. \@ref(fig:pop-methods)). Population totals may be obtained from national census results projected to the current year (or other years). Gridded population estimates are created by using machine learning methods (random forest models) to disaggregate population totals based on relationships with spatial covariates such as building density, distance to city center, or intensity of nighttime lights. The disaggregation can be applied across the entire country or constrained only to areas where settlements have been mapped. 
+
+This is a good approach when recent census totals are available. These models perform best when accurate census totals are available for the smallest administrative units. When census results are outdated, this method relies on projections that can introduce error. Top-down methods generally do not produce estimates of uncertainty.
+
+See the [Top-down Models] section for details.
+
+## Bottom-up  
+
+The bottom-up method [@wardrop2018spatially; @leasure2020national] uses geolocated household survey data from a sample of locations to fit statistical models that estimate population sizes for unsampled areas based on relationships with spatial covariates (Fig. \@ref(fig:pop-methods)).  This approach applies customized statistical models to make the best use of available survey data and to provide probabilistic estimates of uncertainty.
+
+This is a good approach when recent geolocated household survey data are available where there has not been a recent or complete national census. This approach provides robust estimates of uncertainty but requires more detailed input data and more time to develop the models.
+
+See the [Bottom-up Models] section for more details.
+
+## Peanut Butter  
+
+The peanut butter method spreads user-provided estimates of people per building evenly (like peanut butter) among buildings. This is a quick and simple approach that utilizes high resolution maps of building footprints, assuming that the same number of people live in each building across entire regions or settlement types (e.g. urban and rural). WorldPop partners with Maxar Technologies, Ecopia.AI, and the Bill and Melinda Gates Foundation for recent maps of buildings [@ecopia2020digitize, @dooley2020gridded].  
+
+This is a good approach when rapid-response population estimates are needed and no suitable data are available for more data-driven methods. The peanut butter method ignores spatial variation of people per building within each region or settlement type and there is often no objective basis for assessing uncertainty.  
+
+The peanut butter method can be applied in aggregation mode or disaggregation mode:  
+
+- **Aggregation mode** relies on expert opinion to define the average number of people per building footprint in each region or settlement type.  
+
+- **Disaggregation mode** calculates the average number of people per building footprint based on user-provided population totals in each region.  
+
+In both cases, the user-provided estimates of people per building are mapped to every building footprint. Population totals within each 100 m grid cell or administrative unit are calculated by summing across all of the relevant building footprints.
+
+Try the peanut butter method yourself using the <a href="https://apps.worldpop.org/peanutButter" target="_blank">peanutButter web application</a> or the <a href="https://github.com/wpgp/peanutButter" target="_blank">peanutButter R package</a> [@leasure2020peanutButter].
+
+## Comparison of Data  
+
+Within these three broad categories, WorldPop develops a variety of methods for producing gridded population estimates with different characteristics. Selecting the right population estimation method depends on project requirements (e.g. time and resource availability) and data availability. Table \@ref(tab:data-features) provides a checklist of features for different types of WorldPop gridded population estimates.  
+
+```{r, data-features, echo=F}
+knitr::kable(read.csv('dat/gridded_population_estimates/data_features.csv', row.names=1, header=T, check.names=F),
+             caption='Comparison of data characteristics for different types of gridded population estimates. Columns list types of population estimates and rows provide their characteristics. X marks a feature of a data set and ? means that a feature is optional. Variations of the top-down method: 1) Census Projections: basic top-down based on projected census totals, 2) UN-adjusted: includes a post-hoc adjustment to match UN population estimates for administrative units, 3) Constrained: population estimates are constrained to grid cells where buildings occur (UN-adjustment optional), and 4) Custom: WorldPop researchers developed a custom top-down model using bespoke data for an individual country.',
+             align='cccccc') %>% 
+  kableExtra::add_header_above(c(" " = 2, "Top-down" = 4, " " = 1)) %>%
+  kableExtra::column_spec(1, width='7.1cm') %>%
+  kableExtra::column_spec(c(1,2,6), border_right="1px solid lightgray") %>% 
+  kableExtra::kable_styling(font_size=12) %>%
+  kableExtra::pack_rows("Input Population Data", 1, 3) %>%
+  kableExtra::pack_rows("Output Data", 4, 8) %>%
+  kableExtra::pack_rows("Access", 9, 13)
+```
+
+<br>
+With any of these methods, gridded estimates of total population can be divided into specific age-sex groups using WorldPop's pre-existing gridded age-sex proportions. With bottom-up methods, it is also possible to estimate age-sex proportions directly from household survey data when it is available. See section [Age-sex Mapping] for more information.  
+
+## Contribution
+This chapter was written by Doug Leasure and Claire Dooley.
+

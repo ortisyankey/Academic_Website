@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>14 Zambia (v1) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates</title>
+  <meta name="description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="14 Zambia (v1) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/dat/wp_logo.png" />
+  <meta property="og:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="github-repo" content="wpgp/bookworm" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="14 Zambia (v1) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  
+  <meta name="twitter:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="twitter:image" content="/dat/wp_logo.png" />
+
+<meta name="author" content="WorldPop, University of Southampton" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="south-sudan-v2.html"/>
+<link rel="next" href="geostatistical-bottom-up-modelling.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://srv02481.soton.ac.uk/docs.html">WorldPop Book of Methods</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Edited by</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#andrew-tatem"><i class="fa fa-check"></i>Andrew Tatem</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#doug-leisure"><i class="fa fa-check"></i>Doug Leisure</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#attila-n.-lazar"><i class="fa fa-check"></i>Attila N. Lazar</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#claire-dooley"><i class="fa fa-check"></i>Claire Dooley</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#chris-jochem"><i class="fa fa-check"></i>Chris Jochem</a></li>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#edith-darin"><i class="fa fa-check"></i><b>0.1</b> Edith Darin</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#gianluca-boo"><i class="fa fa-check"></i><b>0.2</b> Gianluca Boo</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#ortis-yankey"><i class="fa fa-check"></i><b>0.3</b> Ortis Yankey</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Introduction</i></a></li>
+<li class="chapter" data-level="1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html"><i class="fa fa-check"></i><b>1</b> Gridded Population Estimates</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#top-down"><i class="fa fa-check"></i><b>1.1</b> Top-down</a></li>
+<li class="chapter" data-level="1.2" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#bottom-up"><i class="fa fa-check"></i><b>1.2</b> Bottom-up</a></li>
+<li class="chapter" data-level="1.3" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#peanut-butter"><i class="fa fa-check"></i><b>1.3</b> Peanut Butter</a></li>
+<li class="chapter" data-level="1.4" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#comparison-of-data"><i class="fa fa-check"></i><b>1.4</b> Comparison of Data</a></li>
+<li class="chapter" data-level="1.5" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#contribution"><i class="fa fa-check"></i><b>1.5</b> Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-access.html"><a href="data-access.html"><i class="fa fa-check"></i><b>2</b> Data Access</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-access.html"><a href="data-access.html#websites"><i class="fa fa-check"></i><b>2.1</b> Websites</a></li>
+<li class="chapter" data-level="2.2" data-path="data-access.html"><a href="data-access.html#web-applications"><i class="fa fa-check"></i><b>2.2</b> Web Applications</a></li>
+<li class="chapter" data-level="2.3" data-path="data-access.html"><a href="data-access.html#ftp-server"><i class="fa fa-check"></i><b>2.3</b> FTP Server</a></li>
+<li class="chapter" data-level="2.4" data-path="data-access.html"><a href="data-access.html#gis-plugins"><i class="fa fa-check"></i><b>2.4</b> GIS Plugins</a></li>
+<li class="chapter" data-level="2.5" data-path="data-access.html"><a href="data-access.html#r-packages"><i class="fa fa-check"></i><b>2.5</b> R Packages</a></li>
+<li class="chapter" data-level="2.6" data-path="data-access.html"><a href="data-access.html#python-packages"><i class="fa fa-check"></i><b>2.6</b> Python Packages</a></li>
+<li class="chapter" data-level="2.7" data-path="data-access.html"><a href="data-access.html#rest-api"><i class="fa fa-check"></i><b>2.7</b> REST API</a></li>
+<li class="chapter" data-level="" data-path="data-access.html"><a href="data-access.html#contribution-1"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="research-applications.html"><a href="research-applications.html"><i class="fa fa-check"></i><b>3</b> Research Applications</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="research-applications.html"><a href="research-applications.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-census"><i class="fa fa-check"></i><b>3.2</b> Population modelling to support census</a></li>
+<li class="chapter" data-level="3.3" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-vaccination-programmes"><i class="fa fa-check"></i><b>3.3</b> Population modelling to support vaccination programmes</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#contribution-2"><i class="fa fa-check"></i>Contribution</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html"><i class="fa fa-check"></i><b>4</b> Settlement Data and Geospatial Covariates</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#settlement-data"><i class="fa fa-check"></i><b>4.1</b> Settlement Data</a></li>
+<li class="chapter" data-level="4.2" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#key-settlement-data-sources"><i class="fa fa-check"></i><b>4.2</b> Key Settlement Data Sources</a></li>
+<li class="chapter" data-level="4.3" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#use-of-settlement-data-in-population-modelling"><i class="fa fa-check"></i><b>4.3</b> Use of Settlement Data in Population Modelling</a></li>
+<li class="chapter" data-level="4.4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#geospatial-covariates"><i class="fa fa-check"></i><b>4.4</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#contribution-3"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bottom-up-population-mapping-method.html"><a href="bottom-up-population-mapping-method.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Bottom-Up Population Mapping Method</i></a></li>
+<li class="chapter" data-level="5" data-path="bottom-up-models.html"><a href="bottom-up-models.html"><i class="fa fa-check"></i><b>5</b> Bottom-up Models</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#input-data"><i class="fa fa-check"></i><b>5.1</b> Input Data</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#population-data"><i class="fa fa-check"></i><b>5.1.1</b> Population Data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#settlement-map"><i class="fa fa-check"></i><b>5.1.2</b> Settlement Map</a></li>
+<li class="chapter" data-level="5.1.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geospatial-covariates-1"><i class="fa fa-check"></i><b>5.1.3</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="5.1.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#administrative-boundaries"><i class="fa fa-check"></i><b>5.1.4</b> Administrative Boundaries</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#statistical-models"><i class="fa fa-check"></i><b>5.2</b> Statistical Models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#software"><i class="fa fa-check"></i><b>5.2.1</b> Software</a></li>
+<li class="chapter" data-level="5.2.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#simple-model-to-start"><i class="fa fa-check"></i><b>5.2.2</b> Simple Model to Start</a></li>
+<li class="chapter" data-level="5.2.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#bayesian-priors"><i class="fa fa-check"></i><b>5.2.3</b> Bayesian Priors</a></li>
+<li class="chapter" data-level="5.2.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-core-model"><i class="fa fa-check"></i><b>5.2.4</b> Hierarchical Core Model</a></li>
+<li class="chapter" data-level="5.2.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#age-sex-structure"><i class="fa fa-check"></i><b>5.2.5</b> Age-sex Structure</a></li>
+<li class="chapter" data-level="5.2.6" data-path="bottom-up-models.html"><a href="bottom-up-models.html#random-intercept"><i class="fa fa-check"></i><b>5.2.6</b> Random Intercept</a></li>
+<li class="chapter" data-level="5.2.7" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-variance"><i class="fa fa-check"></i><b>5.2.7</b> Hierarchical Variance</a></li>
+<li class="chapter" data-level="5.2.8" data-path="bottom-up-models.html"><a href="bottom-up-models.html#weighted-likelihood"><i class="fa fa-check"></i><b>5.2.8</b> Weighted-likelihood</a></li>
+<li class="chapter" data-level="5.2.9" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geostatistical-models"><i class="fa fa-check"></i><b>5.2.9</b> Geostatistical Models</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#conclusion"><i class="fa fa-check"></i><b>5.3</b> Conclusion</a></li>
+<li class="chapter" data-level="5.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#contributing"><i class="fa fa-check"></i><b>5.4</b> Contributing</a></li>
+<li class="chapter" data-level="5.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#suggested-citation"><i class="fa fa-check"></i><b>5.5</b> Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html"><i class="fa fa-check"></i><b>6</b> Hierarchichal Bottom-Up Modelling Tutorial</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-i-how-to-think-about-population-as-a-bayesian"><i class="fa fa-check"></i><b>6.2</b> Part I: How to think about population as a Bayesian</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#set-up"><i class="fa fa-check"></i><b>6.2.1</b> Set-up</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#from-a-frequentist-to-a-bayesian-mindset"><i class="fa fa-check"></i><b>6.2.2</b> From a frequentist to a Bayesian mindset</a></li>
+<li class="chapter" data-level="6.2.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#how-to-choose-priors"><i class="fa fa-check"></i><b>6.2.3</b> How to choose priors</a></li>
+<li class="chapter" data-level="6.2.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#simulating-data"><i class="fa fa-check"></i><b>6.2.4</b> Simulating data</a></li>
+<li class="chapter" data-level="6.2.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-the-data"><i class="fa fa-check"></i><b>6.2.5</b> Modelling the data</a></li>
+<li class="chapter" data-level="6.2.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-in-stan"><i class="fa fa-check"></i><b>6.2.6</b> Implementing the model in <code>stan</code></a></li>
+<li class="chapter" data-level="6.2.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-the-data-for-stan"><i class="fa fa-check"></i><b>6.2.7</b> Preparing the data for stan</a></li>
+<li class="chapter" data-level="6.2.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#running-the-model"><i class="fa fa-check"></i><b>6.2.8</b> Running the model</a></li>
+<li class="chapter" data-level="6.2.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#checking-the-mcmc-simulations"><i class="fa fa-check"></i><b>6.2.9</b> Checking the MCMC simulations</a></li>
+<li class="chapter" data-level="6.2.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-estimated-parameters"><i class="fa fa-check"></i><b>6.2.10</b> Evaluating the estimated parameters</a></li>
+<li class="chapter" data-level="6.2.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#lets-try-with-real-data"><i class="fa fa-check"></i><b>6.2.11</b> Let’s try with real data</a></li>
+<li class="chapter" data-level="6.2.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#the-data"><i class="fa fa-check"></i><b>6.2.12</b> The data</a></li>
+<li class="chapter" data-level="6.2.13" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#response-variable-the-population-count"><i class="fa fa-check"></i><b>6.2.13</b> Response variable: the population count</a></li>
+<li class="chapter" data-level="6.2.14" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-distribution"><i class="fa fa-check"></i><b>6.2.14</b> Modelling Population count: a Poisson distribution</a></li>
+<li class="chapter" data-level="6.2.15" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model"><i class="fa fa-check"></i><b>6.2.15</b> Implementing the model</a></li>
+<li class="chapter" data-level="6.2.16" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimating-the-model"><i class="fa fa-check"></i><b>6.2.16</b> Estimating the model</a></li>
+<li class="chapter" data-level="6.2.17" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>6.2.17</b> Evaluating the model goodness-of-fit</a></li>
+<li class="chapter" data-level="6.2.18" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimated-parameters"><i class="fa fa-check"></i><b>6.2.18</b> Estimated parameters</a></li>
+<li class="chapter" data-level="6.2.19" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicted-population-count"><i class="fa fa-check"></i><b>6.2.19</b> Predicted population count</a></li>
+<li class="chapter" data-level="6.2.20" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-lognormal-model"><i class="fa fa-check"></i><b>6.2.20</b> Modelling Population count: a Poisson Lognormal model</a></li>
+<li class="chapter" data-level="6.2.21" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#writing-the-model"><i class="fa fa-check"></i><b>6.2.21</b> Writing the model</a></li>
+<li class="chapter" data-level="6.2.22" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#defining-the-priors"><i class="fa fa-check"></i><b>6.2.22</b> Defining the priors</a></li>
+<li class="chapter" data-level="6.2.23" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-1"><i class="fa fa-check"></i><b>6.2.23</b> Implementing the model</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="set-up--.html"><a href="set-up--.html"><i class="fa fa-check"></i><b>7</b> 1 Set-up —-</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="set-up--.html"><a href="set-up--.html#part-ii-how-to-model-large-scale-spatial-variation"><i class="fa fa-check"></i><b>7.1</b> Part II: How to model large-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="set-up--.html"><a href="set-up--.html#goals"><i class="fa fa-check"></i><b>7.1.1</b> Goals</a></li>
+<li class="chapter" data-level="7.1.2" data-path="set-up--.html"><a href="set-up--.html#supporting-readings"><i class="fa fa-check"></i><b>7.1.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="7.1.3" data-path="set-up--.html"><a href="set-up--.html#extra-packages"><i class="fa fa-check"></i><b>7.1.3</b> Extra packages</a></li>
+<li class="chapter" data-level="7.1.4" data-path="set-up--.html"><a href="set-up--.html#hierarchical-structure-in-the-data"><i class="fa fa-check"></i><b>7.1.4</b> Hierarchical structure in the data</a></li>
+<li class="chapter" data-level="7.1.5" data-path="set-up--.html"><a href="set-up--.html#full-picture-of-the-data-grouping"><i class="fa fa-check"></i><b>7.1.5</b> Full picture of the data grouping</a></li>
+<li class="chapter" data-level="7.1.6" data-path="set-up--.html"><a href="set-up--.html#hierarchical-structure-in-the-model"><i class="fa fa-check"></i><b>7.1.6</b> Hierarchical structure in the model</a></li>
+<li class="chapter" data-level="7.1.7" data-path="set-up--.html"><a href="set-up--.html#a-hierarchical-intercept-by-settlement-type"><i class="fa fa-check"></i><b>7.1.7</b> A hierarchical intercept by settlement type</a></li>
+<li class="chapter" data-level="7.1.8" data-path="set-up--.html"><a href="set-up--.html#no-pooling"><i class="fa fa-check"></i><b>7.1.8</b> No-pooling</a></li>
+<li class="chapter" data-level="7.1.9" data-path="set-up--.html"><a href="set-up--.html#partial-pooling"><i class="fa fa-check"></i><b>7.1.9</b> Partial pooling</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="set-up--.html"><a href="set-up--.html#part-iii-how-to-model-small-scale-spatial-variation"><i class="fa fa-check"></i><b>7.2</b> Part III: How to model small-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="set-up--.html"><a href="set-up--.html#goals-1"><i class="fa fa-check"></i><b>7.2.1</b> Goals</a></li>
+<li class="chapter" data-level="7.2.2" data-path="set-up--.html"><a href="set-up--.html#supporting-readings-1"><i class="fa fa-check"></i><b>7.2.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="7.2.3" data-path="set-up--.html"><a href="set-up--.html#formal-modelling"><i class="fa fa-check"></i><b>7.2.3</b> Formal modelling</a></li>
+<li class="chapter" data-level="7.2.4" data-path="set-up--.html"><a href="set-up--.html#review-of-the-covariates-used-in-worldpop"><i class="fa fa-check"></i><b>7.2.4</b> Review of the covariates used in WorldPop</a></li>
+<li class="chapter" data-level="7.2.5" data-path="set-up--.html"><a href="set-up--.html#covariates-engineering"><i class="fa fa-check"></i><b>7.2.5</b> Covariates engineering</a></li>
+<li class="chapter" data-level="7.2.6" data-path="set-up--.html"><a href="set-up--.html#including-covariates-in-the-model"><i class="fa fa-check"></i><b>7.2.6</b> Including covariates in the model</a></li>
+<li class="chapter" data-level="7.2.7" data-path="set-up--.html"><a href="set-up--.html#overview-of-the-covariates-in-nigeria-v1.2"><i class="fa fa-check"></i><b>7.2.7</b> Overview of the covariates in Nigeria, v1.2</a></li>
+<li class="chapter" data-level="7.2.8" data-path="set-up--.html"><a href="set-up--.html#preparing-the-data"><i class="fa fa-check"></i><b>7.2.8</b> Preparing the data</a></li>
+<li class="chapter" data-level="7.2.9" data-path="set-up--.html"><a href="set-up--.html#implementing-the-model-2"><i class="fa fa-check"></i><b>7.2.9</b> Implementing the model</a></li>
+<li class="chapter" data-level="7.2.10" data-path="set-up--.html"><a href="set-up--.html#a-note-on-initialisation"><i class="fa fa-check"></i><b>7.2.10</b> A note on initialisation</a></li>
+<li class="chapter" data-level="7.2.11" data-path="set-up--.html"><a href="set-up--.html#comparing-prediction-with-previous-model"><i class="fa fa-check"></i><b>7.2.11</b> Comparing prediction with previous model</a></li>
+<li class="chapter" data-level="7.2.12" data-path="set-up--.html"><a href="set-up--.html#grouping-and-covariates-effect-a-random-slope-model"><i class="fa fa-check"></i><b>7.2.12</b> Grouping and covariates effect: a random slope model</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="set-up--.html"><a href="set-up--.html#part-iv-model-diagnostics-and-predictions"><i class="fa fa-check"></i><b>7.3</b> Part IV: Model diagnostics and predictions</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="set-up--.html"><a href="set-up--.html#goals-2"><i class="fa fa-check"></i><b>7.3.1</b> Goals</a></li>
+<li class="chapter" data-level="7.3.2" data-path="set-up--.html"><a href="set-up--.html#supporting-readings-2"><i class="fa fa-check"></i><b>7.3.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="7.3.3" data-path="set-up--.html"><a href="set-up--.html#extra-packages-1"><i class="fa fa-check"></i><b>7.3.3</b> Extra packages</a></li>
+<li class="chapter" data-level="7.3.4" data-path="set-up--.html"><a href="set-up--.html#advanced-model-diagnostics"><i class="fa fa-check"></i><b>7.3.4</b> Advanced model diagnostics</a></li>
+<li class="chapter" data-level="7.3.5" data-path="set-up--.html"><a href="set-up--.html#assessing-convergence"><i class="fa fa-check"></i><b>7.3.5</b> Assessing convergence</a></li>
+<li class="chapter" data-level="7.3.6" data-path="set-up--.html"><a href="set-up--.html#checking-predicted-posterior"><i class="fa fa-check"></i><b>7.3.6</b> Checking predicted posterior</a></li>
+<li class="chapter" data-level="7.3.7" data-path="set-up--.html"><a href="set-up--.html#cross-validation-of-model-predictions"><i class="fa fa-check"></i><b>7.3.7</b> Cross-validation of model predictions</a></li>
+<li class="chapter" data-level="7.3.8" data-path="set-up--.html"><a href="set-up--.html#gridded-population-prediction"><i class="fa fa-check"></i><b>7.3.8</b> Gridded population prediction</a></li>
+<li class="chapter" data-level="7.3.9" data-path="set-up--.html"><a href="set-up--.html#preparing-data-for-prediction"><i class="fa fa-check"></i><b>7.3.9</b> Preparing data for prediction</a></li>
+<li class="chapter" data-level="7.3.10" data-path="set-up--.html"><a href="set-up--.html#extracting-estimated-parameters"><i class="fa fa-check"></i><b>7.3.10</b> Extracting estimated parameters</a></li>
+<li class="chapter" data-level="7.3.11" data-path="set-up--.html"><a href="set-up--.html#predicting-population-count-for-every-grid-cell"><i class="fa fa-check"></i><b>7.3.11</b> Predicting population count for every grid cell</a></li>
+<li class="chapter" data-level="7.3.12" data-path="set-up--.html"><a href="set-up--.html#predicting-distributions"><i class="fa fa-check"></i><b>7.3.12</b> Predicting distributions</a></li>
+<li class="chapter" data-level="7.3.13" data-path="set-up--.html"><a href="set-up--.html#gridded-population"><i class="fa fa-check"></i><b>7.3.13</b> Gridded population</a></li>
+<li class="chapter" data-level="7.3.14" data-path="set-up--.html"><a href="set-up--.html#gridded-uncertainty"><i class="fa fa-check"></i><b>7.3.14</b> Gridded uncertainty</a></li>
+<li class="chapter" data-level="7.3.15" data-path="set-up--.html"><a href="set-up--.html#aggregating-prediction"><i class="fa fa-check"></i><b>7.3.15</b> Aggregating prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="set-up--.html"><a href="set-up--.html#contribution-4"><i class="fa fa-check"></i><b>7.4</b> Contribution</a></li>
+<li class="chapter" data-level="7.5" data-path="set-up--.html"><a href="set-up--.html#suggested-citation-1"><i class="fa fa-check"></i><b>7.5</b> Suggested citation</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><i class="fa fa-check"></i><b>8</b> Hierarchical Bottom-Up Modelling Extention: the Weighted Likelihood</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#introduction-3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#methods"><i class="fa fa-check"></i>Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-populations"><i class="fa fa-check"></i>Simulated Populations</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-survey-data"><i class="fa fa-check"></i>Simulated Survey Data</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#statistical-models-1"><i class="fa fa-check"></i>Statistical Models</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#population-totals"><i class="fa fa-check"></i>Population Totals</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#results"><i class="fa fa-check"></i>Results</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#discussion"><i class="fa fa-check"></i>Discussion</a></li>
+<li class="chapter" data-level="8.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#contributing-1"><i class="fa fa-check"></i><b>8.1</b> Contributing</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#suggested-citation-2"><i class="fa fa-check"></i><b>8.1.1</b> Suggested Citation</a></li>
+<li class="chapter" data-level="8.1.2" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#license-1"><i class="fa fa-check"></i><b>8.1.2</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#references-1"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#tables"><i class="fa fa-check"></i>Tables</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#figures"><i class="fa fa-check"></i>Figures</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#appendix-a-supplementary-files"><i class="fa fa-check"></i>Appendix A: Supplementary Files</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-use-cases.html"><a href="hierarchical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Hierarchical Bottom-Up Modelling Use Cases</i></a></li>
+<li class="chapter" data-level="9" data-path="nigeria-v1.html"><a href="nigeria-v1.html"><i class="fa fa-check"></i><b>9</b> Nigeria (v1)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="nigeria-v1.html"><a href="nigeria-v1.html#introduction-4"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="nigeria-v1.html"><a href="nigeria-v1.html#materials-and-methods"><i class="fa fa-check"></i><b>9.2</b> Materials and Methods</a></li>
+<li class="chapter" data-level="9.3" data-path="nigeria-v1.html"><a href="nigeria-v1.html#results-1"><i class="fa fa-check"></i><b>9.3</b> Results</a></li>
+<li class="chapter" data-level="9.4" data-path="nigeria-v1.html"><a href="nigeria-v1.html#discussion-1"><i class="fa fa-check"></i><b>9.4</b> Discussion</a></li>
+<li class="chapter" data-level="9.5" data-path="nigeria-v1.html"><a href="nigeria-v1.html#conclusions"><i class="fa fa-check"></i><b>9.5</b> Conclusions</a></li>
+<li class="chapter" data-level="9.6" data-path="nigeria-v1.html"><a href="nigeria-v1.html#contribution-5"><i class="fa fa-check"></i><b>9.6</b> Contribution</a></li>
+<li class="chapter" data-level="9.7" data-path="nigeria-v1.html"><a href="nigeria-v1.html#funding"><i class="fa fa-check"></i><b>9.7</b> Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html"><i class="fa fa-check"></i><b>10</b> Democratic Republic of Congo - DRC (v2)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#introduction-5"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#methods-1"><i class="fa fa-check"></i><b>10.2</b> Methods</a></li>
+<li class="chapter" data-level="10.3" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#results-2"><i class="fa fa-check"></i><b>10.3</b> Results</a></li>
+<li class="chapter" data-level="10.4" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#discussion-2"><i class="fa fa-check"></i><b>10.4</b> Discussion</a></li>
+<li class="chapter" data-level="10.5" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#contribution-6"><i class="fa fa-check"></i><b>10.5</b> Contribution</a>
+<ul>
+<li class="chapter" data-level="" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#funding-1"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="ghana-v1.html"><a href="ghana-v1.html"><i class="fa fa-check"></i><b>11</b> Ghana (v1)</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="ghana-v1.html"><a href="ghana-v1.html#introduction-6"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="ghana-v1.html"><a href="ghana-v1.html#methods-2"><i class="fa fa-check"></i><b>11.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="ghana-v1.html"><a href="ghana-v1.html#data"><i class="fa fa-check"></i><b>11.2.1</b> Data</a></li>
+<li class="chapter" data-level="11.2.2" data-path="ghana-v1.html"><a href="ghana-v1.html#statistical-model"><i class="fa fa-check"></i><b>11.2.2</b> Statistical Model</a></li>
+<li class="chapter" data-level="11.2.3" data-path="ghana-v1.html"><a href="ghana-v1.html#model-implementation-and-diagnostics"><i class="fa fa-check"></i><b>11.2.3</b> Model Implementation and Diagnostics</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="ghana-v1.html"><a href="ghana-v1.html#results-3"><i class="fa fa-check"></i><b>11.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="ghana-v1.html"><a href="ghana-v1.html#people-per-household"><i class="fa fa-check"></i><b>11.3.1</b> People per household</a></li>
+<li class="chapter" data-level="11.3.2" data-path="ghana-v1.html"><a href="ghana-v1.html#age-sex-structure-1"><i class="fa fa-check"></i><b>11.3.2</b> Age-sex structure</a></li>
+<li class="chapter" data-level="11.3.3" data-path="ghana-v1.html"><a href="ghana-v1.html#census-projections"><i class="fa fa-check"></i><b>11.3.3</b> Census projections</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="ghana-v1.html"><a href="ghana-v1.html#discussion-3"><i class="fa fa-check"></i><b>11.4</b> Discussion</a></li>
+<li class="chapter" data-level="11.5" data-path="ghana-v1.html"><a href="ghana-v1.html#contribution-7"><i class="fa fa-check"></i><b>11.5</b> Contribution</a></li>
+<li class="chapter" data-level="11.6" data-path="ghana-v1.html"><a href="ghana-v1.html#suggested-citation-3"><i class="fa fa-check"></i><b>11.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="11.7" data-path="ghana-v1.html"><a href="ghana-v1.html#appendices-and-supplements"><i class="fa fa-check"></i><b>11.7</b> Appendices and Supplements</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html"><i class="fa fa-check"></i><b>12</b> Burkina Faso (v1)</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#introduction-7"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-missed-communes"><i class="fa fa-check"></i><b>12.2</b> Estimating Missed <em>Communes</em></a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method"><i class="fa fa-check"></i><b>12.2.1</b> Model Method</a></li>
+<li class="chapter" data-level="12.2.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation"><i class="fa fa-check"></i><b>12.2.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results"><i class="fa fa-check"></i><b>12.3</b> Model results</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-3"><i class="fa fa-check"></i><b>12.3.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="12.3.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>12.3.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-gridded-population-for-the-entire-country"><i class="fa fa-check"></i><b>12.4</b> Estimating Gridded Population for the Entire Country</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method-1"><i class="fa fa-check"></i><b>12.4.1</b> Model Method</a></li>
+<li class="chapter" data-level="12.4.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation-1"><i class="fa fa-check"></i><b>12.4.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results-1"><i class="fa fa-check"></i><b>12.5</b> Model Results</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-4"><i class="fa fa-check"></i><b>12.5.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="12.5.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit-1"><i class="fa fa-check"></i><b>12.5.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#discussion-4"><i class="fa fa-check"></i><b>12.6</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#contributions"><i class="fa fa-check"></i>Contributions</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#suggested-citation-4"><i class="fa fa-check"></i>Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html"><i class="fa fa-check"></i><b>13</b> South Sudan (v2)</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#introduction-8"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#methods-3"><i class="fa fa-check"></i><b>13.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#boundaries-settled-area-and-unadjusted-baseline-county-population-totals"><i class="fa fa-check"></i><b>13.2.1</b> Boundaries, settled area and unadjusted (baseline) county population totals</a></li>
+<li class="chapter" data-level="13.2.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons"><i class="fa fa-check"></i><b>13.2.2</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="13.2.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement"><i class="fa fa-check"></i><b>13.2.3</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="13.2.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-locations-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>13.2.4</b> Mapping locations where people have been displaced from</a></li>
+<li class="chapter" data-level="13.2.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement"><i class="fa fa-check"></i><b>13.2.5</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#results-4"><i class="fa fa-check"></i><b>13.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons-1"><i class="fa fa-check"></i><b>13.3.1</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="13.3.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement-1"><i class="fa fa-check"></i><b>13.3.2</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="13.3.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>13.3.3</b> Mapping of where people have been displaced from</a></li>
+<li class="chapter" data-level="13.3.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement-1"><i class="fa fa-check"></i><b>13.3.4</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#discussion-5"><i class="fa fa-check"></i><b>13.4</b> Discussion</a></li>
+<li class="chapter" data-level="13.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#contribution-8"><i class="fa fa-check"></i><b>13.5</b> Contribution</a></li>
+<li class="chapter" data-level="13.6" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#suggested-citation-5"><i class="fa fa-check"></i><b>13.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#funding-2"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="zambia-v1.html"><a href="zambia-v1.html"><i class="fa fa-check"></i><b>14</b> Zambia (v1)</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="zambia-v1.html"><a href="zambia-v1.html#introduction-9"><i class="fa fa-check"></i><b>14.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="zambia-v1.html"><a href="zambia-v1.html#background"><i class="fa fa-check"></i><b>14.1.1</b> Background</a></li>
+<li class="chapter" data-level="14.1.2" data-path="zambia-v1.html"><a href="zambia-v1.html#zambia-context"><i class="fa fa-check"></i><b>14.1.2</b> Zambia Context</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="zambia-v1.html"><a href="zambia-v1.html#methods-4"><i class="fa fa-check"></i><b>14.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="zambia-v1.html"><a href="zambia-v1.html#data-1"><i class="fa fa-check"></i><b>14.2.1</b> Data</a></li>
+<li class="chapter" data-level="14.2.2" data-path="zambia-v1.html"><a href="zambia-v1.html#statistical-modelling"><i class="fa fa-check"></i><b>14.2.2</b> Statistical Modelling</a></li>
+<li class="chapter" data-level="14.2.3" data-path="zambia-v1.html"><a href="zambia-v1.html#predictions-and-final-dataset"><i class="fa fa-check"></i><b>14.2.3</b> Predictions and Final Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="zambia-v1.html"><a href="zambia-v1.html#results-5"><i class="fa fa-check"></i><b>14.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="zambia-v1.html"><a href="zambia-v1.html#assessment-of-building-footprints-data"><i class="fa fa-check"></i><b>14.3.1</b> Assessment of Building Footprints Data</a></li>
+<li class="chapter" data-level="14.3.2" data-path="zambia-v1.html"><a href="zambia-v1.html#model-fit"><i class="fa fa-check"></i><b>14.3.2</b> Model Fit</a></li>
+<li class="chapter" data-level="14.3.3" data-path="zambia-v1.html"><a href="zambia-v1.html#summary-of-population-estimates"><i class="fa fa-check"></i><b>14.3.3</b> Summary of Population Estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="zambia-v1.html"><a href="zambia-v1.html#discussion-6"><i class="fa fa-check"></i><b>14.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="zambia-v1.html"><a href="zambia-v1.html#contributing-2"><i class="fa fa-check"></i>Contributing</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html"><i class="fa fa-check"></i><b>15</b> Geostatistical Bottom-Up Modelling</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html#introduction-and-model-presentation"><i class="fa fa-check"></i><b>15.1</b> Introduction and Model Presentation</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><b>16</b> Geostatistical Bottom-up Modelling Use Cases</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#cameroon"><i class="fa fa-check"></i><b>16.1</b> Cameroon</a></li>
+<li class="chapter" data-level="16.2" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#papua-new-guinea"><i class="fa fa-check"></i><b>16.2</b> Papua New Guinea</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">References</i></a></li>
+<li class="divider"></li>
+<li><a href="https://www.worldpop.org" target="_blank"><img src="dat/wp_logotype.png" width="110" alt="WorldPop"/></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">WorldPop Book of Methods, Vol. I: Gridded Population Estimates</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="zambia-v1" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">14</span> Zambia (v1)<a href="zambia-v1.html#zambia-v1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-9" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> Introduction<a href="zambia-v1.html#introduction-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="background" class="section level3 hasAnchor" number="14.1.1">
+<h3><span class="header-section-number">14.1.1</span> Background<a href="zambia-v1.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The richest data on a nation’s population and demographic characteristics usually comes from a national population and housing census. During intercensal years population estimates are produced by projecting census population counts into the future. The UN generates national level population projections for most countries, using well established methodologies <span class="citation">(<a href="#ref-UN">Economic &amp; Social Affairs Population Division 2019</a>)</span> that use national census year population counts, as well as fertility, mortality and international migration rates. National Statistics Offices often produce subnational population projections using similar methods. These subnational areas are usually relatively large in geographic size (e.g. administrative unit level 3) due to the data required for projections (age-sex disaggregated population counts and demographic rates) not being available at lower (finer-scale) administrative unit levels. However, the need for accurate population estimates at high spatial resolution is echoed throughout governmental, humanitarian and service providing sectors <span class="citation">(<a href="#ref-Tatem_ZMB">Tatem 2014</a>)</span>. To generate population data at a finer spatial resolution, administrative unit population estimates from projections can be disaggregated across the area within <span class="citation">(<a href="#ref-Maksym_ZMB">Bondarenko et al. 2020</a>)</span>. However, the further in time from the original census data population’s are projected, the larger the impact of some key problems relating to data availability and geographical constraints of data on the resulting population projection estimates. These key problems are then propagated into any disaggregated high spatial resolution population estimates that are based on projected population numbers. The key issues include:</p>
+<ul>
+<li>Internal migration between subnational units is often not considered due to lack of data. Similarly, understanding which subnational unit international migrants have moved to and from may be unknown, even when national estimates exist</li>
+<li>Expansion of settlements across subnational administrative unit boundaries, leading to the settlement’s growth incorrectly being projected solely in the settlement’s original unit</li>
+<li>Variation in fertility and mortality rates within administrative units not considered. This may be particularly significant in urban areas where administrative units contain very different settlement types and contexts</li>
+<li>Changes in the boundaries of administrative units and creation of additional administrative units</li>
+</ul>
+<p>To address the need for accurate population estimates at a high spatial resolution, particularly when population figures rely on projections over extended time periods, alternative approaches are being developed. One approach, known as the ‘bottom-up’ approach <span class="citation">(<a href="#ref-Wardrop_ZMB">Wardrop et al. 2018</a>, <a href="#ref-Weber_ZMB">Weber et al. 2018</a>, <a href="#ref-Leasure_ZMB">Leasure et al. 2020</a>)</span>, harnesses population counts for well‐defined, small areas across a country or study region collected more recently than the country’s last census. This approach involves developing a statistical model that best describes the relationship between population densities and variables (geospatial covariates), such as building density or vegetation cover, at survey sample locations. The parameterised statistical model, along with the geospatial covariate values for every location across a country, are then used to predict population estimates at each of these locations.</p>
+</div>
+<div id="zambia-context" class="section level3 hasAnchor" number="14.1.2">
+<h3><span class="header-section-number">14.1.2</span> Zambia Context<a href="zambia-v1.html#zambia-context" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The last Zambian population and housing census was conducted in 2010. During 2020 the Zambia Statistics Agency (ZamStats) carried out pre-census cartography fieldwork, in preparation for their upcoming census. To support field work activities, WorldPop worked with ZamStats to produce high-resolution population estimates (at approximately 100m x 100m) based on recently collected survey data. Because these estimates provide local level information about where populations are located, they can be beneficial for planning household level fieldwork and cross-referencing field collected data. One key advantage of our modelling approach is that it provides a measure of uncertainty in the population estimates. This can be useful for planning and carrying out fieldwork by extracting the upper and lower population estimates within a 95% credible interval (CI) and comparing these to the field collected data. For example, if the modelled population estimates for an enumeration area (EA) show a mean value of 1,000, as well as upper and lower 95% CI of 800 and 1,250, respectively, this may indicate that the EA has a suitable population size for field data collection. Additionally, post-fieldwork comparisons between the estimates and field collected population data can be carried out. If fieldwork revealed that 900 people were present in the EA example above, we would conclude that this is within the 95% CI of the population estimates data, however, a population count of 790 or 1,260 from field work would be outside the 95% CI and may indicate that further investigation of that EA is needed. While a discrepancy such as this could be due to inaccuracies in the modelled estimates or the field data, this form of cross-referencing can be helpful for identifying areas missed during field work and/or mismatches between digitised EA boundaries and the area in which field data was collected.
+In this work we describe the methodology developed for the Zambia population modelling work. We build on previous pioneering work conducting to produce population estimates for Nigeria where Bayesian hierarchical modelling approaches were developed from methods more commonly used in the field of ecology <span class="citation">(<a href="#ref-Leasure_ZMB">Leasure et al. 2020</a>)</span>. In contrast to the Nigeria work, here we modelled data from three different surveys that had different survey sampling designs and collected different enumeration related data. The three field enumeration datasets came from the Saving Mothers, Giving Life survey - 2017 (SMGL), the Livestock Census survey - 2018 (LSC) and the pre-‐census Pilot Mapping/Cartography- 2019 (PM). ZamStats anonymised this data prior to access and use for this analysis. A bespoke approach was developed, in both data preparation and modelling, to accommodate for the differences between the surveys and reduce biases in the results. Key elements of this approach include:</p>
+<ul>
+<li>Automating the creation of cluster boundaries from GPS located households to accurately delineate the area surveyed</li>
+<li>Integrating reported households that could not be enumerated into the modelling framework to increase the accuracy of population estimates and uncertainty measures</li>
+<li>Incorporating weighted likelihoods for each sample to accounted for ‘Probability Proportional to Size’ (PPS) sampling strategies that increase the probability of selecting a survey cluster with a larger population count</li>
+<li>Using building footprints data to generate covariates that represent fine scale variability within settlements</li>
+</ul>
+</div>
+</div>
+<div id="methods-4" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> Methods<a href="zambia-v1.html#methods-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-1" class="section level3 hasAnchor" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> Data<a href="zambia-v1.html#data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Survey Data</strong>: All survey datasets included counts of population enumerated for each household, with household or building locations (latitude and longitude) recorded using GPS-enabled devices. The key differences between the three survey datasets were: 1. information on households that could not be enumerated (missing households); 2. spatial coverage; and, 3. site location selection (survey sample design). Missing households data was present for LSC and PM, but absent for SMGL. LSC consisted of sample locations across the whole country, while PM consisted of full enumeration across two districts and SMGL consisted of almost full coverage across four areas, each consisting of multiple districts. No site selection process was used for PM and SMGL as they aimed to survey everywhere within their target regions, however, LSC employed a probability proportional to size (PPS) sampling design. For the sampling approach of LSC, the country was first stratified by districts and then enumeration areas (EAs) were selected by weighting EAs within each district by their number of households according to the 2010 census household listing data.</p>
+<p>Population densities at each survey location are required for the statistical model, and therefore to accurately calculate population density we need to know the exact area that was covered in the survey fieldwork, in addition to the population count for the survey cluster/enumeration area. Digitised survey cluster boundaries were unavailable for these three surveys, however, GPS locations of households (point locations) were provided which allowed us to demarcate the area covered during field data collection.</p>
+<p>The following three sections describe the individual surveys and how their data were prepared for the modelling.</p>
+<p><strong>Pilot mapping/cartography </strong>: This data identified the location of all residential buildings as well as non-residential areas across the two districts, Lusaka and Chongwe. Data point locations were cross-checked and verified using multiple geo-location variables included in the data. Because the point data covered two districts, it was necessary to sub-divide the data into smaller units; the study area was objectively split up into 1km x 1km blocks. The blocks not on the edge of the study area were classed as ‘clusters’ with the 1km x 1km block demarcating the cluster boundary. The 1km x 1km size of the blocks was used because: a) smaller sizes would have led to a larger number of points being potentially assigned to the wrong clusters due to GPS error, and b) larger sizes would have led to many clusters having very large population counts. The aim of the 1km x 1km size was to obtain clusters comparable to those in the two other survey datasets whilst maintaining objectivity in the approach. Blocks on the edge of the study area included areas not covered by the survey, and therefore bespoke cluster boundaries were created around the GPS points inside these ‘edge’ blocks. These cluster boundaries were generated using the R function ahull <span class="citation">(<a href="#ref-Lopez_ZMB">Pateiro-López &amp; Rodríguez-Casal 2010</a>, <a href="#ref-Dauby_ZMB">Dauby 2019</a>)</span>. We required a minimum of 15 points to create a cluster boundary because situations with less than 15 points could result in high uncertainty in the exact location of the boundaries, leading to an incorrect demarcation of the settled area for which data was collected. Clusters were not created for ‘edge’ blocks with less than 15 GPS points and therefore these areas were excluded. This approach of creating cluster areas from the larger study region was aimed to be objective, however, we did not investigate potential impact of this demarcation approach on the results. Future work needed to understand how sensitive the statistical model might be to different cluster demarcations is outlined in the discussion section of this report.
+This dataset included information about households (in residential buildings) where enumeration was not possible, e.g. due to non-response (no one answering the door). A small number of non-responders in household surveys is common and, in this survey, well documented. This information is incredibly useful for population modelling because it allows for uncertainty in the observed population counts to be modelled. In order to calculate accurate proportions of missing household counts per cluster we first identified the data points that were residential. We classified points as residential if their structure type was categorised as a ‘Residential building’ or if the residential building variable was non-NA. This allowed households classified as ‘residential’ or ‘multi-purpose’ to be included as our aim was to identify all the buildings where people lived. Second, we identified erroneous household sizes and replaced them with NAs. There were three obvious data entry mistakes (population counts per building of 1000000018, 999999 and 40004) and three more where values were between 200 and 1,000. Visual inspection of data points and building footprints surrounding these three potentially erroneous household sizes verified that they were almost certainly errors, as their building footprints looked similar to nearby footprints with corresponding household counts of between 1 and 15 and were clearly not counts for several buildings. All six household counts above 200 people were replaced with NA household sizes and treated as missing household counts. The next largest household size was 139 for a block of flats (enumerated as one household). All household sizes below 140 were therefore assumed to be correct.</p>
+<p><strong>Livestock census survey:</strong> – This dataset included a nationally representative sample of survey clusters. As this survey used probability proportional to size (PPS) sampling, we needed the survey weights for each cluster. There were four clusters without survey weights data and these were therefore excluded.
+Although cluster boundaries were unavailable, cluster IDs were given for the GPS located households (point locations) making demarcation of the cluster areas possible. Any GPS locations outside of the country were replaced with NAs, i.e. unknown location, and any clusters that did not have GPS locations for at least 95% of listed households were excluded, as accurate demarcation of clusters was only possible where a high proportion of the household locations was known.
+While survey data collected with GPS coordinates can lead to improved knowledge of the exact area covered during fieldwork compared to using standardised digitised boundaries, it can also lead to discrepancies in some cases. These include a) GPS points from different clusters having significant overlap, and b) grouping of GPS points in a very small non-residential area far away from the rest of the cluster’s points. The latter most likely occurs if data was ‘logged’ by the GPS devise after surveyors returned to their ‘base’. Because of associated issues in determining the exact area covered during fieldwork where discrepancies in GPS locations exist, we exclude clusters with significantly overlapping GPS locations and those with more than one grouping of at least 5 GPS points with obvious settled area in between groupings. Where clusters had fewer than 5 GPS locations clearly not at their cluster site, these GPS locations were replaced with NAs and the 95% threshold for valid GPS points per cluster was applied. For clusters meeting the 95% threshold of valid GPS points, cluster boundaries were generated using the R function ahull, as was done for the ‘edge’ areas of the pilot mapping dataset (described above). All clusters post- data cleaning had 15 or more points, and therefore no further clusters were excluded before creating cluster boundaries.</p>
+<p><strong>Saving Mothers, Giving Life survey:</strong> – This dataset contained GPS located households for four regions. Like the livestock census data, GPS points were linked to cluster IDs and we therefore followed the same procedures for demarcation of cluster boundaries. These were: 1) replacing any GPS locations outside of the country with NAs, 2) excluding clusters that did not have GPS points for at least 95% of the total number of households recorded, 3) excluding clusters with significant overlap in GPS locations (which was very common in urban areas of the SMGL data, however, only 11% of the SMGL clusters were urban), 4) excluding any clusters with less than 15 points, and 5) creating cluster boundaries using the R function ahull.</p>
+<p>The cluster level survey data from the three surveys were then combined to create the model input dataset. The proportions of missing households per cluster were calculated for the livestock census survey and pilot mapping datasets. The SMGL data did not include information about missing households. We address this unknown factor in our modelling approach and make use of the existing missing households data from the livestock census survey and pilot mapping to parameterise the missing households sub-model section of our statistical model. This allows for the uncertainty in cluster population counts for the SMGL data to be accurately accounted for.</p>
+<p>To reduce the uncertainty in our results, clusters from the livestock census survey and pilot mapping with more than 20% of missing household size data were excluded from the input data used to fit the regression model. There were no spatial biases in these excluded clusters.
+Where survey clusters from different surveys overlapped, the most recently collected survey cluster was kept to avoid pseudo-replication <span class="citation">(<a href="#ref-Hurlbert_ZMB">Hurlbert 1984</a>)</span>. Additionally, one cluster was dropped (pilot mapping) because it contained just one person. The final dataset included 2,605 clusters. Fig 1. shows the spatial distribution of the clusters and Fig 2. shows the number of clusters by survey and settlement type.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="pic/ZMB_data.png" alt="**Fig. 1 Number of survey clusters per district included in the population modelling. Four districts out of 116 districts of Zambia had no clusters (white). The total number of clusters was 2,605. Note, these are not official government boundaries. The production of this boundaries dataset was facilitated by GRID3 in collaboration with the Government of Zambia (Ministry of Lands, Ministry of Local Government, Zambia Statistics Agency, Electoral Commission of Zambia). **." width="100%" />
+<p class="caption">
+Figure 14.1: <strong>Fig. 1 Number of survey clusters per district included in the population modelling. Four districts out of 116 districts of Zambia had no clusters (white). The total number of clusters was 2,605. Note, these are not official government boundaries. The production of this boundaries dataset was facilitated by GRID3 in collaboration with the Government of Zambia (Ministry of Lands, Ministry of Local Government, Zambia Statistics Agency, Electoral Commission of Zambia). </strong>.
+</p>
+</div>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="pic/ZMB_table1.png" alt="**Fig. 2 Final number of survey clusters by survey and settlement type used for the regression model.**." width="100%" />
+<p class="caption">
+Figure 14.2: <strong>Fig. 2 Final number of survey clusters by survey and settlement type used for the regression model.</strong>.
+</p>
+</div>
+<p>Because the Livestock census survey was conducted using probability proportional to size (PPS) sampling, we needed to account for the fact that the dataset is biased towards clusters with larger population sizes. The survey weights (the relative measure of how representative a cluster is of the wider population) were included in the survey data. Survey weights for pilot cartography and SMGL were assumed to be equal across all their clusters (i.e. random sampling) and the single survey weight value assigned to them was the mean survey weight from the livestock census survey. This results in the model putting equal weight on the pilot cartography and SMGL clusters, whilst the weight varies for the livestock census clusters where, generally, clusters with lower population sizes have a higher survey weight to account for the bias in the sample design where higher population clusters were more likely to be selected and surveyed. We normalised (scaled to sum to one) the survey weights to produce model weights which were then used in the statistical model to reduce biases due to survey sample design. There is inherently additional bias due to the SMGL and pilot mapping data being spatially targeted. While we did not explicitly account for this bias, the spatial hierarchical nature of our statistical model leads to inferences within any given district and settlement type to rely more on the data from the same district and settlement type. Because of this we expect district-settlement type pairs that were well represented in the data not to be heavily influenced by any spatial biases of the overall input dataset. However, those district-settlement type pairs not well represented may be impacted by spatial biases in the data especially if they were in the same province as the concentrated clusters.</p>
+<div id="geospatial-covariates-4" class="section level4 hasAnchor" number="14.2.1.1">
+<h4><span class="header-section-number">14.2.1.1</span> Geospatial Covariates<a href="zambia-v1.html#geospatial-covariates-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We used province and district boundaries in our statistical model. The production of the boundaries dataset used was facilitated by GRID3 in collaboration with the Government of Zambia (Ministry of Lands, Ministry of Local Government, Zambia Statistics Agency, Electoral Commission of Zambia) and are not official government boundaries. For this work we rasterised the boundaries using the WorldPop WGS84 projected raster master grid for Zambia <span class="citation">(<a href="#ref-WorldPop_ZMB">WorldPop 2018</a>)</span>.</p>
+<p>For the statistical modelling we determined the relationship between population density and predictive variables. Our measure of population density was population per total building area, where building area included both residential and non-residential buildings. All building footprint related geospatial layers were created using building footprints provided by the Digitize Africa project of Ecopia.AI and Maxar Technologies <span class="citation">(<a href="#ref-EcopiaAI_ZMB">Ecopia.AI &amp; Maxar Technologies 2020</a>)</span>.
+The building footprints data includes extremely large structures such as stadiums, but also detects solar farms as large ‘structures’ too. Because it is unlikely that people will be living in these exceptionally large structures, we did not want the final population dataset to include people in grid cells that contain these large structures only, and so we applied a building area threshold of <span class="math inline">\(750m^2\)</span> to filter out very large buildings. Note that it is unlikely that this led to the exclusion of any flats or dormitories.
+After filtering out very large buildings we generated gridded geospatial (raster) layers for metrics of the remaining buildings. To do this we first converted building footprint polygons into building centroid points in UTM projection using the st_centroid function in the sf R package <span class="citation">(<a href="#ref-Pebesma_ZMB">Pebesma 2018</a>)</span>. The centroid points were then re-projected to WGS84 using the st_transform function so that their corresponding cell IDs in the WGS84 projected master grid raster could be identified. Building centroid cell IDs were obtained using the cellFromXY function in the raster R package <span class="citation">(<a href="#ref-Hijmans_ZMB">Hijmans et al. 2015</a>)</span>.
+Building counts per grid cell were calculated by simply summing the number of centroids for each cell ID. Building density per grid cell was calculated by dividing the building count in a cell by the area of the cell. Grid cell area was calculated using the area function in the raster R package. To calculate cluster-level mean building density we took the mean of density values across all settled pixels within a cluster’s boundary. The three building area-related layers were all derived using the “Shape_Area” attribute contained in the .gdb building footprints dataset, by applying sum (total area), mean and coefficient of variation (standard deviation divided by mean), for the focal area (either grid cell or cluster areas).
+We categorised each grid cell with at least one building footprint centroid as either rural, small urban or large urban, based on the size of the settlement they belong to. Grid cells in clusters smaller than 500 cells were classed as rural. Grid cells within clusters of 500 to 1,500 contiguous grid cells were classed as small urban. Grid cells within clusters of more than 1,500 contiguous grid cells were classed as large urban. The clump function in the raster R package was used to identify clusters of contiguous cells; grid cells were classified as being in the same cluster if they were directly adjacent to any of the eight neighbouring grid cells, including diagonally adjacent (Queen contiguity).
+To assess potential impact of the age of imagery used to extract the building footprints, we summarised imagery ages for all building footprints included in the survey clusters (used in the modelling) and across the whole country (used in the predictions).</p>
+</div>
+</div>
+<div id="statistical-modelling" class="section level3 hasAnchor" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> Statistical Modelling<a href="zambia-v1.html#statistical-modelling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The goal of this work was to build and parameterise a statistical model that could then be used to predict population counts across every 100m x 100m grid cell of Zambia. We used a Bayesian statistical approach as this allowed us the flexibility to build a model that could account for known uncertainties in the observed data, therefore allowing us to produce results with realistic uncertainty in the population estimates. The model we used includes a core regression model (<a href="zambia-v1.html#eq:4">(14.4)</a>) that accounts for biases in the observed data due to population weighted sampling design (<a href="zambia-v1.html#eq:3">(14.3)</a>) and (<a href="zambia-v1.html#eq:5">(14.5)</a>) and an observation error sub-model that accounts for uncertainty in the observed data due to missing households (<a href="zambia-v1.html#eq:1">(14.1)</a>)
+The core regression model describes the relationship between population density (<span class="math inline">\(D_i\)</span>) and the three predictor variables (covariates):</p>
+<ul>
+<li>log mean building footprint area (<span class="math inline">\(X_1, i\)</span>),</li>
+<li>log mean building footprint density (<span class="math inline">\(X_2, i\)</span>), and</li>
+<li>coefficient of variation in building area (<span class="math inline">\(X_3, i\)</span>).
+The regression has a hierarchical random intercept where districts are nested within provinces and provinces are nested within settlement type. This structure allowed us to account for similarities between observed data within the same district, province and settlement type that cannot be explained by the covariates. Such similarities may result from local level social and cultural trends that are difficult to measure. In the final statistical model used for the predictions, i.e. the model that predicted the observed data well, two of the covariates (<span class="math inline">\(X_2, i\)</span> and <span class="math inline">\(X_3, i\)</span>) had coefficients varying by settlement type (<span class="math inline">\(\delta_{s}\)</span> and <span class="math inline">\(\gamma_{s}\)</span>).
+To account for biases due to survey sampling designs we used model weights for each cluster (described in the data preparation section). If the model weight was relatively low, that cluster’s population density value would contribute less to the fitting of the model compared to clusters with higher model weights. This is implemented in (<a href="zambia-v1.html#eq:3">(14.3)</a>)
+and (<a href="zambia-v1.html#eq:5">(14.5)</a>) of the model where the precision <span class="math inline">\(\tau_{i}\)</span> of the population density (<span class="math inline">\(D_i\)</span>) estimated for a cluster is adjusted by the model weight (<span class="math inline">\(w_i\)</span>).
+Where survey clusters have households that were not enumerated, we did not know the exact number of people in those clusters. The larger the number of missing households in a cluster, the larger the range of possible population counts for that cluster. Therefore, clusters with a large number of missing households will have a larger uncertainty in their population counts. We incorporated this uncertainty in the statistical model via an observation error sub-model shown in (<a href="zambia-v1.html#eq:1">(14.1)</a>). For the livestock census and pilot cartography clusters the number of missing households were known and the parameter values of the binomial were calculated directly from the cluster level data. For the SMGL survey we did not know how many missing households there were in each cluster and we therefore needed to determine the parameter values of the binomial for the SMGL clusters using information from the other surveys. First, we calculated the proportion of non-missing households (i.e. proportion of total households that were enumerated) for every cluster surveyed in the livestock census and pilot cartography (n = 3,489). This provided information about the probabilities associated with different proportions of enumerated households per cluster across two full surveys (<strong>Fig 3</strong>).</li>
+</ul>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="pic/ZMB_prop.png" alt="**Fig. 3 Frequency distribution of the proportion of total households enumerated in a survey cluster across two surveys (pilot mapping and livestock census survey); n=3,489.**" width="100%" />
+<p class="caption">
+Figure 14.3: <strong>Fig. 3 Frequency distribution of the proportion of total households enumerated in a survey cluster across two surveys (pilot mapping and livestock census survey); n=3,489.</strong>
+</p>
+</div>
+<p>We then used this probability distribution to fit the <span class="math inline">\(prop_i\)</span> parameter in (<a href="zambia-v1.html#eq:1">(14.1)</a>) for SMGL clusters.
+In each survey cluster i, the field enumerators counted P_i people, but there were also potentially some households that were unobserved. We included this process as an observation model:</p>
+<p><span class="math display" id="eq:1">\[\begin{equation}
+P_i \sim \text{Binomial}(N_i, \theta_{i})\tag{14.1}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:2">\[\begin{equation*}
+\theta_i = 1 - \frac{(mhhs_i (\frac{nhh_i}{prop_i} - nhh_i))}{N_i}\tag{14.2}
+\end{equation*}\]</span></p>
+<p>where <span class="math inline">\(N_i\)</span> is the total number of people in the cluster (observed and unobserved) and <span class="math inline">\(\theta_i\)</span> is the probability that a person who resided in the cluster was counted during the enumeration. The primary purpose of this portion of the model is to estimate the total number of people <span class="math inline">\(N_i\)</span> in the cluster. We calculated the observation probability <span class="math inline">\(\theta_i\)</span> deterministically based on the mean household size <span class="math inline">\(mhhs_i\)</span>, number of number of households enumerated <span class="math inline">\(nhh_i\)</span>, and the proportion of the total households that were enumerated <span class="math inline">\(prop_i\)</span>.</p>
+<p>We also used the observation model to estimate the parameter <span class="math inline">\(prop_i\)</span> using the observed data from two surveys (livestock census and pilot cartography) to infer these values for the survey where they were not available (SMGL). For this purpose, we modelled <span class="math inline">\(prop_i\)</span> as a stochastic parameter rather than treating it solely as observed data:</p>
+<p><span class="math display" id="eq:3">\[\begin{equation}
+prop_i \sim \text{Beta}(5, \pi)\tag{14.3}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\pi\)</span> is a shape parameter estimated to fit this beta distribution to the observed data.</p>
+<p>The next portion of the model was designed to estimate the population density <span class="math inline">\(D_i\)</span> for each cluster <span class="math inline">\(i\)</span> based on the estimate of total population <span class="math inline">\(N_i\)</span> (above) and the observed total building area <span class="math inline">\(A_i\)</span>:</p>
+<p><span class="math display" id="eq:4">\[\begin{equation}
+N_i \sim \text{Poisson}(D_iA_i)\tag{14.4}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:5">\[\begin{equation}
+D_i \sim \text{LogNormal}(\mu_i, \tau_i)\tag{14.5}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\mu_i\)</span> is the expected population density (i.e. the mean of the lognormal distribution) for cluster <span class="math inline">\(i\)</span> and <span class="math inline">\(\tau_i\)</span> is the precision of that expectation. Note that precision is the inverse of variance (<span class="math inline">\(\tau_i\)</span> = <span class="math inline">\(\sigma^-2\)</span>) and this term provides a measure of uncertainty (i.e. residual variance).</p>
+<p>We modelled the expected population density <span class="math inline">\(\mu_i\)</span> as a linear function of the set of covariates <span class="math inline">\(X_i\)</span>:</p>
+<p><span class="math display" id="eq:6">\[\begin{equation}
+\mu_i = \alpha_{s,p,d} + \beta X_{1,i} + \delta_s X_{2,i} + \gamma_s X_{3, i} \tag{14.6}
+\end{equation}\]</span></p>
+<p>We used a hierarchical random intercept to account for correlations among clusters in the same settlement type <span class="math inline">\(s\)</span>, province <span class="math inline">\(p\)</span>, and division <span class="math inline">\(d\)</span>. We also used random slopes for two covariates (<span class="math inline">\(X_2\)</span> and <span class="math inline">\(X_3\)</span>) to estimate the effects of these covariates for each settlement type s. Samples that were collected for the livestock census survey used a PPS sampling design rather than random sampling. PPS sampling design may result in a sample that contains more data from areas with high population density, which would bias our estimates of population density <span class="math inline">\(D_i\)</span> if not accounted for. We used a weighted-precision approach (similar to weighted-likelihood or inverse-variance weighting) to account for this:</p>
+<p><span class="math display" id="eq:7">\[\begin{equation}
+\tau_i = w_{i}/\sigma^2_{s,p,d} \tag{14.7}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(w_i\)</span> are the model weights (described above). These model weights are the inverse of the probability that a cluster was selected for the survey. This weighted-precision model decreases the influence of clusters from high population density areas that were over-represented in the sample compared to lower population density areas that were under-represented in the sample. This provides an unbiased estimator of population density from non-random weighted survey data.</p>
+<p>The model was fit using JAGS v4.3.0 <span class="citation">(<a href="#ref-Plumber_ZMB">Plummer 2003</a>)</span> where 3 chains were run, each with burn-in and adapt phases of 10,000 and 1,000 iterations, respectively. A total of 35,000 iterations per chain were run in the post-burnin and –adapt phases. To eliminate autocorrelation among a parameter’s estimates within a chain, iterations were thinned so that every 3rd iteration was kept. We checked for model convergence using the <span class="math inline">\(gelman.diag\)</span> function in the coda R package which allows the potential scale reduction factor (psrf) values to be calculated <span class="citation">(<a href="#ref-Plumber_Best">Plummer et al. 2006</a>)</span>. The psrf is a measure of the variance between chains compared to the variance within chains. When these variances are similar, the chains have reached their target distribution and therefore psrf scores less than 1.1 indicate chain convergence. In instances where the psrf score was above 1.1 we continued running the model until model convergence was achieved.</p>
+<p>To check that the model is not overfitting to the data, we performed 10-fold cross validation. This involved re-running the model 10 times with a different 10% of the input data held out in each run. As with the original model, each cross validation model was run until either model convergence was achieved or for 35,000 iterations without convergence. Across all cross validation models, nine (out of 2605) posterior <span class="math inline">\(N_i\)</span> (population counts) and/or <span class="math inline">\(D_i\)</span> (population densities) did not fully converge, although all had a psrf score of &lt;1.3. Running the relevant cross validation models for longer may produce slightly more accurate cross validation results, however, we confirmed that none of the nine predictions had a corresponding observed value outside of the 95% CI and so we believe that this would make very little difference to the results.</p>
+</div>
+<div id="predictions-and-final-dataset" class="section level3 hasAnchor" number="14.2.3">
+<h3><span class="header-section-number">14.2.3</span> Predictions and Final Dataset<a href="zambia-v1.html#predictions-and-final-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For every ~100m x 100m grid cell across Zambia we calculated the probability distribution of population counts (i.e. posterior predictions) using a grid cell’s covariate values and the parameterised model above. Note that the missing households sub-model aimed to allow for accurate parameterisation of the regression model, and is not needed for the predictions where we were estimating <span class="math inline">\(N_i\)</span> not <span class="math inline">\(P_i\)</span>. The grid cell level posterior distributions are available in the SQL database (‘ZMB_population_v1_0_sql.sql’) of the publicly available dataset <a href="https://wopr.worldpop.org/?ZMB/">WOPR</a>. The mean of the posterior predictions for grid cell level population estimates can be found in the raster (ZMB_population_v1_0_gridded.tif) <a href="https://wopr.worldpop.org/?ZMB/">WOPR</a>. To enable users to quickly identify areas of comparatively high and low uncertainty in the mean population estimates, we generated a complementary uncertainty raster (ZMB_population_v1_0_uncertainty.tif) <a href="https://wopr.worldpop.org/?ZMB/">WOPR</a>. The uncertainty values here are the difference between the upper and lower 95% CI of the probability distribution divided by the mean of the probability distribution: (upper – lower)/mean. This layer offers one measure of uncertainty and alternative measures can be calculated using the SQL database. Uncertainty estimates cannot be summed across grid cells to produce an uncertainty measure for a multi-cell area. Uncertainty for larger areas should be calculated by summing the grid cell level probability distributions to generate a new probability distribution for that area, from which the correct uncertainty measure can be calculated. This process is automated by the woprVision web application <a href="https://apps.worldpop.org/woprVision/">WOPR Vision</a> and the wopr R package <span class="citation">(<a href="#ref-Leasure_b">Leasure et al. 2021</a>)</span>. To accompany district and province mean population estimates, we have pre-calculated the upper and lower 95% CI, and these are available in the ZMB_population_v1_0_admin.zip shapefiles <a href="https://wopr.worldpop.org/?ZMB/">WOPR</a>. We also produced population estimates for individual age-sex groups by multiplying the gridded mean population estimates (ZMB_population_v1_0_gridded.tif) by regional level age-sex proportions. These proportions are accessible via this portal <a href="https://www.portal.worldpop.org/demographics/">AGE SEX</a>. All data processing and analysis was carried out using R (v.3.6.0) <span class="citation">(<a href="#ref-r2020r_ZMB">R Core Team 2013</a>)</span> with the exception of the rasterisation of the district and province boundaries which was carried out in ArcGIS Pro.</p>
+</div>
+</div>
+<div id="results-5" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Results<a href="zambia-v1.html#results-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="assessment-of-building-footprints-data" class="section level3 hasAnchor" number="14.3.1">
+<h3><span class="header-section-number">14.3.1</span> Assessment of Building Footprints Data<a href="zambia-v1.html#assessment-of-building-footprints-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The building footprints data largely represents a recent distribution of buildings. Across the whole country, 93% of the building footprints were extracted from imagery between 2017 and 2019, and across the clusters used to fit the statistical model, this was 96%. In Fig 4, we present summaries of the distribution of building footprints across imagery years, and Fig. 5. shows a histogram of building footprints imagery dates by month for all building footprints used in for the grid cell level population predictions. From these assessments we do not believe there is any significant mismatch in the building footprints and the dates the survey data were collected. For the 7% of the country where building footprints represent dates earlier than 2017, we advise that the gridded population estimates be used with caution. The modal year of the Zambia building footprints for each grid cell are available in Dooley et al. (2020).</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="pic/building_ZMB.png" alt="**Fig. 4 Distributions of building level imagery years for buildings used in the grid cell level predictions (columns 2 and 3), and cluster level model fitting (columns 4 to 9)**." width="100%" />
+<p class="caption">
+Figure 14.4: <strong>Fig. 4 Distributions of building level imagery years for buildings used in the grid cell level predictions (columns 2 and 3), and cluster level model fitting (columns 4 to 9)</strong>.
+</p>
+</div>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="pic/ZMB_date.png" alt="**Fig. 5 Histogram of building footprints imagery date for all building footprints used for the grid cell level population predictions**." width="100%" />
+<p class="caption">
+Figure 14.5: <strong>Fig. 5 Histogram of building footprints imagery date for all building footprints used for the grid cell level population predictions</strong>.
+</p>
+</div>
+</div>
+<div id="model-fit" class="section level3 hasAnchor" number="14.3.2">
+<h3><span class="header-section-number">14.3.2</span> Model Fit<a href="zambia-v1.html#model-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For assessing model fit we compare observed and predicted <span class="math inline">\(N_i\)</span> (true population count) and <span class="math inline">\(D_i\)</span> (population densities). As we did not have the observed number of missing households for the SMGL survey, we did not have an observed <span class="math inline">\(N_i\)</span> for SMGL clusters (just observed <span class="math inline">\(P_i\)</span> values). We could have used the modelled mean estimate of missing households to calculate <span class="math inline">\(N_i\)</span> for SMGL clusters but this would have likely led to overstating the model fit. To present a more conservative assessment of model fit we examined observed and predicted <span class="math inline">\(N_i\)</span> and <span class="math inline">\(D_i\)</span> for PM and LSC clusters only. Due to unknown population counts for any missing households, we calculated observed <span class="math inline">\(N_i\)</span> by assuming missing households have a population count equal to their cluster’s mean household size. Given that we filtered clusters such that they must include at least 80% of total households enumerated, we believe that this is a reasonable value for observed <span class="math inline">\(N_i\)</span> to assess model fit.
+Observed vs predicted <span class="math inline">\(N_i\)</span> and <span class="math inline">\(D_i\)</span> are shown in Fig. 7 for both in-sample and out-of-sample (cross-validation) results.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="pic/ZMB_xval.png" alt="**Fig. 7 In-sample and out-of-sample observed vs predicted population counts $N_i$ and population densities $D_i$ (people per total building area); n=1981. Circles represent the cluster mean prediction and lines show their corresponding 95% credible intervals**." width="100%" />
+<p class="caption">
+Figure 14.6: <strong>Fig. 7 In-sample and out-of-sample observed vs predicted population counts <span class="math inline">\(N_i\)</span> and population densities <span class="math inline">\(D_i\)</span> (people per total building area); n=1981. Circles represent the cluster mean prediction and lines show their corresponding 95% credible intervals</strong>.
+</p>
+</div>
+<p>The corresponding model statistics are presented in Fig 8. The model statistic results show that model performance is maintained when 10% of the input data is held out, indicating that the model is not overfitting to the data. We find a very high correlation between observed and predicted population counts (<span class="math inline">\(R^2\)</span> = 0.959 for in-sample <span class="math inline">\(N_i\)</span>) and lower correlation between observed and predicted population densities (<span class="math inline">\(R^2\)</span> = 0.595 for in-sample <span class="math inline">\(D_i\)</span>). This suggests that the population densities responsible for lowered correlation between observed and predicted values, correspond to clusters with small total building area as they have little consequence on the overall correlation between observed and predicted population count. These results are not surprising given that the data included clusters with very small population sizes, across which the variation in number of buildings per cluster will result in higher variation in population density, compared to clusters with relatively large population counts. In other words, over a threshold number of buildings, population densities typical of the area can be calculated more accurately. For future testing of the model, we could assess model fit when clusters below a threshold population size are excluded from the input data.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="pic/ZMB_metrics.png" alt="**Fig. 8 Model statistics for in-sample and out-of-sample (cross validation) results. Statistics shown are bias (mean of residuals), imprecision (standard deviation of residuals), inaccuracy (mean of absolute residuals) and R-squared ($R^2$, correlation between absolute observed and predicted values). $N_i$ is the true population count and $D_i$ is population density (people per building area). Numbers given for bias, imprecision and inaccuracy are people with the standardised values (i.e. divided by predicted $N_i$ or $D_i$) in parentheses. By random chance we expect the percentage of observations outside the predicted 95% credible intervals (CI) to be ~5%**." width="100%" />
+<p class="caption">
+Figure 14.7: <strong>Fig. 8 Model statistics for in-sample and out-of-sample (cross validation) results. Statistics shown are bias (mean of residuals), imprecision (standard deviation of residuals), inaccuracy (mean of absolute residuals) and R-squared (<span class="math inline">\(R^2\)</span>, correlation between absolute observed and predicted values). <span class="math inline">\(N_i\)</span> is the true population count and <span class="math inline">\(D_i\)</span> is population density (people per building area). Numbers given for bias, imprecision and inaccuracy are people with the standardised values (i.e. divided by predicted <span class="math inline">\(N_i\)</span> or <span class="math inline">\(D_i\)</span>) in parentheses. By random chance we expect the percentage of observations outside the predicted 95% credible intervals (CI) to be ~5%</strong>.
+</p>
+</div>
+<p>In addition to the correlations between observed vs prediction values, as described above, we checked for spatial autocorrelation in the standardised residuals ((mean prediction values - observed)/observed). The standardised residuals give a measure of variance in the data unexplained by the model and therefore commonalities among clusters with similar residual values indicates that the model could be improved if those commonalities were accounted for. There is little evidence for spatial autocorrelation in the standardised residuals, as shown in Fig. 9, which suggests that the model accounts for spatial variation well.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="pic/ZMB_autocorrelation.png" alt="**Fig. 9 Spatial autocorrelation in standardised residuals (variance unexplained by the statistical model) for population counts (top) and densities (bottom). Red dots indicate the distances at which there is significant spatial autocorrelations. These occur between clusters that are ~100 km, ~ 900 km, ~1,100 km and ~1,175 km apart**." width="100%" />
+<p class="caption">
+Figure 14.8: <strong>Fig. 9 Spatial autocorrelation in standardised residuals (variance unexplained by the statistical model) for population counts (top) and densities (bottom). Red dots indicate the distances at which there is significant spatial autocorrelations. These occur between clusters that are ~100 km, ~ 900 km, ~1,100 km and ~1,175 km apart</strong>.
+</p>
+</div>
+<p>To understand whether the model is capturing the uncertainty in the data well, we draw our attention the 95% CIs. By random chance we expect the percentage of observations outside the predicted 95% credible intervals (CI) to be ~5% or lower. Fig 8. shows that &lt;5% and &lt;7% of observations were outside the predicted 95% CI for in-sample and out-of-sample results, respectively. While this demonstrates that the model is capturing uncertainty well, we looked for commonalities among the instances where observations were outside the predicted 95% CIs to investigate whether we can make improvements to the model. Generally we found little evidence for biases across the full set of clusters with observations outside the 95% CIs, however, we did identify three common features among small groups of clusters where 95% CI predictions consistently miss the observed value.</p>
+<p>The first is overprediction in six clusters that are located in the industrial area of central Lusaka. The second and third occur in some rural pilot mapping clusters in north Chongwe. For one set there is underprediction and for another there is overprediction. For the set where observed counts (and densities) are higher than the 95% CIs predictions, i.e. model underprediction, the people per household are in-line with the wider data set (see Fig. 10.),
+suggesting that these clusters contain a relatively small number of building footprints compared to other clusters.
+The date of the imagery used to extract building footprints in this area is just a few months after the survey data collection so it is unlikely that there is a mismatch in the building footprints and the surveyed buildings. Further assessment of how these clusters differ to other rural clusters may be required here.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
+<img src="pic/ZMB_cluster.png" alt="**Fig. 10 Comparison of people per households for clusters where the observed population count is larger than the predicted 95% CIs (left) and all clusters (right)**." width="100%" />
+<p class="caption">
+Figure 14.9: <strong>Fig. 10 Comparison of people per households for clusters where the observed population count is larger than the predicted 95% CIs (left) and all clusters (right)</strong>.
+</p>
+</div>
+<p>For the set where observed counts (and densities) are lower than the 95% CIs predictions, i.e. model overprediction, it is likely that the clusters contain areas that were not surveyed as there are sections of the clusters that do not have GPS locations and, again, here there is no mismatch in the dates of the survey and the building footprints. To improve our data analysis we could delineate cluster boundaries in the rural areas based on the GPS locations instead of the block approach, however, given the building footprints we believe that predictions in these few clusters are realistic and that the ‘overprediction’ is in fact due to errors in population density brought about by the clusters including unsurveyed buildings.
+For data points (locations) where the model describes the data well there will be low uncertainty in the mean prediction. Conversely, we find high uncertainty (wide 95% CI) where the model explains less of the observed variance in population densities. Fig. 11. shows two example areas where there is relatively high uncertainty in the population estimates. In the Solwezi example, we note that one of the five survey clusters in the south-west of the city has a much lower observed population density than the other four clusters. All five cluster areas are residential with relatively high building density (compared to all other clusters) and have similar covariate values to one another. The low density of one of these cluster is therefore surprising. Further investigation of the low density cluster reveals that a section inside the cluster boundary that contains buildings (according to the building footprints) have no GPS located households. This results in the population density being lower than expected given the other four similar survey clusters in close proximity. There may be a number of possible reasons for this: a) the area could have been undergoing development at the time of the survey (early 2018) and the new buildings are present in the building footprints (imagery year for this area is 2019); b) the fieldwork may not have been complete; or, c) there may have been an error in collating/transferring the data. We make similar observations for the Chirundu example.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
+<img src="pic/ZMB_map.png" alt="**Fig. 11 Areas of high uncertainty in the modelled population estimates. A) shows relatively high uncertainty for Solwezi (North-Western) and Mansa (Luapula), compared to other urban centres in Copperbelt. B) shows high uncertainty levels in Chirundu’s population estimates**." width="100%" />
+<p class="caption">
+Figure 14.10: <strong>Fig. 11 Areas of high uncertainty in the modelled population estimates. A) shows relatively high uncertainty for Solwezi (North-Western) and Mansa (Luapula), compared to other urban centres in Copperbelt. B) shows high uncertainty levels in Chirundu’s population estimates</strong>.
+</p>
+</div>
+</div>
+<div id="summary-of-population-estimates" class="section level3 hasAnchor" number="14.3.3">
+<h3><span class="header-section-number">14.3.3</span> Summary of Population Estimates<a href="zambia-v1.html#summary-of-population-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The national modelled mean population estimate for Zambia is 21,672,678 (lower and upper 95% CI: 20,929,048 and 22,491,208). Population estimates per province is provided below.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="pic/ZMB_table2.png" alt="**Fig. 12 Modelled population estimates per province for two different boundaries datasets. The production of the boundaries dataset included in modelled population data set v1.0 was facilitated by GRID3 in collaboration with the Government of Zambia (Ministry of Lands, Ministry of Local Government, Zambia Statistics Agency). Note that both boundaries datasets are not official government boundaries**." width="100%" />
+<p class="caption">
+Figure 14.11: <strong>Fig. 12 Modelled population estimates per province for two different boundaries datasets. The production of the boundaries dataset included in modelled population data set v1.0 was facilitated by GRID3 in collaboration with the Government of Zambia (Ministry of Lands, Ministry of Local Government, Zambia Statistics Agency). Note that both boundaries datasets are not official government boundaries</strong>.
+</p>
+</div>
+</div>
+</div>
+<div id="discussion-6" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> Discussion<a href="zambia-v1.html#discussion-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>All model assessments suggest that the statistical model that we developed performed well and was appropriate for predicting population estimates across Zambia. There was little evidence of mismatch in the dates of survey data collection and building footprints, and we therefore believe that the gridded population estimates represent a realistic distribution of the Zambian population around 2018/2019. We encourage users of the modelled population estimates to consult the uncertainty measures via the uncertainty raster and/or the woprVision <a href="https://apps.worldpop.org/woprVision/">WOPR Vision</a> web application (select “ZMB v1.0”) or the wopr R package <span class="citation">(<a href="#ref-Leasure_b">Leasure et al. 2021</a>)</span>. We note that there is particularly high uncertainty in the urban centres of Solwezi and Chirundu, and highlight that caution should be taken when using the estimates for the industrial area in central Lusaka and the small areas where the building footprints data correspond to 2016 or earlier.</p>
+<p>In the short term, the estimates could potentially be improved by re-fitting the model parameters using input data that excludes clusters with very small population counts and carrying out a sensitivity analysis for the survey weights assigned to the pilot mapping and SMGL clusters to assess any impact these might have. In the longer term, we suggest several areas for future research using these survey data:</p>
+<ul>
+<li><p>Developing methods to create clusters from surveys that cover large areas like the pilot mapping. We took an objective approach of splitting up the area into blocks so that the impact of GPS error was minimal. Future work could include developing cluster boundaries for target population counts that optimise uncertainties in cluster population and building counts.</p></li>
+<li><p>Exploring the integration of uncertainties in cluster building counts due to cluster boundary locations based on estimated number of buildings within certain distances of the boundaries.</p></li>
+<li><p>Mapping areas that are predominantly non-residential and, if there are enough survey data covering these areas, incorporating this class of settlement as a fourth settlement type in the statistical model. Methods for classifying settlement types, such as those described in Jochem et al <span class="citation">(<a href="#ref-Jochem_ZMB">Jochem et al. 2021</a>)</span>, could potentially be use for identify non-residential areas in Zambia.</p></li>
+</ul>
+<p>Additionally, future work should be done to understand and improve the reporting of missing households so that refinements to the observation error sub-model can be carried out.</p>
+<blockquote>
+<p><strong>Note:</strong> The gridded population estimates for the Zambia are available from the WorldPop Open Population Repository <a href="https://wopr.worldpop.org/?ZMB/">WOPR</a>, and they can be visualized using the <a href="https://apps.worldpop.org/woprVision/">WOPR Vision</a> web application (select “ZMB v1.0”)</p>
+</blockquote>
+</div>
+<div id="contributing-2" class="section level2 unnumbered hasAnchor">
+<h2>Contributing<a href="zambia-v1.html#contributing-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Funding for the work described in this chapter was provided by the Bill and Melinda Gates Foundation and the United Kingdom Foreign, Commonwealth &amp; Development Office as part of the GRID3 project (#INV009579).</p>
+
+</div>
+</div>
+<h3><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">References</i><a href="references-2.html#references-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-Maksym_ZMB" class="csl-entry">
+Bondarenko M, Kerr D, Sorichetta A, Tatem A. 2020. Census/projection-disaggregated gridded population datasets for 51 countries across sub-saharan africa in 2020 using building footprints.
+</div>
+<div id="ref-Dauby_ZMB" class="csl-entry">
+Dauby G. 2019. ConR: Computation of parameters used in preliminary assessment of conservation status. <em>R package version</em> 1.
+</div>
+<div id="ref-UN" class="csl-entry">
+Economic UND of, Social Affairs Population Division. 2019. <em>World population prospects 2019: Methodology of the united nations population estimates and projections (ST/ESA/SER.a/425)</em>. <a href="https://population.un.org/wpp/Publications/Files/WPP2019_Methodology.pdf">https://population.un.org/wpp/Publications/Files/WPP2019_Methodology.pdf</a>.
+</div>
+<div id="ref-EcopiaAI_ZMB" class="csl-entry">
+Ecopia.AI &amp; Maxar Technologies. 2020. Digitize africa data — building footprints. <a href="https://www.maxar.com/products/imagery-basemaps">https://www.maxar.com/products/imagery-basemaps</a>.
+</div>
+<div id="ref-Hijmans_ZMB" class="csl-entry">
+Hijmans RJ, Van Etten J, Cheng J, Mattiuzzi M, Sumner M, Greenberg JA, Lamigueiro OP, Bevan A, Racine EB, Shortridge A. 2015. Package <span>“raster.”</span> <em>R package</em> 734:473.
+</div>
+<div id="ref-Hurlbert_ZMB" class="csl-entry">
+Hurlbert SH. 1984. Pseudoreplication and the design of ecological field experiments. <em>Ecological monographs</em> 54:187–211.
+</div>
+<div id="ref-Jochem_ZMB" class="csl-entry">
+Jochem WC, Leasure DR, Pannell O, Chamberlain HR, Jones P, Tatem AJ. 2021. Classifying settlement types from multi-scale spatial patterns of building footprints. <em>Environment and Planning B: Urban Analytics and City Science</em> 48:1161–1179.
+</div>
+<div id="ref-Leasure_b" class="csl-entry">
+Leasure D, Bondarenko M, Darin E, Tatem A. 2021. Wopr: An r package to query the WorldPop open population repository, version 1.0. 0.
+</div>
+<div id="ref-Leasure_ZMB" class="csl-entry">
+Leasure DR, Jochem WC, Weber EM, Seaman V, Tatem AJ. 2020. National population mapping from sparse survey data: A hierarchical bayesian modeling framework to account for uncertainty. <em>Proceedings of the National Academy of Sciences</em> 117:24173–24179.
+</div>
+<div id="ref-Lopez_ZMB" class="csl-entry">
+Pateiro-López B, Rodríguez-Casal A. 2010. Generalizing the convex hull of a sample: The r package alphahull. <em>Journal of Statistical software</em> 34:1–28.
+</div>
+<div id="ref-Pebesma_ZMB" class="csl-entry">
+Pebesma EJ. 2018. Simple features for r: Standardized support for spatial vector data. <em>R J.</em> 10:439.
+</div>
+<div id="ref-Plumber_ZMB" class="csl-entry">
+Plummer M. 2003. JAGS: A program for analysis of bayesian graphical models using gibbs sampling. In: <em>Proceedings of the 3rd international workshop on distributed statistical computing</em>. Vienna, Austria, 1–10.
+</div>
+<div id="ref-Plumber_Best" class="csl-entry">
+Plummer M, Best N, Cowles K, Vines K. 2006. CODA: Convergence diagnosis and output analysis for MCMC. <em>R news</em> 6:7–11.
+</div>
+<div id="ref-r2020r_ZMB" class="csl-entry">
+R Core Team. 2013. <em>R: A language and environment for statistical computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-Tatem_ZMB" class="csl-entry">
+Tatem AJ. 2014. Mapping population and pathogen movements. <em>International health</em> 6:5–11.
+</div>
+<div id="ref-Wardrop_ZMB" class="csl-entry">
+Wardrop N, Jochem W, Bird T, Chamberlain H, Clarke D, Kerr D, Bengtsson L, Juran S, Seaman V, Tatem A. 2018. Spatially disaggregated population estimates in the absence of national population and housing census data. <em>Proceedings of the National Academy of Sciences</em> 115:3529–3537.
+</div>
+<div id="ref-Weber_ZMB" class="csl-entry">
+Weber EM, Seaman VY, Stewart RN, Bird TJ, Tatem AJ, McKee JJ, Bhaduri BL, Moehl JJ, Reith AE. 2018. Census-independent population mapping in northern nigeria. <em>Remote sensing of environment</em> 204:786–798.
+</div>
+<div id="ref-WorldPop_ZMB" class="csl-entry">
+WorldPop. 2018. Global high resolution population denominators project. 2018. <a href="https://www.worldpop.org/doi/10.5258/SOTON/WP00645">https://www.worldpop.org/doi/10.5258/SOTON/WP00645</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="south-sudan-v2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="geostatistical-bottom-up-modelling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

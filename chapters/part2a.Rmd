@@ -1,0 +1,4 @@
+
+# <i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Hierarchical Bottom-Up Modelling Use Cases</i> {-}
+
+This section provides provide country examples of the use of bottom up population modelling for gridded population estimates.

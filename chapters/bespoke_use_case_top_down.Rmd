@@ -1,0 +1,11 @@
+# <i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Bespoke Top-Down Population Models</i> {-}
+
+This section describes methods developed for specific country contexts.
+
+# Kenya (v1)
+
+# Niger (v1)
+
+# Senegal (v1)
+
+# Mozambique (v1)

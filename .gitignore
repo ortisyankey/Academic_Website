@@ -1,0 +1,12 @@
+wd
+.Rproj.user
+.Rhistory
+.RData
+_publish.R
+rsconnect
+_bookdown_files
+_main.log
+*.rds
+
+
+

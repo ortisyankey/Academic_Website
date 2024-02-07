@@ -1,0 +1,3 @@
+# <i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Introduction</i> {-}
+
+This section will introduce you to WorldPop population data sets and various ways to access them. 

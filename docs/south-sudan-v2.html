@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>12 South Sudan (v2) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates</title>
+  <meta name="description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="12 South Sudan (v2) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/dat/wp_logo.png" />
+  <meta property="og:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="github-repo" content="wpgp/bookworm" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="12 South Sudan (v2) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  
+  <meta name="twitter:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="twitter:image" content="/dat/wp_logo.png" />
+
+<meta name="author" content="WorldPop, University of Southampton" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="burkina-faso-v1.html"/>
+<link rel="next" href="zambia-v1.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<script src="libs/htmlwidgets-1.6.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://srv02481.soton.ac.uk/docs.html">WorldPop Book of Methods</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Edited by</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html"><i class="fa fa-check"></i>About this book</a>
+<ul>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html"><i class="fa fa-check"></i>Contributing Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#andrew-tatem"><i class="fa fa-check"></i>Andrew Tatem</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#doug-leisure"><i class="fa fa-check"></i>Doug Leisure</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#attila-n.-lazar"><i class="fa fa-check"></i>Attila N. Lazar</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#claire-dooley"><i class="fa fa-check"></i>Claire Dooley</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#chris-jochem"><i class="fa fa-check"></i>Chris Jochem</a></li>
+<li class="chapter" data-level="0.1" data-path="contributing-authors.html"><a href="contributing-authors.html#edith-darin"><i class="fa fa-check"></i><b>0.1</b> Edith Darin</a></li>
+<li class="chapter" data-level="0.2" data-path="contributing-authors.html"><a href="contributing-authors.html#gianluca-boo"><i class="fa fa-check"></i><b>0.2</b> Gianluca Boo</a></li>
+<li class="chapter" data-level="0.3" data-path="contributing-authors.html"><a href="contributing-authors.html#ortis-yankey"><i class="fa fa-check"></i><b>0.3</b> Ortis Yankey</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Introduction</i></a></li>
+<li class="chapter" data-level="1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html"><i class="fa fa-check"></i><b>1</b> Gridded Population Estimates</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#top-down"><i class="fa fa-check"></i><b>1.1</b> Top-down</a></li>
+<li class="chapter" data-level="1.2" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#bottom-up"><i class="fa fa-check"></i><b>1.2</b> Bottom-up</a></li>
+<li class="chapter" data-level="1.3" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#peanut-butter"><i class="fa fa-check"></i><b>1.3</b> Peanut Butter</a></li>
+<li class="chapter" data-level="1.4" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#comparison-of-data"><i class="fa fa-check"></i><b>1.4</b> Comparison of Data</a></li>
+<li class="chapter" data-level="1.5" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#contribution"><i class="fa fa-check"></i><b>1.5</b> Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-access.html"><a href="data-access.html"><i class="fa fa-check"></i><b>2</b> Data Access</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-access.html"><a href="data-access.html#websites"><i class="fa fa-check"></i><b>2.1</b> Websites</a></li>
+<li class="chapter" data-level="2.2" data-path="data-access.html"><a href="data-access.html#web-applications"><i class="fa fa-check"></i><b>2.2</b> Web Applications</a></li>
+<li class="chapter" data-level="2.3" data-path="data-access.html"><a href="data-access.html#ftp-server"><i class="fa fa-check"></i><b>2.3</b> FTP Server</a></li>
+<li class="chapter" data-level="2.4" data-path="data-access.html"><a href="data-access.html#gis-plugins"><i class="fa fa-check"></i><b>2.4</b> GIS Plugins</a></li>
+<li class="chapter" data-level="2.5" data-path="data-access.html"><a href="data-access.html#r-packages"><i class="fa fa-check"></i><b>2.5</b> R Packages</a></li>
+<li class="chapter" data-level="2.6" data-path="data-access.html"><a href="data-access.html#python-packages"><i class="fa fa-check"></i><b>2.6</b> Python Packages</a></li>
+<li class="chapter" data-level="2.7" data-path="data-access.html"><a href="data-access.html#rest-api"><i class="fa fa-check"></i><b>2.7</b> REST API</a></li>
+<li class="chapter" data-level="" data-path="data-access.html"><a href="data-access.html#contribution-1"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="research-applications.html"><a href="research-applications.html"><i class="fa fa-check"></i><b>3</b> Research Applications</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="research-applications.html"><a href="research-applications.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-census"><i class="fa fa-check"></i><b>3.2</b> Population modelling to support census</a></li>
+<li class="chapter" data-level="3.3" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-vaccination-programmes"><i class="fa fa-check"></i><b>3.3</b> Population modelling to support vaccination programmes</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#contribution-2"><i class="fa fa-check"></i>Contribution</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html"><i class="fa fa-check"></i><b>4</b> Settlement Data and Geospatial Covariates</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#settlement-data"><i class="fa fa-check"></i><b>4.1</b> Settlement Data</a></li>
+<li class="chapter" data-level="4.2" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#key-settlement-data-sources"><i class="fa fa-check"></i><b>4.2</b> Key Settlement Data Sources</a></li>
+<li class="chapter" data-level="4.3" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#use-of-settlement-data-in-population-modelling"><i class="fa fa-check"></i><b>4.3</b> Use of Settlement Data in Population Modelling</a></li>
+<li class="chapter" data-level="4.4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#geospatial-covariates"><i class="fa fa-check"></i><b>4.4</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#contribution-3"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bottom-up-population-mapping-method.html"><a href="bottom-up-population-mapping-method.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Bottom-Up Population Mapping Method</i></a></li>
+<li class="chapter" data-level="5" data-path="bottom-up-models.html"><a href="bottom-up-models.html"><i class="fa fa-check"></i><b>5</b> Bottom-up Models</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#input-data"><i class="fa fa-check"></i><b>5.1</b> Input Data</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#population-data"><i class="fa fa-check"></i><b>5.1.1</b> Population Data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#settlement-map"><i class="fa fa-check"></i><b>5.1.2</b> Settlement Map</a></li>
+<li class="chapter" data-level="5.1.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geospatial-covariates-1"><i class="fa fa-check"></i><b>5.1.3</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="5.1.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#administrative-boundaries"><i class="fa fa-check"></i><b>5.1.4</b> Administrative Boundaries</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#statistical-models"><i class="fa fa-check"></i><b>5.2</b> Statistical Models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#software"><i class="fa fa-check"></i><b>5.2.1</b> Software</a></li>
+<li class="chapter" data-level="5.2.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#simple-model-to-start"><i class="fa fa-check"></i><b>5.2.2</b> Simple Model to Start</a></li>
+<li class="chapter" data-level="5.2.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#bayesian-priors"><i class="fa fa-check"></i><b>5.2.3</b> Bayesian Priors</a></li>
+<li class="chapter" data-level="5.2.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-core-model"><i class="fa fa-check"></i><b>5.2.4</b> Hierarchical Core Model</a></li>
+<li class="chapter" data-level="5.2.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#age-sex-structure"><i class="fa fa-check"></i><b>5.2.5</b> Age-sex Structure</a></li>
+<li class="chapter" data-level="5.2.6" data-path="bottom-up-models.html"><a href="bottom-up-models.html#random-intercept"><i class="fa fa-check"></i><b>5.2.6</b> Random Intercept</a></li>
+<li class="chapter" data-level="5.2.7" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-variance"><i class="fa fa-check"></i><b>5.2.7</b> Hierarchical Variance</a></li>
+<li class="chapter" data-level="5.2.8" data-path="bottom-up-models.html"><a href="bottom-up-models.html#weighted-likelihood"><i class="fa fa-check"></i><b>5.2.8</b> Weighted-likelihood</a></li>
+<li class="chapter" data-level="5.2.9" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geostatistical-models"><i class="fa fa-check"></i><b>5.2.9</b> Geostatistical Models</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#conclusion"><i class="fa fa-check"></i><b>5.3</b> Conclusion</a></li>
+<li class="chapter" data-level="5.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#contributing"><i class="fa fa-check"></i><b>5.4</b> Contributing</a></li>
+<li class="chapter" data-level="5.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#suggested-citation"><i class="fa fa-check"></i><b>5.5</b> Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html"><i class="fa fa-check"></i><b>6</b> Hierarchichal Bottom-Up Modelling Tutorial</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-i-how-to-think-about-population-as-a-bayesian"><i class="fa fa-check"></i><b>6.2</b> Part I: How to think about population as a Bayesian</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#set-up"><i class="fa fa-check"></i><b>6.2.1</b> Set-up</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#from-a-frequentist-to-a-bayesian-mindset"><i class="fa fa-check"></i><b>6.2.2</b> From a frequentist to a Bayesian mindset</a></li>
+<li class="chapter" data-level="6.2.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#how-to-choose-priors"><i class="fa fa-check"></i><b>6.2.3</b> How to choose priors</a></li>
+<li class="chapter" data-level="6.2.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#simulating-data"><i class="fa fa-check"></i><b>6.2.4</b> Simulating data</a></li>
+<li class="chapter" data-level="6.2.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-the-data"><i class="fa fa-check"></i><b>6.2.5</b> Modelling the data</a></li>
+<li class="chapter" data-level="6.2.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-in-stan"><i class="fa fa-check"></i><b>6.2.6</b> Implementing the model in <code>stan</code></a></li>
+<li class="chapter" data-level="6.2.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-the-data-for-stan"><i class="fa fa-check"></i><b>6.2.7</b> Preparing the data for stan</a></li>
+<li class="chapter" data-level="6.2.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#running-the-model"><i class="fa fa-check"></i><b>6.2.8</b> Running the model</a></li>
+<li class="chapter" data-level="6.2.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#checking-the-mcmc-simulations"><i class="fa fa-check"></i><b>6.2.9</b> Checking the MCMC simulations</a></li>
+<li class="chapter" data-level="6.2.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-estimated-parameters"><i class="fa fa-check"></i><b>6.2.10</b> Evaluating the estimated parameters</a></li>
+<li class="chapter" data-level="6.2.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#lets-try-with-real-data"><i class="fa fa-check"></i><b>6.2.11</b> Let’s try with real data</a></li>
+<li class="chapter" data-level="6.2.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#the-data"><i class="fa fa-check"></i><b>6.2.12</b> The data</a></li>
+<li class="chapter" data-level="6.2.13" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#response-variable-the-population-count"><i class="fa fa-check"></i><b>6.2.13</b> Response variable: the population count</a></li>
+<li class="chapter" data-level="6.2.14" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-distribution"><i class="fa fa-check"></i><b>6.2.14</b> Modelling Population count: a Poisson distribution</a></li>
+<li class="chapter" data-level="6.2.15" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model"><i class="fa fa-check"></i><b>6.2.15</b> Implementing the model</a></li>
+<li class="chapter" data-level="6.2.16" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimating-the-model"><i class="fa fa-check"></i><b>6.2.16</b> Estimating the model</a></li>
+<li class="chapter" data-level="6.2.17" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>6.2.17</b> Evaluating the model goodness-of-fit</a></li>
+<li class="chapter" data-level="6.2.18" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimated-parameters"><i class="fa fa-check"></i><b>6.2.18</b> Estimated parameters</a></li>
+<li class="chapter" data-level="6.2.19" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicted-population-count"><i class="fa fa-check"></i><b>6.2.19</b> Predicted population count</a></li>
+<li class="chapter" data-level="6.2.20" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-lognormal-model"><i class="fa fa-check"></i><b>6.2.20</b> Modelling Population count: a Poisson Lognormal model</a></li>
+<li class="chapter" data-level="6.2.21" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#writing-the-model"><i class="fa fa-check"></i><b>6.2.21</b> Writing the model</a></li>
+<li class="chapter" data-level="6.2.22" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#defining-the-priors"><i class="fa fa-check"></i><b>6.2.22</b> Defining the priors</a></li>
+<li class="chapter" data-level="6.2.23" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-1"><i class="fa fa-check"></i><b>6.2.23</b> Implementing the model</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-ii-how-to-model-large-scale-spatial-variation"><i class="fa fa-check"></i><b>6.3</b> Part II: How to model large-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals"><i class="fa fa-check"></i><b>6.3.1</b> Goals</a></li>
+<li class="chapter" data-level="6.3.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings"><i class="fa fa-check"></i><b>6.3.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.3.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extra-packages"><i class="fa fa-check"></i><b>6.3.3</b> Extra packages</a></li>
+<li class="chapter" data-level="6.3.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#hierarchical-structure-in-the-data"><i class="fa fa-check"></i><b>6.3.4</b> Hierarchical structure in the data</a></li>
+<li class="chapter" data-level="6.3.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#full-picture-of-the-data-grouping"><i class="fa fa-check"></i><b>6.3.5</b> Full picture of the data grouping</a></li>
+<li class="chapter" data-level="6.3.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#hierarchical-structure-in-the-model"><i class="fa fa-check"></i><b>6.3.6</b> Hierarchical structure in the model</a></li>
+<li class="chapter" data-level="6.3.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#a-hierarchical-intercept-by-settlement-type"><i class="fa fa-check"></i><b>6.3.7</b> A hierarchical intercept by settlement type</a></li>
+<li class="chapter" data-level="6.3.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#no-pooling"><i class="fa fa-check"></i><b>6.3.8</b> No-pooling</a></li>
+<li class="chapter" data-level="6.3.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#partial-pooling"><i class="fa fa-check"></i><b>6.3.9</b> Partial pooling</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-iii-how-to-model-small-scale-spatial-variation"><i class="fa fa-check"></i><b>6.4</b> Part III: How to model small-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals-1"><i class="fa fa-check"></i><b>6.4.1</b> Goals</a></li>
+<li class="chapter" data-level="6.4.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings-1"><i class="fa fa-check"></i><b>6.4.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.4.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#formal-modelling"><i class="fa fa-check"></i><b>6.4.3</b> Formal modelling</a></li>
+<li class="chapter" data-level="6.4.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#review-of-the-covariates-used-in-worldpop"><i class="fa fa-check"></i><b>6.4.4</b> Review of the covariates used in WorldPop</a></li>
+<li class="chapter" data-level="6.4.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#covariates-engineering"><i class="fa fa-check"></i><b>6.4.5</b> Covariates engineering</a></li>
+<li class="chapter" data-level="6.4.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#including-covariates-in-the-model"><i class="fa fa-check"></i><b>6.4.6</b> Including covariates in the model</a></li>
+<li class="chapter" data-level="6.4.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#overview-of-the-covariates-in-nigeria-v1.2"><i class="fa fa-check"></i><b>6.4.7</b> Overview of the covariates in Nigeria, v1.2</a></li>
+<li class="chapter" data-level="6.4.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-the-data"><i class="fa fa-check"></i><b>6.4.8</b> Preparing the data</a></li>
+<li class="chapter" data-level="6.4.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-2"><i class="fa fa-check"></i><b>6.4.9</b> Implementing the model</a></li>
+<li class="chapter" data-level="6.4.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#a-note-on-initialisation"><i class="fa fa-check"></i><b>6.4.10</b> A note on initialisation</a></li>
+<li class="chapter" data-level="6.4.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#comparing-prediction-with-previous-model"><i class="fa fa-check"></i><b>6.4.11</b> Comparing prediction with previous model</a></li>
+<li class="chapter" data-level="6.4.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#grouping-and-covariates-effect-a-random-slope-model"><i class="fa fa-check"></i><b>6.4.12</b> Grouping and covariates effect: a random slope model</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-iv-model-diagnostics-and-predictions"><i class="fa fa-check"></i><b>6.5</b> Part IV: Model diagnostics and predictions</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals-2"><i class="fa fa-check"></i><b>6.5.1</b> Goals</a></li>
+<li class="chapter" data-level="6.5.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings-2"><i class="fa fa-check"></i><b>6.5.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.5.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extra-packages-1"><i class="fa fa-check"></i><b>6.5.3</b> Extra packages</a></li>
+<li class="chapter" data-level="6.5.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#advanced-model-diagnostics"><i class="fa fa-check"></i><b>6.5.4</b> Advanced model diagnostics</a></li>
+<li class="chapter" data-level="6.5.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#assessing-convergence"><i class="fa fa-check"></i><b>6.5.5</b> Assessing convergence</a></li>
+<li class="chapter" data-level="6.5.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#checking-predicted-posterior"><i class="fa fa-check"></i><b>6.5.6</b> Checking predicted posterior</a></li>
+<li class="chapter" data-level="6.5.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#cross-validation-of-model-predictions"><i class="fa fa-check"></i><b>6.5.7</b> Cross-validation of model predictions</a></li>
+<li class="chapter" data-level="6.5.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-population-prediction"><i class="fa fa-check"></i><b>6.5.8</b> Gridded population prediction</a></li>
+<li class="chapter" data-level="6.5.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-data-for-prediction"><i class="fa fa-check"></i><b>6.5.9</b> Preparing data for prediction</a></li>
+<li class="chapter" data-level="6.5.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extracting-estimated-parameters"><i class="fa fa-check"></i><b>6.5.10</b> Extracting estimated parameters</a></li>
+<li class="chapter" data-level="6.5.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicting-population-count-for-every-grid-cell"><i class="fa fa-check"></i><b>6.5.11</b> Predicting population count for every grid cell</a></li>
+<li class="chapter" data-level="6.5.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicting-distributions"><i class="fa fa-check"></i><b>6.5.12</b> Predicting distributions</a></li>
+<li class="chapter" data-level="6.5.13" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-population"><i class="fa fa-check"></i><b>6.5.13</b> Gridded population</a></li>
+<li class="chapter" data-level="6.5.14" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-uncertainty"><i class="fa fa-check"></i><b>6.5.14</b> Gridded uncertainty</a></li>
+<li class="chapter" data-level="6.5.15" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#aggregating-prediction"><i class="fa fa-check"></i><b>6.5.15</b> Aggregating prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#contribution-4"><i class="fa fa-check"></i><b>6.6</b> Contribution</a></li>
+<li class="chapter" data-level="6.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#suggested-citation-1"><i class="fa fa-check"></i><b>6.7</b> Suggested citation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><i class="fa fa-check"></i><b>7</b> Hierarchical Bottom-Up Modelling Extention: the Weighted Likelihood</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#introduction-3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#methods"><i class="fa fa-check"></i>Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-populations"><i class="fa fa-check"></i>Simulated Populations</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-survey-data"><i class="fa fa-check"></i>Simulated Survey Data</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#statistical-models-1"><i class="fa fa-check"></i>Statistical Models</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#population-totals"><i class="fa fa-check"></i>Population Totals</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#results"><i class="fa fa-check"></i>Results</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#discussion"><i class="fa fa-check"></i>Discussion</a></li>
+<li class="chapter" data-level="7.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#contributing-1"><i class="fa fa-check"></i><b>7.1</b> Contributing</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#suggested-citation-2"><i class="fa fa-check"></i><b>7.1.1</b> Suggested Citation</a></li>
+<li class="chapter" data-level="7.1.2" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#license-1"><i class="fa fa-check"></i><b>7.1.2</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#references-1"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#tables"><i class="fa fa-check"></i>Tables</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#figures"><i class="fa fa-check"></i>Figures</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#appendix-a-supplementary-files"><i class="fa fa-check"></i>Appendix A: Supplementary Files</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-use-cases.html"><a href="hierarchical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Hierarchical Bottom-Up Modelling Use Cases</i></a></li>
+<li class="chapter" data-level="8" data-path="nigeria-v1.html"><a href="nigeria-v1.html"><i class="fa fa-check"></i><b>8</b> Nigeria (v1)</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="nigeria-v1.html"><a href="nigeria-v1.html#introduction-4"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="nigeria-v1.html"><a href="nigeria-v1.html#materials-and-methods"><i class="fa fa-check"></i><b>8.2</b> Materials and Methods</a></li>
+<li class="chapter" data-level="8.3" data-path="nigeria-v1.html"><a href="nigeria-v1.html#results-1"><i class="fa fa-check"></i><b>8.3</b> Results</a></li>
+<li class="chapter" data-level="8.4" data-path="nigeria-v1.html"><a href="nigeria-v1.html#discussion-1"><i class="fa fa-check"></i><b>8.4</b> Discussion</a></li>
+<li class="chapter" data-level="8.5" data-path="nigeria-v1.html"><a href="nigeria-v1.html#conclusions"><i class="fa fa-check"></i><b>8.5</b> Conclusions</a></li>
+<li class="chapter" data-level="8.6" data-path="nigeria-v1.html"><a href="nigeria-v1.html#contribution-5"><i class="fa fa-check"></i><b>8.6</b> Contribution</a></li>
+<li class="chapter" data-level="8.7" data-path="nigeria-v1.html"><a href="nigeria-v1.html#funding"><i class="fa fa-check"></i><b>8.7</b> Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html"><i class="fa fa-check"></i><b>9</b> Democratic Republic of Congo - DRC (v2)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#introduction-5"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#methods-1"><i class="fa fa-check"></i><b>9.2</b> Methods</a></li>
+<li class="chapter" data-level="9.3" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#results-2"><i class="fa fa-check"></i><b>9.3</b> Results</a></li>
+<li class="chapter" data-level="9.4" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#discussion-2"><i class="fa fa-check"></i><b>9.4</b> Discussion</a></li>
+<li class="chapter" data-level="9.5" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#contribution-6"><i class="fa fa-check"></i><b>9.5</b> Contribution</a>
+<ul>
+<li class="chapter" data-level="" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#funding-1"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ghana-v1.html"><a href="ghana-v1.html"><i class="fa fa-check"></i><b>10</b> Ghana (v1)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ghana-v1.html"><a href="ghana-v1.html#introduction-6"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="ghana-v1.html"><a href="ghana-v1.html#methods-2"><i class="fa fa-check"></i><b>10.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="ghana-v1.html"><a href="ghana-v1.html#data"><i class="fa fa-check"></i><b>10.2.1</b> Data</a></li>
+<li class="chapter" data-level="10.2.2" data-path="ghana-v1.html"><a href="ghana-v1.html#statistical-model"><i class="fa fa-check"></i><b>10.2.2</b> Statistical Model</a></li>
+<li class="chapter" data-level="10.2.3" data-path="ghana-v1.html"><a href="ghana-v1.html#model-implementation-and-diagnostics"><i class="fa fa-check"></i><b>10.2.3</b> Model Implementation and Diagnostics</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="ghana-v1.html"><a href="ghana-v1.html#results-3"><i class="fa fa-check"></i><b>10.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="ghana-v1.html"><a href="ghana-v1.html#people-per-household"><i class="fa fa-check"></i><b>10.3.1</b> People per household</a></li>
+<li class="chapter" data-level="10.3.2" data-path="ghana-v1.html"><a href="ghana-v1.html#age-sex-structure-1"><i class="fa fa-check"></i><b>10.3.2</b> Age-sex structure</a></li>
+<li class="chapter" data-level="10.3.3" data-path="ghana-v1.html"><a href="ghana-v1.html#census-projections"><i class="fa fa-check"></i><b>10.3.3</b> Census projections</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="ghana-v1.html"><a href="ghana-v1.html#discussion-3"><i class="fa fa-check"></i><b>10.4</b> Discussion</a></li>
+<li class="chapter" data-level="10.5" data-path="ghana-v1.html"><a href="ghana-v1.html#contribution-7"><i class="fa fa-check"></i><b>10.5</b> Contribution</a></li>
+<li class="chapter" data-level="10.6" data-path="ghana-v1.html"><a href="ghana-v1.html#suggested-citation-3"><i class="fa fa-check"></i><b>10.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="10.7" data-path="ghana-v1.html"><a href="ghana-v1.html#appendices-and-supplements"><i class="fa fa-check"></i><b>10.7</b> Appendices and Supplements</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html"><i class="fa fa-check"></i><b>11</b> Burkina Faso (v1)</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#introduction-7"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-missed-communes"><i class="fa fa-check"></i><b>11.2</b> Estimating Missed <em>Communes</em></a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method"><i class="fa fa-check"></i><b>11.2.1</b> Model Method</a></li>
+<li class="chapter" data-level="11.2.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation"><i class="fa fa-check"></i><b>11.2.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results"><i class="fa fa-check"></i><b>11.3</b> Model results</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-3"><i class="fa fa-check"></i><b>11.3.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="11.3.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>11.3.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-gridded-population-for-the-entire-country"><i class="fa fa-check"></i><b>11.4</b> Estimating Gridded Population for the Entire Country</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method-1"><i class="fa fa-check"></i><b>11.4.1</b> Model Method</a></li>
+<li class="chapter" data-level="11.4.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation-1"><i class="fa fa-check"></i><b>11.4.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results-1"><i class="fa fa-check"></i><b>11.5</b> Model Results</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-4"><i class="fa fa-check"></i><b>11.5.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="11.5.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit-1"><i class="fa fa-check"></i><b>11.5.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#discussion-4"><i class="fa fa-check"></i><b>11.6</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#contributions"><i class="fa fa-check"></i>Contributions</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#suggested-citation-4"><i class="fa fa-check"></i>Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html"><i class="fa fa-check"></i><b>12</b> South Sudan (v2)</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#introduction-8"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#methods-3"><i class="fa fa-check"></i><b>12.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#boundaries-settled-area-and-unadjusted-baseline-county-population-totals"><i class="fa fa-check"></i><b>12.2.1</b> Boundaries, settled area and unadjusted (baseline) county population totals</a></li>
+<li class="chapter" data-level="12.2.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons"><i class="fa fa-check"></i><b>12.2.2</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="12.2.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement"><i class="fa fa-check"></i><b>12.2.3</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="12.2.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-locations-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>12.2.4</b> Mapping locations where people have been displaced from</a></li>
+<li class="chapter" data-level="12.2.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement"><i class="fa fa-check"></i><b>12.2.5</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#results-4"><i class="fa fa-check"></i><b>12.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons-1"><i class="fa fa-check"></i><b>12.3.1</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="12.3.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement-1"><i class="fa fa-check"></i><b>12.3.2</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="12.3.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>12.3.3</b> Mapping of where people have been displaced from</a></li>
+<li class="chapter" data-level="12.3.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement-1"><i class="fa fa-check"></i><b>12.3.4</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#discussion-5"><i class="fa fa-check"></i><b>12.4</b> Discussion</a></li>
+<li class="chapter" data-level="12.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#contribution-8"><i class="fa fa-check"></i><b>12.5</b> Contribution</a></li>
+<li class="chapter" data-level="12.6" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#suggested-citation-5"><i class="fa fa-check"></i><b>12.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#funding-2"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="zambia-v1.html"><a href="zambia-v1.html"><i class="fa fa-check"></i><b>13</b> Zambia (v1)</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="zambia-v1.html"><a href="zambia-v1.html#introduction-9"><i class="fa fa-check"></i><b>13.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="zambia-v1.html"><a href="zambia-v1.html#background"><i class="fa fa-check"></i><b>13.1.1</b> Background</a></li>
+<li class="chapter" data-level="13.1.2" data-path="zambia-v1.html"><a href="zambia-v1.html#zambia-context"><i class="fa fa-check"></i><b>13.1.2</b> Zambia Context</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="zambia-v1.html"><a href="zambia-v1.html#methods-4"><i class="fa fa-check"></i><b>13.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="zambia-v1.html"><a href="zambia-v1.html#data-1"><i class="fa fa-check"></i><b>13.2.1</b> Data</a></li>
+<li class="chapter" data-level="13.2.2" data-path="zambia-v1.html"><a href="zambia-v1.html#statistical-modelling"><i class="fa fa-check"></i><b>13.2.2</b> Statistical Modelling</a></li>
+<li class="chapter" data-level="13.2.3" data-path="zambia-v1.html"><a href="zambia-v1.html#predictions-and-final-dataset"><i class="fa fa-check"></i><b>13.2.3</b> Predictions and Final Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="zambia-v1.html"><a href="zambia-v1.html#results-5"><i class="fa fa-check"></i><b>13.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="zambia-v1.html"><a href="zambia-v1.html#assessment-of-building-footprints-data"><i class="fa fa-check"></i><b>13.3.1</b> Assessment of Building Footprints Data</a></li>
+<li class="chapter" data-level="13.3.2" data-path="zambia-v1.html"><a href="zambia-v1.html#model-fit"><i class="fa fa-check"></i><b>13.3.2</b> Model Fit</a></li>
+<li class="chapter" data-level="13.3.3" data-path="zambia-v1.html"><a href="zambia-v1.html#summary-of-population-estimates"><i class="fa fa-check"></i><b>13.3.3</b> Summary of Population Estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="zambia-v1.html"><a href="zambia-v1.html#discussion-6"><i class="fa fa-check"></i><b>13.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="zambia-v1.html"><a href="zambia-v1.html#contributing-2"><i class="fa fa-check"></i>Contributing</a></li>
+<li class="chapter" data-level="13.5" data-path="zambia-v1.html"><a href="zambia-v1.html#references-2"><i class="fa fa-check"></i><b>13.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html"><i class="fa fa-check"></i><b>14</b> Geostatistical Bottom-Up Modelling</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html#introduction-and-model-presentation"><i class="fa fa-check"></i><b>14.1</b> Introduction and Model Presentation</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><b>15</b> Geostatistical Bottom-up Modelling Use Cases</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#cameroon"><i class="fa fa-check"></i><b>15.1</b> Cameroon</a></li>
+<li class="chapter" data-level="15.2" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#papua-new-guinea"><i class="fa fa-check"></i><b>15.2</b> Papua New Guinea</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-3.html"><a href="references-3.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">References</i></a></li>
+<li class="divider"></li>
+<li><a href="https://www.worldpop.org" target="_blank"><img src="dat/wp_logotype.png" width="110" alt="WorldPop"/></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">WorldPop Book of Methods, Vol. I: Gridded Population Estimates</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="south-sudan-v2" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">12</span> South Sudan (v2)<a href="south-sudan-v2.html#south-sudan-v2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h2>
+South Sudan 2020 gridded population estimates from census projections adjusted for displacement, version 2.0
+</h2>
+<div id="introduction-8" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Introduction<a href="south-sudan-v2.html#introduction-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>South Sudan’s last population and housing census was conducted in 2008 prior to its independence from Sudan in 2011. Estimating the population of South Sudan and mapping its spatial distribution is incredibly challenging due to ongoing conflict, flooding and famine that continues to drive large scale movement within the country as well as across national borders into neighbouring countries. This chapter present an approach that integrated several different data sources available at differing spatial scales to estimate South Sudan’s population at a high spatial
+resolution in 2020.
+This chapter describes the methods used to produce the <strong>South Sudan 2020 gridded population estimates from census projections adjusted for displacement, version 2.0</strong> <span class="citation">(<a href="#ref-Dooley_SSD">Dooley et al. 2021</a>)</span>. This approach models the population distribution to likely settled locations and adjusts for displacement. Conceptually, the population in a given location is expected to follow:</p>
+<center>
+<strong>Final population = baseline population + in-displacement - out-displacement</strong>
+</center>
+<p>The key elements of this approach are:</p>
+<ol style="list-style-type: lower-alpha">
+<li>disaggregating projected census population estimates for 2020 to a high spatial resolution using a number of ancillary geospatial datasets, including building footprints, which depict factors known to relate to human population presence (baseline population)</li>
+<li>using geocoded internally displaced populations and building footprints to demarcate destination spatial extents of displaced populations (in-displacement)</li>
+<li>modelling where people have been displaced from at a high spatial resolution using geospatial data including conflict locations (out-displacement)</li>
+<li>combining the projected population estimates (in a) and displaced population estimates (in b and c) to produce the final adjusted population estimates that account for displacement (final population)
+This chapter present model assessments, provide example areas from the results and discuss future work needed to improve mapping efforts in South Sudan.
+Note that the final dataset is most likely to represent South Sudan’s population distribution as of September 2020 given the age of the input data.</li>
+</ol>
+</div>
+<div id="methods-3" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Methods<a href="south-sudan-v2.html#methods-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>All data preparation and analysis was carried out using R version 4.0.2 <span class="citation">(<a href="#ref-r2020r_SSD">R Core Team 2020b</a>)</span>. We used the World Geodetic System 1984 (WGS84) projection system for all geospatial data. If input data was not in this projection, the data was converted accordingly. We used the WorldPop South Sudan mastergrid for the grid positioning of all rasters throughout the analysis. All output data is provided in raster format with WGS84 projection and approximately 100m x 100m resolution (0.0008333 decimal degrees grid).</p>
+<div id="boundaries-settled-area-and-unadjusted-baseline-county-population-totals" class="section level3 hasAnchor" number="12.2.1">
+<h3><span class="header-section-number">12.2.1</span> Boundaries, settled area and unadjusted (baseline) county population totals<a href="south-sudan-v2.html#boundaries-settled-area-and-unadjusted-baseline-county-population-totals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To define our study area, we used the United Nations Office for the Coordination of Humanitarian Affairs (OCHA) operational administrative level 2 boundaries (counties) dataset <a href="https://data.humdata.org/dataset/cod-ab-ssd">OCHA</a>. Grid cells within this area were defined as ‘settled’ if they contained any building centroids in the Digitise Africa building footprints dataset <span class="citation">(<a href="#ref-EcopiaAI_SSD">Ecopia.AI &amp; Maxar Technologies 2020b</a>)</span> for South Sudan and its neighbouring countries (Central African Republic, Democratic Republic of Congo, Ethiopia, Kenya, Sudan, Uganda). For the unadjusted (baseline)
+population estimates, we used county level population projections for 2020 from the 2008 census produced by the South Sudan National Bureau of Statistics (National Bureau of Statistics, 2015). These projections are derived using fertility and mortality rates, and do not account for displacement.</p>
+</div>
+<div id="mapping-of-internally-displaced-persons" class="section level3 hasAnchor" number="12.2.2">
+<h3><span class="header-section-number">12.2.2</span> Mapping of internally displaced persons<a href="south-sudan-v2.html#mapping-of-internally-displaced-persons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The International Organisation for Migration <a href="https://www.iom.int/">IOM</a> collect extensive information about internally displaced persons
+(IDPs) in South Sudan. From 1st July 2020 to 30th September 2020, IOM conducted Round 9 of their ‘Baseline Assessment’ of IDPs <a href="https://dtm.iom.int/">Displacement Tracking Matrix</a> which includes estimated numbers of IDPs at more than 2,000 locations across South Sudan. The data is collected from key informants at each location and verified by the IOM team who report on the consistency of the data and whether it is in line with observations. <strong>IOM’s Baseline Assessment Round 9</strong> covers almost every area of the country and provides the highest resolution of locations of IDP populations compared to other datasets where estimates are given for large areas only. However, we acknowledge that there is likely to be large and varying uncertainty in the IDP counts. In this study we do not consider the uncertainty in IDP estimates as it would be incredibly difficult to quantify given the data collection methodology. All IOM data mentioned in this report refers to their Baseline Assessment Round 9. Note that we refer to a single location of IDPs as an IDP population.</p>
+<p>As of September 2020, IOM reported 1,615,765 IDPs residing inside South Sudan. Of the total number of IDPs, an estimated 554,081 people were displaced from a different county and 1,061,684 people were displaced from within their same county. All reported IDP populations were 28,000 people or less, with the exception of UNMISS Bentiu Protection of Civilians camp which had 97,321 IDPs.</p>
+<p>In this study we aim to identify the likely area in which IDP populations may be living, which then allows us to redistribute those populations over the most likely settled areas. This is necessary because defined boundaries of the areas in which IDPs reside are not available. IOM classifies locations of IDP populations as either a ‘displacement site’ or within a ‘host community’. We assume that ‘displacement sites’ have been purposefully constructed or converted to accommodate IDPs and, therefore, are occupied by IDPs only. ‘Displacement sites’ include UN Protection of Civilians sites and converted public buildings such as schools. Conversely, we assume that host communities can have both IDPs and non-IDPs. Because of these assumptions, we mapped the area occupied by ‘displacement sites’ first and then excluded these areas for the mapping of all other populations (IDP host communities, unadjusted (baseline) population and areas people have been displaced from).</p>
+<p>There were a total of 99 open ‘displacements sites’ recorded by IOM (a further 23 closed sites were also reported to have no IDPs present as of September 2020). There was one open site recorded for Korijo IDP Camp Zone 1, 2 and 3, and we split this into three separate sites based on the proportion of IDPs across the three camps and their locations in July 2017 <span class="citation">(<a href="#ref-IOM_SSD">IOM 2017</a>)</span>. We merged the sites recorded for ‘Panyiduay Hospital’ and ‘School Panyiduay’ as they had the same location coordinates. This meant that IDPs across the two sites occupy the same location in our final dataset.</p>
+<p>After these data edits, we mapped the resulting 100 ‘displacement sites’ by identifying the nearest settled grid cell to the site’s recorded location coordinates and then buffering an area around the focal cell. The size of the buffered area varied per site and was big enough such that the number of IDPs per settled cell did not exceed 500 people. We capped the buffer size to a maximum of 3.5km, and therefore allowed more than 500 people per settled cell where the maximum buffer was reached. The distance restriction was implemented so that ‘displacement sites’ weren’t incorrectly mapped as sparse and sprawling. We used a people per cell restriction rather than people per building because ‘displacement sites’ are likely to have non-permanent structures such as tents and so we didn’t want to rely on the count of building footprints in these areas reflecting the situation at the time of data collection. The high maximum value of 500 people per grid cell was selected to allow for potentially high population densities in low resource situations and to restrict the spatial areas covered by these IDP only sites to realistic spaces in urban areas.</p>
+<p>We cross referenced a subset of the resulting ‘displacement sites’ areas with publicly available spatial data relating to 22 UN IDP camps <a href="https://unitar.org/maps/countries/94">UN IDP Camps</a> and found that the areas matched well. However, there is no available spatial data for non-UN camps and cross referencing was therefore not possible for non-UN ‘displacement sites’. In the absence of this data, we highlight that there are potential uncertainties in our results. In particular, the maximum of 500 people per grid cell may have been too high for rural ‘displacement sites’ and may have led to spatial extents that are too small (if the maximum was 250, say, the spatial extent would have been bigger because the buffer size would have needed to be bigger to allow for the lower people per cell). With limited data available for non-UN sites, it is outside the scope of this study to assess our mapped ‘displacement sites’ thoroughly, and we recommend that further evaluation be done in collaboration with NBS, IOM and other data collectors.</p>
+<p>There were 2,097 ‘host community’ sites with recorded IDPs. To map the spatial extents of these populations from their georeferenced point locations, we incrementally increased a buffer around the location until there was no more than 1 IDP per building within the buffer. Given the possible national population totals, reasonable household sizes of 5.5-6.5 persons (average household size in the 2008 census was 5.9) <span class="citation">(<a href="#ref-Minnesota">Minnesota Population Center 2020</a>)</span> and the number of building footprints, we estimate that approximately 50% of the building footprints are residential. Based on this assumption, along with a reasonable average limit of 2 IDPs per residential building in host community settings, we considered 1 IDP per building to be a sensible maximum, while acknowledging that this could vary significantly between IDP populations across the country. If buffer areas of different IDP populations overlapped, we allowed the limit per building within the overlapping area to increase (with the limit being 1 IDP per building per IDP population). We applied a maximum buffer of 50km in order to prevent IDPs being mapped in potentially incorrect locations. We chose 50km because there was always at least one building within that distance of the recorded IDP point location.</p>
+</div>
+<div id="mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement" class="section level3 hasAnchor" number="12.2.3">
+<h3><span class="header-section-number">12.2.3</span> Mapping of unadjusted population (population distribution in the absence of displacement)<a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We disaggregated the 2020 county level population projection estimates <span class="citation">(<a href="#ref-NBS">National Bureau of Statistics 2015</a>)</span> to a high spatial resolution grid using a random forest machine learning-based dasymetric approach <span class="citation">(<a href="#ref-Stevens_SSD">Stevens et al. 2015d</a>)</span>. This approach allowed us to predict grid cell level population estimates based on modelled relationships with geospatial data (covariates) while preserving the projected county-level population totals. Here we used a bespoke set of covariates that included data potentially important for predicting the distribution of South Sudan’s unadjusted population projection. We started with a total of 36 covariates relating to land use types, physical attributes, climate and the built environment. The steps taken in our approach were:</p>
+<ul>
+<li>Prepare covariate layers so that their spatial extent matches the OCHA boundaries</li>
+<li>Mask out the areas considered to be IDP ‘displacement sites’ (e.g. UN Protection of Civilians sites, i.e. not ‘host communities’) across all covariates</li>
+<li>Calculate mean covariate values across the settled grid cells per county</li>
+<li>Calculate population density per county (population per settled area defined as the sum of areas of grid cell containing building centroids)</li>
+<li>Run iterations of the random forest model, with log mean population density as the response variable, dropping covariates that have low importance scores in each</li>
+<li>Run the final model that included important covariates only</li>
+<li>Predict log population density weighting layer using the final model and covariate values for each settled grid cell (excluding those classified as a displacement site)</li>
+<li>Distribute the aggregate (county-level) population counts to grid cells using the weighting layer</li>
+</ul>
+</div>
+<div id="mapping-locations-where-people-have-been-displaced-from" class="section level3 hasAnchor" number="12.2.4">
+<h3><span class="header-section-number">12.2.4</span> Mapping locations where people have been displaced from<a href="south-sudan-v2.html#mapping-locations-where-people-have-been-displaced-from" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Data on where people have been displaced from is notoriously difficult to collect due to multiple settlement and administrative unit names used for given locations and challenges in recording multiple origins across large displaced populations. The IOM data summarises where the majority of current IDPs have been displaced from. This is reported for each IDP population (i.e. at each destination location) and by the following arrival time periods: a) 2014-2015; b) 2016-2017; c) 2018 pre- Revitalised Agreement for the Resolution of Conflict in South
+Sudan (R-ARCSS); d) 2018 post- R-ARCSS; e) 2019; and, f) 2020. While we know that different IDPs may have arrived at a destination location from different places of origin during a given time period, this data is the best resource compared to other available data. From this county origins data, we calculated the total estimated number of IDPs that had been displaced from each county. In addition to 1,615,765 IDPs, there was an estimated 2,185,117 refugees living outside of South Sudan (as of September 2020) <span class="citation">(<a href="#ref-UNHCR_2020">UNHCR 2020</a>)</span>. Very little data exists for the place of origin of these refugees. Here we combined information from two datasets to estimate the number of refugees displaced from each county but emphasise the unquantified and potentially large uncertainty in these estimates.</p>
+<p>The first dataset was a household survey conducted by the UN Refugee Agency (UNHCR) in each of the countries surrounding South Sudan <span class="citation">(<a href="#ref-UNHCR_2019">UNHCR 2019</a>)</span>. This survey covered a total of 6,964 households across 15 refugee camps: Ethiopia (3 camps), Uganda (3 camps), Sudan (2 camps), Kenya (3 camps), the Democratic Republic of Congo (3 camps) and the Central African Republic (1 camps). While data on county of origin was not available, the survey reported the proportion of respondents from each state in South Sudan. We applied these proportions to the total number of refugees to estimate the numbers displaced from each state, and then split these state level estimates across counties based on the reported ‘not yet returned’ estimates provided at each location surveyed in the IOM Baseline Assessment. ‘Not yet returned’ is an estimate of how many people have been displaced from the survey location and not returned, reported by the key informants. The ‘not yet returned’ numbers have a very large level of uncertainty due to recall biases and gaps in coverage for areas with consistently high conflict (as the Baseline Assessment targets locations of displaced persons and/or returnees, not areas where there are neither). Therefore, we did not use the exact numbers but instead used the proportion of ‘not yet returned’ across counties within a given state.
+The ‘not yet returned’ estimates were used for this step in estimating the origin of refugees, rather than using the origin data of IDPs because the origins of those displaced internally to neighbouring counties can be very different to the origins of those displaced into neighbouring countries. For example, Yei county has experienced some of the highest levels of conflict in the country yet there are very few IDPs reportedly displaced from Yei. Instead, people were forcibly displaced into Uganda, and this is evident in the relatively high estimates of ‘not yet returned’ for the county.</p>
+<p>After applying this procedure we found that four counties (Ibba, Western Equatoria; Morobo, Central Equatoria; Nagero, Western Equatoria; Panyikang, Upper Nile) had less than 10% of their census projection population remaining when the total number of people displaced from them was subtracted. Because of the high uncertainty in these displacement origin numbers, we re-estimated the total number of refugees from these four counties such that they did not exceed 90% of the census projection. In reality, it is possible that county populations are depleted to a larger extent, but we erred on the side of caution to avoid under-representing current populations of these counties in the final dataset. Reducing the number of refugees displaced from these four counties resulted in a
+total of 2,062,059 refugees being accounted for instead of the reported 2,185,117.</p>
+<p>We summed the estimated number of IDPs and refugees displaced from each county, and then applied the random forest disaggregation methodology to map estimates of people displaced from each settled grid cell across the country. For this we used the same steps as outlined in <a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement">Mapping of unadjusted population (population distribution in the absence of displacement)</a>. See Figure <a href="south-sudan-v2.html#fig:Fig5">12.5</a> for the distribution of estimated counts of people displaced from each county as well as the model response variable (log estimated density of people displaced from each county). Again, these settled grid cells did not include those classified as purposefully constructed or converted ‘displacement sites’. In addition to the 36 covariates used for predicting unadjusted population counts, we generated covariates relating to conflicts as variables relating to conflicts are critical for predicting where people have been displaced from. We used the reported conflict events between January 2014 and September 2020 in the Armed Conflict Location Events Database <span class="citation">(<a href="#ref-ACLED">Raleigh et al. 2010</a>)</span>. After initial comparisons of different potential measures, we created covariates for distance to: a) all ‘Battles’ and ‘Violence against civilians’ events; b) all events that resulted in 5 or more fatalities; c) all events that resulted in 20 or more fatalities; and, d) all events that resulted in 50 or more fatalities. Each layer was created separately for each year between 2014 and 2020.</p>
+</div>
+<div id="final-population-distribution-accounting-for-displacement" class="section level3 hasAnchor" number="12.2.5">
+<h3><span class="header-section-number">12.2.5</span> Final population distribution accounting for displacement<a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To produce the final, high spatial resolution gridded population distribution, we simply applied the following equation using the grid cell level datasets:</p>
+<center>
+<strong>Population count = unadjusted (baseline) pop. count + IDP count - pop.count displaced from location</strong>
+</center>
+This corresponds to the equation in the introduction section of this chapter.
+<center>
+<strong>Final population = baseline population + in-displacement - out-displacement</strong>
+<center>
+</div>
+</div>
+<div id="results-4" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Results<a href="south-sudan-v2.html#results-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mapping-of-internally-displaced-persons-1" class="section level3 hasAnchor" number="12.3.1">
+<h3><span class="header-section-number">12.3.1</span> Mapping of internally displaced persons<a href="south-sudan-v2.html#mapping-of-internally-displaced-persons-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The mean and median number of IDPs per grid cell was: 344 and 224 for ‘displacements sites’ and 4 and 2 for ‘host community’ sites (<strong>Figure <a href="south-sudan-v2.html#fig:Fig1">12.1</a></strong>). Our method of incrementally increasing the buffer around georeferenced locations was able to capture a reasonable area of buildings that could house IDPs in urban and many rural areas. <strong>Figure <a href="south-sudan-v2.html#fig:Fig2">12.2</a></strong> shows an example of the areas mapped as IDP locations across South Sudan’s capital, Juba. In some sparse rural areas, particularly Jonglei in the east of the country, IDP coordinate locations were very far away from their nearest building footprints. Further work is needed to understand the overlap of point locations and building footprints in the context of individual IDP population, e.g. what type of community do the IDPs join? What is the primary housing type? Is the spatial extent in which IDPs live fluctuating significantly in short periods of time? With limited data available on the spatial extent of non-UN camps, it is outside the scope of this study to address these questions and thoroughly evaluate the mapped IDPs. Here we provide a starting point to facilitate future work on mapping IDPs from community level point locations, and recommend further evaluation in collaboration
+with NBS, IOM and other data collectors.</p>
+<p>A total of 1,431 grid cells out of 1,054,006 settled grid cells were classified as ‘displacement sites’ across the country. These cells were considered to contain IDPs only and were not included in the mapping of the unadjusted census projections and where people have been displaced from.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:Fig1"></span>
+<img src="pic/SSD_hist.png" alt="**Histograms of IDPs per cell for ‘displacement sites’ (left) and ‘host communities’ (right)**." width="100%"  />
+<p class="caption">
+Figure 12.1: <strong>Histograms of IDPs per cell for ‘displacement sites’ (left) and ‘host communities’ (right)</strong>.
+</p>
+</div>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:Fig2"></span>
+<img src="pic/SSD_displacement.png" alt="**Mapped spatial extents of IDP populations across Juba derived using reported point locations and estimates IDP counts as of September 2020 [@IOM_SSD2] and building footprint [@EcopiaAI_SSD]**." width="100%"  />
+<p class="caption">
+Figure 12.2: <strong>Mapped spatial extents of IDP populations across Juba derived using reported point locations and estimates IDP counts as of September 2020 <span class="citation">(<a href="#ref-IOM_SSD2">IOM 2021</a>)</span> and building footprint <span class="citation">(<a href="#ref-EcopiaAI_SSD">Ecopia.AI &amp; Maxar Technologies 2020b</a>)</span></strong>.
+</p>
+</div>
+</div>
+<div id="mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement-1" class="section level3 hasAnchor" number="12.3.2">
+<h3><span class="header-section-number">12.3.2</span> Mapping of unadjusted population (population distribution in the absence of displacement)<a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The variance explained was 50.02% and the mean of squared residuals was 0.28, for the final random forest model used to predict the unadjusted census population counts at a high spatial resolution. Given the relatively low number of administrative unit (79 counties) to fit the model and the high uncertainties in projections from a census conducted 12 years ago, we consider these results to be reasonable. <strong>Figure <a href="south-sudan-v2.html#fig:Fig3">12.3</a></strong> shows covariate importance for the final model and highlights that specific monthly precipitation means and building footprint metrics were among the best variables from the covariate set for estimating the spatial distribution of the unadjusted population.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:Fig3"></span>
+<img src="pic/SSD_covs_importance1.png" alt="**List of covariates used to predict the unadjusted census population counts, ordered by importance in the model**. The %IncMSE indicates the increase of the mean squared error and the IncNodePurity is a measure of the total increase in node purity, when the given variable is randomly permuted." width="100%"  />
+<p class="caption">
+Figure 12.3: <strong>List of covariates used to predict the unadjusted census population counts, ordered by importance in the model</strong>. The %IncMSE indicates the increase of the mean squared error and the IncNodePurity is a measure of the total increase in node purity, when the given variable is randomly permuted.
+</p>
+</div>
+</div>
+<div id="mapping-of-where-people-have-been-displaced-from" class="section level3 hasAnchor" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> Mapping of where people have been displaced from<a href="south-sudan-v2.html#mapping-of-where-people-have-been-displaced-from" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For the final random forest model estimating the origin of displacement, the variance explained was 46.34 % and the mean of squared residuals was 0.81. We found that the conflict covariates were the most important of the covariates set (<strong>Figure <a href="south-sudan-v2.html#fig:Fig4">12.4</a></strong>). These results show that there is huge potential for using geospatial layers derived from conflict data to map and understand where people have been displaced from. Again, the level of variance explained by the model is reasonable given that the model is based on only 79 administrative units and the high uncertainties in county level counts. The county level estimates were based on summaries of place of origin for whole IDP populations as well as very limited origin data of refugees. In order to improve the accuracy of mapping where people have been displaced from, finer scale origin data is needed.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:Fig4"></span>
+<img src="pic/SSD_covs_importance2.png" alt="**List of covariates used to predict the locations where people have been displaced from, ordered by importance in the model**. The %IncMSE indicates the increase of the mean squared error and the IncNodePurity is a measure of the total increase in node purity, when the given variable is randomly permuted." width="100%"  />
+<p class="caption">
+Figure 12.4: <strong>List of covariates used to predict the locations where people have been displaced from, ordered by importance in the model</strong>. The %IncMSE indicates the increase of the mean squared error and the IncNodePurity is a measure of the total increase in node purity, when the given variable is randomly permuted.
+</p>
+</div>
+<p>In a small proportion of grid cells (12,638 out of 1,054,006) we found that the estimated number of people displaced from them was larger than their unadjusted population count. This was not unexpected given the high levels of uncertainty in both the census projections and the counts of people displaced from counties, and shows that the county level uncertainty propagated to the grid cell level. The affected grid cells were concentrated to a small number of counties in Upper Nile State and along the southern national border, and correspond to the areas of highest conflict (see top-right map of <strong>Figure <a href="south-sudan-v2.html#fig:Fig5">12.5</a></strong> for variation in estimates of people displaced across counties with lighter colours indicating counties where large numbers have been displaced from). For these grid cells where the estimated number of people displaced from them exceeded their unadjusted population count, we replaced the value in the origin of displacement layer with the unadjusted population count, such that the final population estimates are set to zero.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:Fig5"></span>
+<img src="pic/SSD_response.png" alt="**Distribution of county level counts in absolute numbers (top plots) and log densities (bottom plots)**. In this study we used the United Nations Office for the Coordination of Humanitarian Affairs (OCHA) operational administrative level 2 boundaries (counties) dataset [@OCHA], as shown here." width="100%"  />
+<p class="caption">
+Figure 12.5: <strong>Distribution of county level counts in absolute numbers (top plots) and log densities (bottom plots)</strong>. In this study we used the United Nations Office for the Coordination of Humanitarian Affairs (OCHA) operational administrative level 2 boundaries (counties) dataset <span class="citation">(<a href="#ref-OCHA">OCHA 2020</a>)</span>, as shown here.
+</p>
+</div>
+</div>
+<div id="final-population-distribution-accounting-for-displacement-1" class="section level3 hasAnchor" number="12.3.4">
+<h3><span class="header-section-number">12.3.4</span> Final population distribution accounting for displacement<a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For the final population data, the mean, median and maximum grid cell level population counts were 10.6, 7.1 and 921.0, respectively. In <strong>Figure <a href="south-sudan-v2.html#fig:Fig7">12.7</a></strong> we present the final population distribution across Juba, and in <strong>Figure <a href="south-sudan-v2.html#fig:Fig6">12.6</a></strong> we show the final state level totals.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:Fig6"></span>
+<img src="pic/SSD_table.png" alt="**2020 state level population counts from census projections (unadjusted to account for displacement) and counts for the South Sudan V2.0 dataset that are adjusted to account for displacement.** This is the number of refugees we deducted from the census counts given the available county level population data and place of origin information. The official number of refugees as of October 2021 was 2,185,117 [@UNHCR_2020]." width="100%"  />
+<p class="caption">
+Figure 12.6: <strong>2020 state level population counts from census projections (unadjusted to account for displacement) and counts for the South Sudan V2.0 dataset that are adjusted to account for displacement.</strong> This is the number of refugees we deducted from the census counts given the available county level population data and place of origin information. The official number of refugees as of October 2021 was 2,185,117 <span class="citation">(<a href="#ref-UNHCR_2020">UNHCR 2020</a>)</span>.
+</p>
+</div>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:Fig7"></span>
+<img src="pic/SSD_pop.png" alt="**Final grid cell level population counts accounting for displacement across Juba.** The highest population counts (red) can been seen in areas where ‘displacement sites’ are located and relatively high population counts (dark orange) in areas where IDPs are present in host communities." width="100%"  />
+<p class="caption">
+Figure 12.7: <strong>Final grid cell level population counts accounting for displacement across Juba.</strong> The highest population counts (red) can been seen in areas where ‘displacement sites’ are located and relatively high population counts (dark orange) in areas where IDPs are present in host communities.
+</p>
+</div>
+</div>
+</div>
+<div id="discussion-5" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Discussion<a href="south-sudan-v2.html#discussion-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here we present a unique approach for integrating different datasets to produce high spatial resolution population estimates that account for displacement in a high conflict and data limited setting. We estimate the approximate time point that the data represents as being September 2020, given the mix of input data. We recommend the following areas for future work:</p>
+<ul>
+<li><p>Validation of IDP population spatial extents - here we applied a set of rules to map IDP populations, but further information about the populations is needed to help understand their densities compared to that of host populations.</p></li>
+<li><p>Collating information on place of origin of displaced persons - there is very little coherent and accurate origin data. The UNHCR survey used in this study had a relatively small sample size and only reported data at the state level. Similar representative household surveys of displaced populations could provide valuable data on place of origin at a fine scale. This would open up options to carry out causal analyses as well as improve the county level estimates for the top-down approach we implemented.</p></li>
+<li><p>Development of informative covariates for improving the accuracy of top-down models - uncertainty in county level counts needs to be reduced before this step, however, with more accurate estimates further testing of potential covariates could improve the results. Specifically:</p></li>
+</ul>
+<p>– Other covariates relating to fatalities and event types that could be derived from the conflict location data</p>
+<p>– Alternatives to the flow accumulation covariate that may be indicative of flooding events, e.g. topographic wetness index. Although natural disasters were responsible for only &lt; 3% of IDP displacement <span class="citation">(<a href="#ref-IOM_SSD">IOM 2017</a>, <a href="#ref-IOM_SSD2">2021</a>)</span></p>
+<p>– Other climatic variables - here we only used monthly precipitation. We did test alternative models that included 3 month means and sums in place of the individual monthly precipitation covariates, but the latter produced better model fit. <a href="https://www.worldclim.org/data/worldclim21.html">WorldClim</a> provides other variables on temperature and additional metrics such as maximum and minimums.</p>
+<ul>
+<li>Consideration of seasonal dynamics including nomadic groups.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> The gridded population estimates for SSD are available from the WorldPop Open Population Repository <a href="https://wopr.worldpop.org/?COD/">WOPR</a>, and they can be visualized using the <a href="https://apps.worldpop.org/woprVision/">WOPR Vision</a> web application (select “SSD v2.0”)</p>
+</blockquote>
+</div>
+<div id="contribution-8" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Contribution<a href="south-sudan-v2.html#contribution-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter and its corresponding dataset was led by Claire A. Dooley. Chris Jochem, Alessandro Sorichetta and Andy Tatem contributed to methods development. Oversight of the work was provided by Attila Lazar and Andy Tatem.</p>
+</div>
+<div id="suggested-citation-5" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Suggested Citation<a href="south-sudan-v2.html#suggested-citation-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dooley CA, Jochem WC, Sorichetta A, Lazar AN and Tatem AJ. 2021. Description of methods for South Sudan
+2020 gridded population estimates from census projections adjusted for displacement, version 2.0. WorldPop,
+University of Southampton. doi: 10.5258/SOTON/WP00710</p>
+</div>
+<div id="funding-2" class="section level2 unnumbered hasAnchor">
+<h2>Funding<a href="south-sudan-v2.html#funding-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This work is part of the GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development) project
+funded by the Bill and Melinda Gates Foundation (BMGF) and the United Kingdom Foreign, Commonwealth &amp;
+Development Office (INV-009579, formerly OPP1182425)</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-Dooley_SSD" class="csl-entry">
+Dooley C, Jochem W, Leasure D, Sorichetta A, Lazar A, Tatem A, Bondarenko M. 2021. South sudan 2020 gridded population estimates from census projections adjusted for displacement, version 2.0.
+</div>
+<div id="ref-EcopiaAI_SSD" class="csl-entry">
+Ecopia.AI &amp; Maxar Technologies. 2020b. Digitize africa data — building footprints. <a href="https://www.maxar.com/products/imagery-basemaps">https://www.maxar.com/products/imagery-basemaps</a>.
+</div>
+<div id="ref-IOM_SSD" class="csl-entry">
+IOM. 2017. Displacement tracking matrix. Kajo keji, central equatoria: Paper registration | rapid intentions &amp; multi-sectorial needs survey | 29 june-12 july 2017.
+</div>
+<div id="ref-IOM_SSD2" class="csl-entry">
+IOM. 2021. South sudan - baseline assessment round 9 - IDP and returnee. Data released 31st january 2021. <a href="https://displacement.iom.int">https://displacement.iom.int</a>.
+</div>
+<div id="ref-Minnesota" class="csl-entry">
+Minnesota Population Center. 2020. Integrated public use microdata series, international: Version 7.3 [south sudan 2008 census]. Minneapolis, MN: IPUMS, 2020. <a href="https://doi.org/10.18128/D020.V7.3">https://doi.org/10.18128/D020.V7.3</a>.
+</div>
+<div id="ref-NBS" class="csl-entry">
+National Bureau of Statistics. 2015. Population projections, south sudan. From 2015 - 2020.
+</div>
+<div id="ref-OCHA" class="csl-entry">
+OCHA. 2020. South sudan (SSD) administrative boundary common operational database (COD-AB). <a href="https://data.humdata.org/dataset/south-sudan-administrative-boundaries">https://data.humdata.org/dataset/south-sudan-administrative-boundaries</a>.
+</div>
+<div id="ref-r2020r_SSD" class="csl-entry">
+R Core Team. 2020b. <em>R: A language and environment for statistical computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-ACLED" class="csl-entry">
+Raleigh C, Linke rew, Hegre H, Karlsen J. 2010. Introducing ACLED: An armed conflict location and event dataset. <em>Journal of peace research</em> 47:651–660.
+</div>
+<div id="ref-Stevens_SSD" class="csl-entry">
+Stevens FR, Gaughan AE, Linard C, Tatem AJ. 2015d. Disaggregating census data for population mapping using random forests with remotely-sensed and ancillary data. <em>PloS one</em> 10:e0107042.
+</div>
+<div id="ref-UNHCR_2019" class="csl-entry">
+UNHCR. 2019. Regional intention survey of south sudanese refugees. <a href="https://microdata.unhcr.org/index.php/catalog/224">https://microdata.unhcr.org/index.php/catalog/224</a>.
+</div>
+<div id="ref-UNHCR_2020" class="csl-entry">
+UNHCR. 2020. Regional overview of the south sudanese refugee population: 2020 SOUTH SUDAN REGIONAL RRRP.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="burkina-faso-v1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="zambia-v1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

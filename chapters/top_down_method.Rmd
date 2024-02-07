@@ -1,0 +1,21 @@
+# Top-down Models
+
+> **Note:** This chapter is currently being drafted. To make suggestions, please raise an [issue](https://github.com/wpgp/bookworm/issues) in the bookworm repository. Include the tags \@asoriche and \@doug-leasure in your issues or pull requests.
+
+## Introduction
+
+## Model Specification
+
+## Large Scale Mapping
+
+### Global 1
+
+### Latin American and Carribean Regions
+
+
+## Contributing 
+This chapter was written by *[contributors, please add your name here]*. Funding for the work described in this chapter was provided by *[please add funders and grant numbers here]*.
+
+## Suggested Citation 
+Doe J, ... . 2020. Population Mapping Methods: Top-down Models. In *WorldPop Book of Methods, Vol. I: Gridded Population Estimates*. WorldPop, University of Southampton. `r format(Sys.time(), "%d %B %Y")`. https://docs.worldpop.org
+

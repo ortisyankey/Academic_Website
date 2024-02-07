@@ -1,0 +1,81 @@
+# Census Support
+
+## Introduction
+
+*Challenge:*  
+Census cannot always achieve national coverage because some areas may be inaccessible to census field workers. Census results can also become outdated, particularly in localized areas where migration is occurring.  
+
+*Solution:*  
+Use statistical models to estimate populations in areas where census results are not available or are outdated.  Statistical models relate observed population sizes from accessible areas to other data sets that can be mapped everywhere (i.e. in accessible and inaccessible areas). These relationships form the basis for population estimates in inaccessible areas.  
+
+*Technical Overview:*  
+WorldPop at the University of Southampton develops customized Bayesian statistical models for individual countries to maximize the information gleaned from available data. These models generally estimate the number of people in every 100 m grid cell within the area(s) of interest. Each population estimate is accompanied by a range of uncertainty (i.e. confidence intervals) for a given level of confidence (e.g. 95% confidence). These gridded population estimates can be aggregated within administrative units or other boundaries to derive population totals (with confidence intervals) for larger areas.  WorldPop models are developed in the R programming language and the code can be openly shared among stakeholders.   
+
+## Input Data
+**Key data inputs:**  
+
+1. Population data  
+2. Settlement map  
+3. Geospatial covariates  
+4. Administrative boundaries  
+
+### Population Data  
+Population data from accessible areas are essential to be able to estimate populations in inaccessible areas.  Population data used for modelling must include counts of people in clearly defined georeferenced areas.  A polygon shapefile with the boundary of each enumeration area and the total population within each area would be ideal.  There are a few potential sources for these data:  
+
+- Partial census results  
+- Microcensus surveys designed for population modelling (a random sample of locations where enumeration is carried out)  
+- Pre-survey listing data from routine household surveys (e.g. DHS, LSMS, MICS)  
+
+Point locations of buildings and/or households within enumeration areas are sometimes collected during census and survey field work.  These data can be very useful because they provide higher resolution information about population patterns, but they are not required. Pre-survey listing data can be very useful, especially if surveys were recently conducted in areas that were inaccessible to census enumerators.  If pre-survey listing data from household surveys are used, additional information about the site selection will also be required.  If the household survey used a sampling design in which survey locations were selected with probabilities proportional to population size (PPS), then it will be necessary to obtain the weights used for PPS sample design.  
+
+### Settlement Map  
+A settlement map identifies areas where residential structures occur.  It may also classify areas into settlement types such as urban, peri-urban, rural, slums, commercial, industrial, etc.  This information may be in the form of:  
+
+- Building locations (points)  
+- Building footprints (polygons)  
+- Gridded map identifying pixels that contain buildings (raster)  
+
+These data could be derived from several sources:  
+
+- Satellite imagery  
+- Pre-census cartography  
+- Building points and footprints can be purchased commercially  
+
+If there is no classification of settlement types available, building points or building footprints could be directly used to identify different settlement types based on the patterns of building locations (building density, spacing, regularity, etc). There are also freely available global settlement maps, but quality from global data sets varies strongly among countries, with the smallest settlements often missing, so this would need to be considered before committing to any publicly available global settlement map. Additional data about each building can be very beneficial for population modelling such as building area, height, or use (i.e. residential, commercial, mixed).  While these additional data would improve population estimates, they are not required.
+
+### Geospatial Covariates  
+Geospatial covariates are spatial data (e.g. GIS data) with national coverage that describe any variable that may be correlated with population densities.  
+
+For example, a digital map of road networks (a line shapefile) could be used to calculate road densities which may correlate with population densities.  Or, global satellite-derived nighttime lights data sets (raster files) may correlate with population densities in some areas.  Administrative records could also be useful such as electricity usage for each administrative unit (polygon shapefile).  Locations of public facilities such as schools (a point shapefile) can also be very informative.  If the number of students attending each school is known, that would also likely add to the accuracy of population estimates.  
+
+There are an almost infinite number of possible geospatial covariates.  Many of them are publicly available, so identifying these data sets is not necessarily required to initiate population modelling. But, identifying good quality covariates (i.e. those that are strongly correlated to population density) that are comprehensive with national coverage can significantly improve the accuracy of population estimates.
+
+Some examples include:  
+
+- Road networks
+- Intensity of nighttime lights
+- Electricity usage
+- School locations
+- School enrollment numbers
+- Health facility locations
+- Police station locations
+- Locations of large employers (factories, mines, etc.)
+- Average household size (aggregated, not personal data)
+- Average income (aggregated, not personal data)
+- Land cover (forest, agriculture, urban, etc.)
+- Terrain slope and elevation
+- Climate variables (temperature, precipitation)
+
+### Administrative Boundaries  
+Administrative boundaries could include regions, states (provinces), and/or local government areas.  These administrative units are often nested within one another.  Administrative units can be used by the model as a covariate to improve estimates of population densities.  Administrative units can also be used to summarize model results, providing population totals for each administrative unit.  
+
+## Recommendations  
+To assess the potential for hybrid census implementation for a specific country and potential modelling methods, sharing of sample data for any specific area relating to the above categories would be valuable. In particular, a sample of the population data with indications of areas that were not enumerated, and any geospatial data on settlement/building locations would be especially useful.
+
+### Contributing 
+This chapter was written by Doug Leasure and Andy Tatem.  
+
+### Suggested Citation 
+WorldPop. `r format(Sys.time(), "%Y")`. Hybrid Census. In: *WorldPop Book of Methods*. WorldPop Research Group, University of Southampton. `r format(Sys.time(), "%d %B %Y")`, https://docs.worldpop.org/bookworm
+
+### References {-}  

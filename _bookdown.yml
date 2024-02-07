@@ -1,0 +1,45 @@
+new_session: FALSE
+output_dir: "docs"
+delete_merged_file: TRUE
+before_chapter_script: "before-chapter.R"
+rmd_files: [
+"index.Rmd",
+
+  "chapters/part1.Rmd",
+  "chapters/gridded_population_estimates.Rmd",
+  "chapters/data_access.Rmd",
+  "chapters/research_applications.Rmd",
+  "chapters/Settlement_Data_Geospatial_Covariates.Rmd",
+
+  "chapters/part2.Rmd",
+  "chapters/bottom_up_method.Rmd",
+  "chapters/tutorial1_linearRegression.Rmd",
+  "chapters/tutorial2_hierarchicalModel.Rmd",
+  "chapters/tutorial3_covariates.Rmd",
+  "chapters/tutorial4_diagnosticsPrediction.Rmd",
+    "chapters/weighted-likelihood-report.Rmd",
+
+    "chapters/part2a.Rmd",
+  "chapters/hierarchical_NGAv1.Rmd",
+  "chapters/hierarchical_CODv2.Rmd",
+  "chapters/hierarchical_GHAv1.Rmd",
+  "chapters/hierarchical_BFAv1.Rmd",
+  "chapters/hierarchical_SSDv2.Rmd",
+  "chapters/hierarchical_ZMBv1.Rmd",
+  "chapters/Geostatistical_Modelling.Rmd",
+  "chapters/Geostatistical_Use_Cases.Rmd",
+
+  # "chapters/part3.Rmd",
+  # "chapters/top_down_method.Rmd",
+  # "chapters/top-down-tutorial.Rmd",
+  # "chapters/bespoke_use_case_top_down.Rmd",
+  #
+  #  "chapters/part4.Rmd",
+  # "chapters/agesex_method.Rmd",
+  #
+  #  "chapters/part5.Rmd",
+  #  "chapters/hybrid_population_mapping.Rmd",
+
+  "chapters/partEnd.Rmd"
+
+]

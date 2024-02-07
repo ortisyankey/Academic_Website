@@ -1,0 +1,257 @@
+# Bottom-up Models
+
+
+Bottom-up population modelling methods [@wardrop2018spatially; @leasure2020national] use geolocated household survey data from a sample of locations to fit statistical models that estimate population sizes for unsampled areas based on relationships with spatial covariates. WorldPop develops customized statistical models for individual countries to make the best use of available survey data and to provide robust estimates of uncertainty. 
+
+This is a good approach when there has not been a recent or complete national census but there are recent geolocated household survey data available. This approach provides Bayesian estimates of uncertainty but requires more detailed input data and more time to develop the models.
+
+## Input Data
+Bottom-up methods require a few key types of input data:   
+
+1. Population data  
+2. Settlement map  
+3. Geospatial covariates  
+4. Administrative boundaries  
+
+### Population Data  
+Population data for bottom-up methods generally must include counts of people in clearly defined georeferenced areas.  A polygon shapefile with the boundary of each enumeration area and the total population within each area is ideal.  There are a few potential sources for these data:  
+
+- Partial census results  
+- Microcensus surveys designed for population modelling (a random sample of locations where enumeration is carried out)  
+- Pre-survey listing data from routine household surveys (e.g. DHS, LSMS, MICS)  
+
+Point locations of buildings and/or households within enumeration areas are sometimes collected during census and survey field work.  These data can be very useful because they provide higher resolution information about population patterns, but they are not required. Pre-survey listing data can be very useful, especially if surveys were recently conducted in areas that were inaccessible to census enumerators.  If pre-survey listing data from household surveys are used, additional information about the site selection will also be required.  If the household survey used a sampling design in which survey locations were selected with probabilities proportional to population size (PPS), then it will be necessary to obtain the weights used for PPS sample design.  
+
+### Settlement Map  
+A settlement map identifies areas where residential structures occur.  It may also classify areas into settlement types such as urban, peri-urban, rural, slums, commercial, industrial, etc (see [Settlement Classification]).  This information may be in the form of:  
+
+- Building locations (points)  
+- Building footprints (polygons)  
+- Gridded map identifying pixels that contain buildings (raster)  
+
+These data could be derived from several sources:  
+
+- Satellite imagery  
+- Pre-census cartography  
+- Building points and footprints can be purchased commercially 
+- Gridded derivatives of building footprints are freely available for some countries [@dooley2020gridded]
+
+If there is no classification of settlement types available, building points or building footprints could be directly used to identify different settlement types based on the patterns of building locations [@jochem2020classifying; @jochem2018identifying]. There are also freely available global settlement maps, but quality from global data sets varies strongly among countries, with the smallest settlements often missing, so this would need to be considered before committing to any publicly available global settlement map. 
+
+Additional data about each building can be very beneficial for population modelling such as building area, height, or use (i.e. residential, commercial, mixed).  Classifying individual buildings as residential or non-residential [@sturrock2018predicting; @lloyd2020classifying] can sometimes be accomplished with existing public data from Open Street Maps and other sources.  While these additional data would improve population estimates, they are not required.
+
+### Geospatial Covariates  
+Geospatial covariates are spatial data (e.g. GIS data) with national coverage that describe any variable that may be correlated with population densities. There are many suitable datasets that are publicly available, including some produced by WorldPop for this purpose [@lloyd2019global; @dooley2020gridded].  
+
+For example, a digital map of road networks (a line shapefile) could be used to calculate road densities which may correlate with population densities.  Or, global satellite-derived nighttime lights data sets (raster files) may correlate with population densities in some areas.  Administrative records could also be useful such as electricity usage for each administrative unit (polygon shapefile).  Locations of public facilities such as schools (a point shapefile) can also be very informative.  If the number of students attending each school is known, that would also likely add to the accuracy of population estimates.  
+
+There are an almost infinite number of possible geospatial covariates.  Many of them are publicly available, so identifying these data sets is not necessarily required to initiate population modelling. But, identifying good quality covariates (i.e. those that are strongly correlated to population density) that are comprehensive with national coverage can significantly improve the accuracy of population estimates.
+
+### Administrative Boundaries  
+
+Administrative boundaries could include regions, states (provinces), and/or local government areas.  These administrative units are often nested within one another.  Administrative units can be used by the model as a covariate to improve estimates of population densities.  Administrative units can also be used to summarize model results, providing population totals for each administrative unit.  
+
+## Statistical Models
+
+WorldPop develops customized Bayesian models to make the best use of available data for specific countries and to accurately quantify uncertainty associated with the population estimates. 
+
+Bayesian models generate population estimates as probability distributions known as "posteriors". You can see examples of posterior probability distributions for population estimates in the <a href="https://apps.worldpop.org/woprVision" target="_blank">woprVision web application</a>. We use the mean value of the posterior probability distribution as the expected value for the population estimate. Variance around the mean represents uncertainty in the population estimate. 
+
+Uncertainty in population estimates may be caused by several factors. Sometimes uncertainty results from sampling error associated with small sample sizes (i.e. not many household survey clusters in the area). Uncertainty may also represent true variation in population densities from neighborhood to neighborhood that simply could not be explained by the covariates in the model. Uncertainty may also be related to the structure of the statistical model itself. To reduce uncertainty in a model, you must weigh the cost-benefits for: A) collecting more household survey data, B) finding better covariates to predict population densities, or C) revising the model structure. Revising the model structure is by-far the easiest and this is one reason why the flexibility of Bayesian models is so important. 
+
+### Software
+A quick note about software before we get into the models themselves. The R programming language for statistical computing [@r2020r] is ideal for fitting Bayesian models. There are a number of software packages available, but a few that we regularly use are:  
+
+1. STAN software [@carpenter2017stan] with the rstan R package [@stan2020rstan]  
+2. JAGS software [@plummer2003jags] with the runjags R package [@denwood2016runjags]  
+3. INLA R package [@lindgren2015bayesian]  
+
+If you are new to Bayesian modelling, we recommend starting with STAN because it provides full flexibility to customize your models, it has excellent documentation (<a href="https://mc-stan.org/" target="_blank">mc-stan.org</a>) and it is computationally more efficient than JAGS. If you are already familiar with the BUGS or JAGS languages, you can build all of the models described below using either software. If you want to build geostatistical models (see [Geostatistical Models]), INLA (<a href="http://www.r-inla.org" target="_blank">R-INLA.org</a>) is the preferred software because it is more computationally efficient than JAGS or STAN for estimating high-dimensional spatial covariance parameters, although it is less flexible for building customized hierarchical models.  
+
+### Simple Model to Start
+
+A simple linear regression can be written as:
+
+$$
+y_i \sim Normal(\mu_i, \sigma) \\
+\mu_i = \alpha + \beta x_i
+$$
+
+where $y_i$ is the value of the response variable at location $i$ and $x_i$ is the predictor variable (a.k.a. covariate). These two variables represent observed data and all of the other variables represent model parameters that we will estimate using STAN, JAGS, or INLA (software described above). 
+
+$\mu_i$ is the expected value of the response variable based on the covariate value $x_i$ at a given location. It is the mean of the normal distribution. Random noise that could result in the observed value being different than the expected value (i.e. residual variance, uncertainty) is represented by $\sigma$ (i.e. standard deviation). The regression coeffecient $\beta$ (i.e. regression slope) estimates the effect of the covariate on the expected value, and $\alpha$ (i.e. regression intercept) is the expected value for the response variable when the covariate is equal to zero. 
+
+The first line of the model is the stochastic model (i.e. it includes random noise) and the second line is deterministic (i.e. it always generates the same output for a given input). The selection of a normal distribution (a.k.a. Gaussian) in the stochastic portion of the model should be based on characteristics of the response variable. A normal distribution represents continuous numbers that can be negative or positive.  
+
+For population modelling, our response variables are counts of people $N_i$ that are always positive integers, so we need to choose a more appropriate stochastic model. We can modify the Gaussian linear regression above into a Poisson regression:
+
+\begin{equation}
+  N_i \sim Poisson( \mu_i ) \\
+  log(\mu_i) = \alpha + \beta x_i
+  (\#eq:poisson)
+\end{equation}
+
+This is a generalized linear model with a log-link function [@mccullagh1989generalized]. The log-link function ensures that $\mu_i$ is always positive, and the Poisson distribution produces positive integers. Now we have an appropriate deterministic regression and stochastic model for population counts.
+
+### Bayesian Priors 
+To implement this model Eq. \@ref(eq:poisson) in a Bayesian context, we need to define priors for $\alpha$ and $\beta$. Priors are probability distributions that represent our prior knowledge about the range of possible values for parameters in the model. Priors must be specified for any "root node" parameters, those that do not show up on the left side of any probability statements in the model. Probability distributions used as priors are usually very disperse flat priors so that they do not influence the posterior parameter estimates. In general, we try to specify priors that are informative enough to define a realistic range of possible values for the parameter but vague enough to allow the observed data to have dominating influence on the parameter estimates. 
+
+For the model in Eq. \@ref(eq:poisson), we could choose uninformative flat priors:
+$$
+\alpha \sim Uniform(-10, 10) \\
+\beta \sim Uniform(-10, 10) 
+$$
+On the log-scale, this is a range from near zero to over 22,000.  
+
+Or, we may prefer more informative priors:
+
+$$
+\alpha \sim Normal(0, 5) \\
+\beta \sim Normal(0, 1) 
+$$
+The relative influence of priors depends on the scale of the response variable and the structure of the model. It is good practice to test the relative influence of various priors on the posterior parameter estimates before making a decision.
+
+In this chapter, we will assume that you understand Bayesian priors and we will not explicitly specify the priors in our examples unless the prior selection is noteworthy.
+
+### Hierarchical Core Model
+
+A hierarchical model is one where the output (left side of equation) from one stochastic model serves as the input (right side) of another. Building on the Poisson regression in Eq. \@ref(eq:poisson), we can make a hierarchical model that incorporates population density $D_i$: 
+
+\begin{equation}
+  N_i \sim Poisson( D_i A_i ) \\
+  D_i \sim LogNormal( \bar{D}_i, \sigma) \\
+  \bar{D}_i = \alpha + \sum_{k=1}^{K} \beta_k x_{i,k}
+  (\#eq:likelihood)
+\end{equation}
+
+where $A_i$ is observed data measuring total settled area within location $i$. If area is measured in hectares, then $D_i$ would be people per hectare. $\bar{D}_i$ is the expected population density on the log scale (i.e. the mean of the log-normal distribution), and $\sigma$ is the residual variance term. $K$ is the total number of covariates included in the model. 
+
+This hierarchical formulation has several advantages over the simple Poisson regression from Eq. \@ref(eq:poisson):  
+
+1. It adds a residual variance term $\sigma$ that allows for over-dispersion of the Poisson,  
+2. Covariates are now predicting population density rather than counts, and   
+4. The log-normal replaces the log-link function (acting as a stochastic log-link).  
+
+Over-dispersion means that the model can now accommodate more residual variance in population counts than could be modelled with a Poisson distribution alone (because Poisson doesn't have a variance parameter). In addition, making the covariates predictors of population density rather than population counts avoids the confounding effect of area. For example, two locations with identical covariate values and population densities could have very different population counts if the total amount of settled area is different.  The hierarchical model explicitly accounts for this multi-level process.  
+
+Eq. \@ref(eq:likelihood) will serve as the core likelihood model for many of the model customizations described below.
+
+### Age-sex Structure
+We can incorporate an age-structured sub-model if the household survey data contain counts $M_{i,g}$ of people in each age-sex group $g$ at each location $i$. These data allow us to estimate a population pyramid (i.e. proportions of the population in each age-sex group) and to produce age-sex-specific population estimates. A multinomial model can be added to Eq. \@ref(eq:likelihood) to achieve this:
+
+\begin{equation}
+  M_{i,g} \sim Multinomial(\theta_{r,g}, N_i) \\
+  \theta_{r,g} \sim Dirichlet(rep(1,g))
+  (\#eq:agesex)
+\end{equation}
+
+where $N_i$ is the total population at location $i$ from Eq. \@ref(eq:likelihood). The population pyramid $\theta_{r,g}$ is being estimated independently for each region $r$ with a flat Dirichlet prior. The Dirichlet prior enforces the assumptions that individual elements of $\theta_{r,g=1:G}$ are between zero and one and that they sum to one across all age-sex groups $g$. 
+
+
+### Random Intercept
+
+Random effects are regression coefficients (e.g. $\alpha$ and $\beta$ above) that are dependent on other parameters. All of the regression coefficients shown above were fixed effects because they were not dependent on other parameters. Models that contain random effects are sometimes called mixed effects models because they contain fixed and random effects. Mixed effects models may have random intercepts, random slopes, or both.
+
+An example of a random intercept in a population model could be a regression intercept $\alpha$ (i.e. average population density) that is estimated separately for urban and rural areas in a way that accounts for the correlation between the two. We can adjust Eq. \@ref(eq:likelihood) to have this random intercept $\alpha_t$:
+
+\begin{equation}
+  N_i \sim Poisson( D_i A_i ) \\
+  D_i \sim LogNormal( \bar{D}_i, \sigma) \\
+  \bar{D}_i = \alpha_t + \sum_{k=1}^{K} \beta_k x_{i,k} \\
+  \alpha_t \sim Normal(\eta, \theta)
+\end{equation}
+
+where $t$ is the settlement type (i.e. urban or rural) that location $i$ belongs to. $\eta$ and $\theta$ are the mean and standard deviation of $\alpha$ among settlement types. The correlation between $\alpha$ for the two settlement types is explicitly modelled because they are drawn from the same distribution, but these parameter estimates will still differ based on their fit to the data from each settlement type. This is a random intercept by settlement type and it can help to account stratified sampling that household surveys often use to collect population data.
+
+We can extend this concept to a random intercept by settlement type $t$ and region $r$ to account for additional spatial correlation where population densities from the same region are more similar to one another than population densities from different regions. Regions $r$ could be defined as states or local government areas. This two-level random intercept $\alpha_{t,r}$ (by settlement type and region) could be included as:
+
+\begin{equation}
+  N_i \sim Poisson( D_i A_i ) \\
+  D_i \sim LogNormal( \bar{D}_i, \sigma) \\
+  \bar{D}_i = \alpha_{t,r} + \sum_{k=1}^{K} \beta_k x_{i,k} \\ 
+  \alpha_{t,r} \sim Normal(\breve{\alpha}_{t}, \theta_{t}) \\
+  \breve{\alpha}_{t} \sim Normal(\bar{\alpha}, \eta) 
+  (\#eq:intercept)
+\end{equation}
+
+where $\breve{\alpha}_{t}$ and $\theta_{t}$ are the mean and standard deviation (for each settlement type) of regression intercepts $\alpha_{t,r}$ among regions. At the national level, $\bar{\alpha}$ and $\eta$ are the mean and standard deviation for $\breve{\alpha}_{t}$. 
+
+This hierarchical random intercept can help to account for:  
+- Sampling that is stratified by settlement type, and 
+- Spatial autocorrelation within regions.  
+
+### Hierarchical Variance  
+
+Similar to the hierarchical random intercept above, we can also use hierarchical variance by settlement type and region. This allows us to map uncertainty to see where residual variance is the greatest and giving more realistic ranges of uncertainty around population estimates in different regions and settlement types. We could modify Eq. \@ref(eq:likelihood) to have hierarchical variance $\sigma_{t,r}$:  
+
+\begin{equation}
+  N_i \sim Poisson( D_i A_i ) \\
+  D_i \sim LogNormal( \bar{D}_i, \sigma_{t,r}) \\
+  \bar{D}_i = \alpha + \sum_{k=1}^{K} \beta_k x_{i,k} \\
+  \sigma_{t,r} \sim HalfNormal( \breve{\sigma}_t, \theta_t ) \\
+  \breve{\sigma}_t \sim HalfNormal( \bar{\sigma}, \eta )
+  (\#eq:variance)
+\end{equation}
+
+Half-Cauchy distributions are also often recommended for modelling hierarchical variances rather than the Half-Normal that we have shown here [@gelman2013bayesian]. Hierarchical variances can lead to convergence issues and care must be taken to specify priors that result in good convergence without being too influential on the posterior parameter estimates. It is often necessary to simplify the variance structure (e.g. fewer settlement types, or regions, or dropping one level entirely), especially if the sample size is low in some regions and/or settlement types.
+
+### Weighted-likelihood
+
+Household surveys often implement a weighted sampling design known as PPS, or Probability Proportional to Size. This means that the probability of a location being selected for the survey is not random, it is dependent on the number of people (or households) in that area. Household surveys use weighted sampling to achieve a representative sample of households. If they used spatial random sampling, the results would be biased towards rural areas because urban areas occupy less space on the landscape.
+
+To use these data for population modelling, it is necessary to account for the bias that weighted sampling can introduce to avoid overestimating average population densities. Suppose sample weights $w_i$ were used to collect a weighted sample of locations from a national sampling frame. We can build a weighted-likelihood model that incorporates these weights to provide unbiased estimates of population densities.  The first step is to calculate inverse weights and scale them to sum to one:
+
+\begin{equation}
+  m_i = \frac{w_i^{-1}}{\sum_{i=1}^I{w_i^{-1}}}
+\end{equation}
+
+$I$ is the total number of observations used to fit the model.
+The scaled inverse weights $m_i$ (or "model weights") are then used to weight individual samples in the likelihood by adjusting the variance term $\sigma_i$:
+
+\begin{equation}
+  N_i \sim Poisson( D_i A_i ) \\
+  D_i \sim LogNormal( \bar{D}_i , \sigma_i ) \\
+  \sigma_i = \sqrt{ \frac{1}{m_i \theta^{-2}} }
+  (\#eq:weighted-likelihood)
+\end{equation}
+
+where $\theta$ is an estimated parameter that is a component part of the variance, together with the model weights $m_i$. Notice that the standard deviation for the log-normal $\sigma_i$ is now location-specific. This results in unbiased estimates of the mean and variance because it gives more weight in the likelihood to locations that had lower probabilities of being included in the sample (e.g. for PPS household survey designs this would be locations with fewer people). The regression model for $\bar{D}_i$ is not shown but it could be setup like Eq. \@ref(eq:likelihood).  
+
+The sample weights $w_i$ are often not known for unsampled areas where population predictions are needed. Because of this, we need to derive a weighted average value for the variance term that is not location-specific:
+
+$$
+\bar{\sigma} = \frac{ \sum_{i=1}^I{ \sigma_i \sqrt{m_i} } } { \sum_{i=1}^I{ \sqrt{m_i} } }
+$$
+
+This is a weighted average of $\sigma_i$ across locations $i$ (essentially factoring out the model weights $m_i$). Model predictions of population density $\hat{D}_i$ in locations where sampling weights $w_i$ are unknown would be produced from:
+
+$$
+\hat{D}_i \sim LogNormal(\bar{D}_i, \bar{\sigma})
+$$
+
+
+### Geostatistical Models
+Geostatistics is a form of spatial statistics that explicitly model a continuous spatial phenomenon when observations are accurately georeferenced at particular sites (such as from a GPS location in a survey). Geostatistical models can help to estimate the outcome in unobserved locations, with the expectation that nearby locations are more similar than distant locations. While geostatistical modelling includes interpolation or smoothing methods such as Kriging, a model-based geostatistical approach [@diggle2016mbg] makes it possible to incorporate spatial position into a statistical framework similar to Eq. \@ref(eq:poisson). The spatial information from the observations' locations (in addition to observed covariate data) can improve the accuracy of population estimates. WorldPop has utilised geostatistical modelling approaches to produce population estimates for Afghanistan (CITATION), to map the proportion of the population under 5 years of age [@alegana2015u5], produce high-resolution poverty estimates [@steele2017povertymap], and to estimate vaccination coverage [@utazi2019mapping].
+
+The general form of the model-based geostatistics framework is a mixed-effects regression model. This model includes fixed covariate effects plus a spatially correlated random effect for modelling spatial variation, to give
+
+\begin{equation}
+  N_i \sim Poisson( \mu_i ) \\
+  log(\mu_i) = \alpha + \beta x_i + Z(i)
+  (\#eq:mbg)
+\end{equation}
+
+where $i$ again indicate locations of observations, but these locations are taken as a spatial index within a fixed domain ($s \in D \subset \R^2$). $Z(\cdot)$ is a spatially-continuous process that can be modelled as a Gaussian random field. Estimating the characteristics of a Gaussian random field is an important component of geostatistics, in particular the covariance  ($\Sigma$) which describes how the dependence varies as a function of distance between the observations
+
+Geostatistical models are often implemented using the INLA approach [@krainski2018advanced; @lindgren2015bayesian] because estimation of spatial covariance is very computationally-intensive for MCMC samplers. Integrated Nested Laplace Approximation (INLA) is a more efficient alternative to traditional Bayesian MCMC sampling that can provide rapid approximations of posterior probability distributions. Krainski et al. [-@krainski2018advanced] provide a good introduction to fitting Bayesian spatial models.
+
+## Conclusion
+
+Bayesian statistical models used for bottom-up population estimates are powerful and versatile. We have shown the core strategies that can be implemented to build appropriate statistical models for various data sets and applications. These methods are freely available to be built upon and customized for new applications.
+
+## Contributing
+This chapter was written by Doug Leasure, Andy Tatem, Chris Jochem, *[contributors, please add your name here]*. These methods were developed primarily with funding from the Bill and Melinda Gates Foundation and the United Kingdom’s Foreign, Commonwealth, and Development Office (OPP1134076, OPP1182408).
+
+## Suggested Citation
+WorldPop. `r format(Sys.time(), "%Y")`. Population Mapping Methods: Bottom-up Models. In *WorldPop Book of Methods, Vol. I: Gridded Population Estimates*. WorldPop, University of Southampton. `r format(Sys.time(), "%d %B %Y")`. https://docs.worldpop.org
+

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Introduction | WorldPop Book of Methods, Vol. I: Gridded Population Estimates</title>
+  <meta name="description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Introduction | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/dat/wp_logo.png" />
+  <meta property="og:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="github-repo" content="wpgp/bookworm" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  
+  <meta name="twitter:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="twitter:image" content="/dat/wp_logo.png" />
+
+<meta name="author" content="WorldPop, University of Southampton" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="contributing-authors.html"/>
+<link rel="next" href="gridded-population-estimates.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<script src="libs/htmlwidgets-1.6.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://srv02481.soton.ac.uk/docs.html">WorldPop Book of Methods</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Edited by</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html"><i class="fa fa-check"></i>About this book</a>
+<ul>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html"><i class="fa fa-check"></i>Contributing Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#andrew-tatem"><i class="fa fa-check"></i>Andrew Tatem</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#doug-leisure"><i class="fa fa-check"></i>Doug Leisure</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#attila-n.-lazar"><i class="fa fa-check"></i>Attila N. Lazar</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#claire-dooley"><i class="fa fa-check"></i>Claire Dooley</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#chris-jochem"><i class="fa fa-check"></i>Chris Jochem</a></li>
+<li class="chapter" data-level="0.1" data-path="contributing-authors.html"><a href="contributing-authors.html#edith-darin"><i class="fa fa-check"></i><b>0.1</b> Edith Darin</a></li>
+<li class="chapter" data-level="0.2" data-path="contributing-authors.html"><a href="contributing-authors.html#gianluca-boo"><i class="fa fa-check"></i><b>0.2</b> Gianluca Boo</a></li>
+<li class="chapter" data-level="0.3" data-path="contributing-authors.html"><a href="contributing-authors.html#ortis-yankey"><i class="fa fa-check"></i><b>0.3</b> Ortis Yankey</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Introduction</i></a></li>
+<li class="chapter" data-level="1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html"><i class="fa fa-check"></i><b>1</b> Gridded Population Estimates</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#top-down"><i class="fa fa-check"></i><b>1.1</b> Top-down</a></li>
+<li class="chapter" data-level="1.2" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#bottom-up"><i class="fa fa-check"></i><b>1.2</b> Bottom-up</a></li>
+<li class="chapter" data-level="1.3" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#peanut-butter"><i class="fa fa-check"></i><b>1.3</b> Peanut Butter</a></li>
+<li class="chapter" data-level="1.4" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#comparison-of-data"><i class="fa fa-check"></i><b>1.4</b> Comparison of Data</a></li>
+<li class="chapter" data-level="1.5" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#contribution"><i class="fa fa-check"></i><b>1.5</b> Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-access.html"><a href="data-access.html"><i class="fa fa-check"></i><b>2</b> Data Access</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-access.html"><a href="data-access.html#websites"><i class="fa fa-check"></i><b>2.1</b> Websites</a></li>
+<li class="chapter" data-level="2.2" data-path="data-access.html"><a href="data-access.html#web-applications"><i class="fa fa-check"></i><b>2.2</b> Web Applications</a></li>
+<li class="chapter" data-level="2.3" data-path="data-access.html"><a href="data-access.html#ftp-server"><i class="fa fa-check"></i><b>2.3</b> FTP Server</a></li>
+<li class="chapter" data-level="2.4" data-path="data-access.html"><a href="data-access.html#gis-plugins"><i class="fa fa-check"></i><b>2.4</b> GIS Plugins</a></li>
+<li class="chapter" data-level="2.5" data-path="data-access.html"><a href="data-access.html#r-packages"><i class="fa fa-check"></i><b>2.5</b> R Packages</a></li>
+<li class="chapter" data-level="2.6" data-path="data-access.html"><a href="data-access.html#python-packages"><i class="fa fa-check"></i><b>2.6</b> Python Packages</a></li>
+<li class="chapter" data-level="2.7" data-path="data-access.html"><a href="data-access.html#rest-api"><i class="fa fa-check"></i><b>2.7</b> REST API</a></li>
+<li class="chapter" data-level="" data-path="data-access.html"><a href="data-access.html#contribution-1"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="research-applications.html"><a href="research-applications.html"><i class="fa fa-check"></i><b>3</b> Research Applications</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="research-applications.html"><a href="research-applications.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-census"><i class="fa fa-check"></i><b>3.2</b> Population modelling to support census</a></li>
+<li class="chapter" data-level="3.3" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-vaccination-programmes"><i class="fa fa-check"></i><b>3.3</b> Population modelling to support vaccination programmes</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#contribution-2"><i class="fa fa-check"></i>Contribution</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html"><i class="fa fa-check"></i><b>4</b> Settlement Data and Geospatial Covariates</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#settlement-data"><i class="fa fa-check"></i><b>4.1</b> Settlement Data</a></li>
+<li class="chapter" data-level="4.2" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#key-settlement-data-sources"><i class="fa fa-check"></i><b>4.2</b> Key Settlement Data Sources</a></li>
+<li class="chapter" data-level="4.3" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#use-of-settlement-data-in-population-modelling"><i class="fa fa-check"></i><b>4.3</b> Use of Settlement Data in Population Modelling</a></li>
+<li class="chapter" data-level="4.4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#geospatial-covariates"><i class="fa fa-check"></i><b>4.4</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#contribution-3"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bottom-up-population-mapping-method.html"><a href="bottom-up-population-mapping-method.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Bottom-Up Population Mapping Method</i></a></li>
+<li class="chapter" data-level="5" data-path="bottom-up-models.html"><a href="bottom-up-models.html"><i class="fa fa-check"></i><b>5</b> Bottom-up Models</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#input-data"><i class="fa fa-check"></i><b>5.1</b> Input Data</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#population-data"><i class="fa fa-check"></i><b>5.1.1</b> Population Data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#settlement-map"><i class="fa fa-check"></i><b>5.1.2</b> Settlement Map</a></li>
+<li class="chapter" data-level="5.1.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geospatial-covariates-1"><i class="fa fa-check"></i><b>5.1.3</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="5.1.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#administrative-boundaries"><i class="fa fa-check"></i><b>5.1.4</b> Administrative Boundaries</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#statistical-models"><i class="fa fa-check"></i><b>5.2</b> Statistical Models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#software"><i class="fa fa-check"></i><b>5.2.1</b> Software</a></li>
+<li class="chapter" data-level="5.2.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#simple-model-to-start"><i class="fa fa-check"></i><b>5.2.2</b> Simple Model to Start</a></li>
+<li class="chapter" data-level="5.2.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#bayesian-priors"><i class="fa fa-check"></i><b>5.2.3</b> Bayesian Priors</a></li>
+<li class="chapter" data-level="5.2.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-core-model"><i class="fa fa-check"></i><b>5.2.4</b> Hierarchical Core Model</a></li>
+<li class="chapter" data-level="5.2.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#age-sex-structure"><i class="fa fa-check"></i><b>5.2.5</b> Age-sex Structure</a></li>
+<li class="chapter" data-level="5.2.6" data-path="bottom-up-models.html"><a href="bottom-up-models.html#random-intercept"><i class="fa fa-check"></i><b>5.2.6</b> Random Intercept</a></li>
+<li class="chapter" data-level="5.2.7" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-variance"><i class="fa fa-check"></i><b>5.2.7</b> Hierarchical Variance</a></li>
+<li class="chapter" data-level="5.2.8" data-path="bottom-up-models.html"><a href="bottom-up-models.html#weighted-likelihood"><i class="fa fa-check"></i><b>5.2.8</b> Weighted-likelihood</a></li>
+<li class="chapter" data-level="5.2.9" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geostatistical-models"><i class="fa fa-check"></i><b>5.2.9</b> Geostatistical Models</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#conclusion"><i class="fa fa-check"></i><b>5.3</b> Conclusion</a></li>
+<li class="chapter" data-level="5.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#contributing"><i class="fa fa-check"></i><b>5.4</b> Contributing</a></li>
+<li class="chapter" data-level="5.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#suggested-citation"><i class="fa fa-check"></i><b>5.5</b> Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html"><i class="fa fa-check"></i><b>6</b> Hierarchichal Bottom-Up Modelling Tutorial</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-i-how-to-think-about-population-as-a-bayesian"><i class="fa fa-check"></i><b>6.2</b> Part I: How to think about population as a Bayesian</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#set-up"><i class="fa fa-check"></i><b>6.2.1</b> Set-up</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#from-a-frequentist-to-a-bayesian-mindset"><i class="fa fa-check"></i><b>6.2.2</b> From a frequentist to a Bayesian mindset</a></li>
+<li class="chapter" data-level="6.2.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#how-to-choose-priors"><i class="fa fa-check"></i><b>6.2.3</b> How to choose priors</a></li>
+<li class="chapter" data-level="6.2.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#simulating-data"><i class="fa fa-check"></i><b>6.2.4</b> Simulating data</a></li>
+<li class="chapter" data-level="6.2.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-the-data"><i class="fa fa-check"></i><b>6.2.5</b> Modelling the data</a></li>
+<li class="chapter" data-level="6.2.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-in-stan"><i class="fa fa-check"></i><b>6.2.6</b> Implementing the model in <code>stan</code></a></li>
+<li class="chapter" data-level="6.2.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-the-data-for-stan"><i class="fa fa-check"></i><b>6.2.7</b> Preparing the data for stan</a></li>
+<li class="chapter" data-level="6.2.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#running-the-model"><i class="fa fa-check"></i><b>6.2.8</b> Running the model</a></li>
+<li class="chapter" data-level="6.2.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#checking-the-mcmc-simulations"><i class="fa fa-check"></i><b>6.2.9</b> Checking the MCMC simulations</a></li>
+<li class="chapter" data-level="6.2.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-estimated-parameters"><i class="fa fa-check"></i><b>6.2.10</b> Evaluating the estimated parameters</a></li>
+<li class="chapter" data-level="6.2.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#lets-try-with-real-data"><i class="fa fa-check"></i><b>6.2.11</b> Let’s try with real data</a></li>
+<li class="chapter" data-level="6.2.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#the-data"><i class="fa fa-check"></i><b>6.2.12</b> The data</a></li>
+<li class="chapter" data-level="6.2.13" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#response-variable-the-population-count"><i class="fa fa-check"></i><b>6.2.13</b> Response variable: the population count</a></li>
+<li class="chapter" data-level="6.2.14" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-distribution"><i class="fa fa-check"></i><b>6.2.14</b> Modelling Population count: a Poisson distribution</a></li>
+<li class="chapter" data-level="6.2.15" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model"><i class="fa fa-check"></i><b>6.2.15</b> Implementing the model</a></li>
+<li class="chapter" data-level="6.2.16" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimating-the-model"><i class="fa fa-check"></i><b>6.2.16</b> Estimating the model</a></li>
+<li class="chapter" data-level="6.2.17" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>6.2.17</b> Evaluating the model goodness-of-fit</a></li>
+<li class="chapter" data-level="6.2.18" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimated-parameters"><i class="fa fa-check"></i><b>6.2.18</b> Estimated parameters</a></li>
+<li class="chapter" data-level="6.2.19" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicted-population-count"><i class="fa fa-check"></i><b>6.2.19</b> Predicted population count</a></li>
+<li class="chapter" data-level="6.2.20" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-lognormal-model"><i class="fa fa-check"></i><b>6.2.20</b> Modelling Population count: a Poisson Lognormal model</a></li>
+<li class="chapter" data-level="6.2.21" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#writing-the-model"><i class="fa fa-check"></i><b>6.2.21</b> Writing the model</a></li>
+<li class="chapter" data-level="6.2.22" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#defining-the-priors"><i class="fa fa-check"></i><b>6.2.22</b> Defining the priors</a></li>
+<li class="chapter" data-level="6.2.23" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-1"><i class="fa fa-check"></i><b>6.2.23</b> Implementing the model</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-ii-how-to-model-large-scale-spatial-variation"><i class="fa fa-check"></i><b>6.3</b> Part II: How to model large-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals"><i class="fa fa-check"></i><b>6.3.1</b> Goals</a></li>
+<li class="chapter" data-level="6.3.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings"><i class="fa fa-check"></i><b>6.3.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.3.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extra-packages"><i class="fa fa-check"></i><b>6.3.3</b> Extra packages</a></li>
+<li class="chapter" data-level="6.3.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#hierarchical-structure-in-the-data"><i class="fa fa-check"></i><b>6.3.4</b> Hierarchical structure in the data</a></li>
+<li class="chapter" data-level="6.3.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#full-picture-of-the-data-grouping"><i class="fa fa-check"></i><b>6.3.5</b> Full picture of the data grouping</a></li>
+<li class="chapter" data-level="6.3.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#hierarchical-structure-in-the-model"><i class="fa fa-check"></i><b>6.3.6</b> Hierarchical structure in the model</a></li>
+<li class="chapter" data-level="6.3.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#a-hierarchical-intercept-by-settlement-type"><i class="fa fa-check"></i><b>6.3.7</b> A hierarchical intercept by settlement type</a></li>
+<li class="chapter" data-level="6.3.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#no-pooling"><i class="fa fa-check"></i><b>6.3.8</b> No-pooling</a></li>
+<li class="chapter" data-level="6.3.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#partial-pooling"><i class="fa fa-check"></i><b>6.3.9</b> Partial pooling</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-iii-how-to-model-small-scale-spatial-variation"><i class="fa fa-check"></i><b>6.4</b> Part III: How to model small-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals-1"><i class="fa fa-check"></i><b>6.4.1</b> Goals</a></li>
+<li class="chapter" data-level="6.4.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings-1"><i class="fa fa-check"></i><b>6.4.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.4.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#formal-modelling"><i class="fa fa-check"></i><b>6.4.3</b> Formal modelling</a></li>
+<li class="chapter" data-level="6.4.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#review-of-the-covariates-used-in-worldpop"><i class="fa fa-check"></i><b>6.4.4</b> Review of the covariates used in WorldPop</a></li>
+<li class="chapter" data-level="6.4.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#covariates-engineering"><i class="fa fa-check"></i><b>6.4.5</b> Covariates engineering</a></li>
+<li class="chapter" data-level="6.4.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#including-covariates-in-the-model"><i class="fa fa-check"></i><b>6.4.6</b> Including covariates in the model</a></li>
+<li class="chapter" data-level="6.4.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#overview-of-the-covariates-in-nigeria-v1.2"><i class="fa fa-check"></i><b>6.4.7</b> Overview of the covariates in Nigeria, v1.2</a></li>
+<li class="chapter" data-level="6.4.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-the-data"><i class="fa fa-check"></i><b>6.4.8</b> Preparing the data</a></li>
+<li class="chapter" data-level="6.4.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-2"><i class="fa fa-check"></i><b>6.4.9</b> Implementing the model</a></li>
+<li class="chapter" data-level="6.4.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#a-note-on-initialisation"><i class="fa fa-check"></i><b>6.4.10</b> A note on initialisation</a></li>
+<li class="chapter" data-level="6.4.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#comparing-prediction-with-previous-model"><i class="fa fa-check"></i><b>6.4.11</b> Comparing prediction with previous model</a></li>
+<li class="chapter" data-level="6.4.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#grouping-and-covariates-effect-a-random-slope-model"><i class="fa fa-check"></i><b>6.4.12</b> Grouping and covariates effect: a random slope model</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-iv-model-diagnostics-and-predictions"><i class="fa fa-check"></i><b>6.5</b> Part IV: Model diagnostics and predictions</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals-2"><i class="fa fa-check"></i><b>6.5.1</b> Goals</a></li>
+<li class="chapter" data-level="6.5.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings-2"><i class="fa fa-check"></i><b>6.5.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.5.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extra-packages-1"><i class="fa fa-check"></i><b>6.5.3</b> Extra packages</a></li>
+<li class="chapter" data-level="6.5.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#advanced-model-diagnostics"><i class="fa fa-check"></i><b>6.5.4</b> Advanced model diagnostics</a></li>
+<li class="chapter" data-level="6.5.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#assessing-convergence"><i class="fa fa-check"></i><b>6.5.5</b> Assessing convergence</a></li>
+<li class="chapter" data-level="6.5.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#checking-predicted-posterior"><i class="fa fa-check"></i><b>6.5.6</b> Checking predicted posterior</a></li>
+<li class="chapter" data-level="6.5.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#cross-validation-of-model-predictions"><i class="fa fa-check"></i><b>6.5.7</b> Cross-validation of model predictions</a></li>
+<li class="chapter" data-level="6.5.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-population-prediction"><i class="fa fa-check"></i><b>6.5.8</b> Gridded population prediction</a></li>
+<li class="chapter" data-level="6.5.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-data-for-prediction"><i class="fa fa-check"></i><b>6.5.9</b> Preparing data for prediction</a></li>
+<li class="chapter" data-level="6.5.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extracting-estimated-parameters"><i class="fa fa-check"></i><b>6.5.10</b> Extracting estimated parameters</a></li>
+<li class="chapter" data-level="6.5.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicting-population-count-for-every-grid-cell"><i class="fa fa-check"></i><b>6.5.11</b> Predicting population count for every grid cell</a></li>
+<li class="chapter" data-level="6.5.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicting-distributions"><i class="fa fa-check"></i><b>6.5.12</b> Predicting distributions</a></li>
+<li class="chapter" data-level="6.5.13" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-population"><i class="fa fa-check"></i><b>6.5.13</b> Gridded population</a></li>
+<li class="chapter" data-level="6.5.14" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-uncertainty"><i class="fa fa-check"></i><b>6.5.14</b> Gridded uncertainty</a></li>
+<li class="chapter" data-level="6.5.15" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#aggregating-prediction"><i class="fa fa-check"></i><b>6.5.15</b> Aggregating prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#contribution-4"><i class="fa fa-check"></i><b>6.6</b> Contribution</a></li>
+<li class="chapter" data-level="6.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#suggested-citation-1"><i class="fa fa-check"></i><b>6.7</b> Suggested citation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><i class="fa fa-check"></i><b>7</b> Hierarchical Bottom-Up Modelling Extention: the Weighted Likelihood</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#introduction-3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#methods"><i class="fa fa-check"></i>Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-populations"><i class="fa fa-check"></i>Simulated Populations</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-survey-data"><i class="fa fa-check"></i>Simulated Survey Data</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#statistical-models-1"><i class="fa fa-check"></i>Statistical Models</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#population-totals"><i class="fa fa-check"></i>Population Totals</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#results"><i class="fa fa-check"></i>Results</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#discussion"><i class="fa fa-check"></i>Discussion</a></li>
+<li class="chapter" data-level="7.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#contributing-1"><i class="fa fa-check"></i><b>7.1</b> Contributing</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#suggested-citation-2"><i class="fa fa-check"></i><b>7.1.1</b> Suggested Citation</a></li>
+<li class="chapter" data-level="7.1.2" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#license-1"><i class="fa fa-check"></i><b>7.1.2</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#references-1"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#tables"><i class="fa fa-check"></i>Tables</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#figures"><i class="fa fa-check"></i>Figures</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#appendix-a-supplementary-files"><i class="fa fa-check"></i>Appendix A: Supplementary Files</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-use-cases.html"><a href="hierarchical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Hierarchical Bottom-Up Modelling Use Cases</i></a></li>
+<li class="chapter" data-level="8" data-path="nigeria-v1.html"><a href="nigeria-v1.html"><i class="fa fa-check"></i><b>8</b> Nigeria (v1)</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="nigeria-v1.html"><a href="nigeria-v1.html#introduction-4"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="nigeria-v1.html"><a href="nigeria-v1.html#materials-and-methods"><i class="fa fa-check"></i><b>8.2</b> Materials and Methods</a></li>
+<li class="chapter" data-level="8.3" data-path="nigeria-v1.html"><a href="nigeria-v1.html#results-1"><i class="fa fa-check"></i><b>8.3</b> Results</a></li>
+<li class="chapter" data-level="8.4" data-path="nigeria-v1.html"><a href="nigeria-v1.html#discussion-1"><i class="fa fa-check"></i><b>8.4</b> Discussion</a></li>
+<li class="chapter" data-level="8.5" data-path="nigeria-v1.html"><a href="nigeria-v1.html#conclusions"><i class="fa fa-check"></i><b>8.5</b> Conclusions</a></li>
+<li class="chapter" data-level="8.6" data-path="nigeria-v1.html"><a href="nigeria-v1.html#contribution-5"><i class="fa fa-check"></i><b>8.6</b> Contribution</a></li>
+<li class="chapter" data-level="8.7" data-path="nigeria-v1.html"><a href="nigeria-v1.html#funding"><i class="fa fa-check"></i><b>8.7</b> Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html"><i class="fa fa-check"></i><b>9</b> Democratic Republic of Congo - DRC (v2)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#introduction-5"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#methods-1"><i class="fa fa-check"></i><b>9.2</b> Methods</a></li>
+<li class="chapter" data-level="9.3" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#results-2"><i class="fa fa-check"></i><b>9.3</b> Results</a></li>
+<li class="chapter" data-level="9.4" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#discussion-2"><i class="fa fa-check"></i><b>9.4</b> Discussion</a></li>
+<li class="chapter" data-level="9.5" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#contribution-6"><i class="fa fa-check"></i><b>9.5</b> Contribution</a>
+<ul>
+<li class="chapter" data-level="" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#funding-1"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ghana-v1.html"><a href="ghana-v1.html"><i class="fa fa-check"></i><b>10</b> Ghana (v1)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ghana-v1.html"><a href="ghana-v1.html#introduction-6"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="ghana-v1.html"><a href="ghana-v1.html#methods-2"><i class="fa fa-check"></i><b>10.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="ghana-v1.html"><a href="ghana-v1.html#data"><i class="fa fa-check"></i><b>10.2.1</b> Data</a></li>
+<li class="chapter" data-level="10.2.2" data-path="ghana-v1.html"><a href="ghana-v1.html#statistical-model"><i class="fa fa-check"></i><b>10.2.2</b> Statistical Model</a></li>
+<li class="chapter" data-level="10.2.3" data-path="ghana-v1.html"><a href="ghana-v1.html#model-implementation-and-diagnostics"><i class="fa fa-check"></i><b>10.2.3</b> Model Implementation and Diagnostics</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="ghana-v1.html"><a href="ghana-v1.html#results-3"><i class="fa fa-check"></i><b>10.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="ghana-v1.html"><a href="ghana-v1.html#people-per-household"><i class="fa fa-check"></i><b>10.3.1</b> People per household</a></li>
+<li class="chapter" data-level="10.3.2" data-path="ghana-v1.html"><a href="ghana-v1.html#age-sex-structure-1"><i class="fa fa-check"></i><b>10.3.2</b> Age-sex structure</a></li>
+<li class="chapter" data-level="10.3.3" data-path="ghana-v1.html"><a href="ghana-v1.html#census-projections"><i class="fa fa-check"></i><b>10.3.3</b> Census projections</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="ghana-v1.html"><a href="ghana-v1.html#discussion-3"><i class="fa fa-check"></i><b>10.4</b> Discussion</a></li>
+<li class="chapter" data-level="10.5" data-path="ghana-v1.html"><a href="ghana-v1.html#contribution-7"><i class="fa fa-check"></i><b>10.5</b> Contribution</a></li>
+<li class="chapter" data-level="10.6" data-path="ghana-v1.html"><a href="ghana-v1.html#suggested-citation-3"><i class="fa fa-check"></i><b>10.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="10.7" data-path="ghana-v1.html"><a href="ghana-v1.html#appendices-and-supplements"><i class="fa fa-check"></i><b>10.7</b> Appendices and Supplements</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html"><i class="fa fa-check"></i><b>11</b> Burkina Faso (v1)</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#introduction-7"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-missed-communes"><i class="fa fa-check"></i><b>11.2</b> Estimating Missed <em>Communes</em></a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method"><i class="fa fa-check"></i><b>11.2.1</b> Model Method</a></li>
+<li class="chapter" data-level="11.2.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation"><i class="fa fa-check"></i><b>11.2.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results"><i class="fa fa-check"></i><b>11.3</b> Model results</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-3"><i class="fa fa-check"></i><b>11.3.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="11.3.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>11.3.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-gridded-population-for-the-entire-country"><i class="fa fa-check"></i><b>11.4</b> Estimating Gridded Population for the Entire Country</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method-1"><i class="fa fa-check"></i><b>11.4.1</b> Model Method</a></li>
+<li class="chapter" data-level="11.4.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation-1"><i class="fa fa-check"></i><b>11.4.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results-1"><i class="fa fa-check"></i><b>11.5</b> Model Results</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-4"><i class="fa fa-check"></i><b>11.5.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="11.5.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit-1"><i class="fa fa-check"></i><b>11.5.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#discussion-4"><i class="fa fa-check"></i><b>11.6</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#contributions"><i class="fa fa-check"></i>Contributions</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#suggested-citation-4"><i class="fa fa-check"></i>Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html"><i class="fa fa-check"></i><b>12</b> South Sudan (v2)</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#introduction-8"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#methods-3"><i class="fa fa-check"></i><b>12.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#boundaries-settled-area-and-unadjusted-baseline-county-population-totals"><i class="fa fa-check"></i><b>12.2.1</b> Boundaries, settled area and unadjusted (baseline) county population totals</a></li>
+<li class="chapter" data-level="12.2.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons"><i class="fa fa-check"></i><b>12.2.2</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="12.2.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement"><i class="fa fa-check"></i><b>12.2.3</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="12.2.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-locations-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>12.2.4</b> Mapping locations where people have been displaced from</a></li>
+<li class="chapter" data-level="12.2.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement"><i class="fa fa-check"></i><b>12.2.5</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#results-4"><i class="fa fa-check"></i><b>12.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons-1"><i class="fa fa-check"></i><b>12.3.1</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="12.3.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement-1"><i class="fa fa-check"></i><b>12.3.2</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="12.3.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>12.3.3</b> Mapping of where people have been displaced from</a></li>
+<li class="chapter" data-level="12.3.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement-1"><i class="fa fa-check"></i><b>12.3.4</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#discussion-5"><i class="fa fa-check"></i><b>12.4</b> Discussion</a></li>
+<li class="chapter" data-level="12.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#contribution-8"><i class="fa fa-check"></i><b>12.5</b> Contribution</a></li>
+<li class="chapter" data-level="12.6" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#suggested-citation-5"><i class="fa fa-check"></i><b>12.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#funding-2"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="zambia-v1.html"><a href="zambia-v1.html"><i class="fa fa-check"></i><b>13</b> Zambia (v1)</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="zambia-v1.html"><a href="zambia-v1.html#introduction-9"><i class="fa fa-check"></i><b>13.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="zambia-v1.html"><a href="zambia-v1.html#background"><i class="fa fa-check"></i><b>13.1.1</b> Background</a></li>
+<li class="chapter" data-level="13.1.2" data-path="zambia-v1.html"><a href="zambia-v1.html#zambia-context"><i class="fa fa-check"></i><b>13.1.2</b> Zambia Context</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="zambia-v1.html"><a href="zambia-v1.html#methods-4"><i class="fa fa-check"></i><b>13.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="zambia-v1.html"><a href="zambia-v1.html#data-1"><i class="fa fa-check"></i><b>13.2.1</b> Data</a></li>
+<li class="chapter" data-level="13.2.2" data-path="zambia-v1.html"><a href="zambia-v1.html#statistical-modelling"><i class="fa fa-check"></i><b>13.2.2</b> Statistical Modelling</a></li>
+<li class="chapter" data-level="13.2.3" data-path="zambia-v1.html"><a href="zambia-v1.html#predictions-and-final-dataset"><i class="fa fa-check"></i><b>13.2.3</b> Predictions and Final Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="zambia-v1.html"><a href="zambia-v1.html#results-5"><i class="fa fa-check"></i><b>13.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="zambia-v1.html"><a href="zambia-v1.html#assessment-of-building-footprints-data"><i class="fa fa-check"></i><b>13.3.1</b> Assessment of Building Footprints Data</a></li>
+<li class="chapter" data-level="13.3.2" data-path="zambia-v1.html"><a href="zambia-v1.html#model-fit"><i class="fa fa-check"></i><b>13.3.2</b> Model Fit</a></li>
+<li class="chapter" data-level="13.3.3" data-path="zambia-v1.html"><a href="zambia-v1.html#summary-of-population-estimates"><i class="fa fa-check"></i><b>13.3.3</b> Summary of Population Estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="zambia-v1.html"><a href="zambia-v1.html#discussion-6"><i class="fa fa-check"></i><b>13.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="zambia-v1.html"><a href="zambia-v1.html#contributing-2"><i class="fa fa-check"></i>Contributing</a></li>
+<li class="chapter" data-level="13.5" data-path="zambia-v1.html"><a href="zambia-v1.html#references-2"><i class="fa fa-check"></i><b>13.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html"><i class="fa fa-check"></i><b>14</b> Geostatistical Bottom-Up Modelling</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html#introduction-and-model-presentation"><i class="fa fa-check"></i><b>14.1</b> Introduction and Model Presentation</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><b>15</b> Geostatistical Bottom-up Modelling Use Cases</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#cameroon"><i class="fa fa-check"></i><b>15.1</b> Cameroon</a></li>
+<li class="chapter" data-level="15.2" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#papua-new-guinea"><i class="fa fa-check"></i><b>15.2</b> Papua New Guinea</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-3.html"><a href="references-3.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">References</i></a></li>
+<li class="divider"></li>
+<li><a href="https://www.worldpop.org" target="_blank"><img src="dat/wp_logotype.png" width="110" alt="WorldPop"/></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">WorldPop Book of Methods, Vol. I: Gridded Population Estimates</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1 unnumbered hasAnchor">
+<h1><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Introduction</i><a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This section will introduce you to WorldPop population data sets and various ways to access them.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="contributing-authors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gridded-population-estimates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10 Ghana (v1) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates</title>
+  <meta name="description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="10 Ghana (v1) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/dat/wp_logo.png" />
+  <meta property="og:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="github-repo" content="wpgp/bookworm" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10 Ghana (v1) | WorldPop Book of Methods, Vol. I: Gridded Population Estimates" />
+  
+  <meta name="twitter:description" content="An open book of WorldPop methods to produce gridded population estimates." />
+  <meta name="twitter:image" content="/dat/wp_logo.png" />
+
+<meta name="author" content="WorldPop, University of Southampton" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="democratic-republic-of-congo---drc-v2.html"/>
+<link rel="next" href="burkina-faso-v1.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<script src="libs/htmlwidgets-1.6.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://srv02481.soton.ac.uk/docs.html">WorldPop Book of Methods</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Edited by</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html"><i class="fa fa-check"></i>About this book</a>
+<ul>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html"><i class="fa fa-check"></i>Contributing Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#andrew-tatem"><i class="fa fa-check"></i>Andrew Tatem</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#doug-leisure"><i class="fa fa-check"></i>Doug Leisure</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#attila-n.-lazar"><i class="fa fa-check"></i>Attila N. Lazar</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#claire-dooley"><i class="fa fa-check"></i>Claire Dooley</a></li>
+<li class="chapter" data-level="" data-path="contributing-authors.html"><a href="contributing-authors.html#chris-jochem"><i class="fa fa-check"></i>Chris Jochem</a></li>
+<li class="chapter" data-level="0.1" data-path="contributing-authors.html"><a href="contributing-authors.html#edith-darin"><i class="fa fa-check"></i><b>0.1</b> Edith Darin</a></li>
+<li class="chapter" data-level="0.2" data-path="contributing-authors.html"><a href="contributing-authors.html#gianluca-boo"><i class="fa fa-check"></i><b>0.2</b> Gianluca Boo</a></li>
+<li class="chapter" data-level="0.3" data-path="contributing-authors.html"><a href="contributing-authors.html#ortis-yankey"><i class="fa fa-check"></i><b>0.3</b> Ortis Yankey</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Introduction</i></a></li>
+<li class="chapter" data-level="1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html"><i class="fa fa-check"></i><b>1</b> Gridded Population Estimates</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#top-down"><i class="fa fa-check"></i><b>1.1</b> Top-down</a></li>
+<li class="chapter" data-level="1.2" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#bottom-up"><i class="fa fa-check"></i><b>1.2</b> Bottom-up</a></li>
+<li class="chapter" data-level="1.3" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#peanut-butter"><i class="fa fa-check"></i><b>1.3</b> Peanut Butter</a></li>
+<li class="chapter" data-level="1.4" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#comparison-of-data"><i class="fa fa-check"></i><b>1.4</b> Comparison of Data</a></li>
+<li class="chapter" data-level="1.5" data-path="gridded-population-estimates.html"><a href="gridded-population-estimates.html#contribution"><i class="fa fa-check"></i><b>1.5</b> Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-access.html"><a href="data-access.html"><i class="fa fa-check"></i><b>2</b> Data Access</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-access.html"><a href="data-access.html#websites"><i class="fa fa-check"></i><b>2.1</b> Websites</a></li>
+<li class="chapter" data-level="2.2" data-path="data-access.html"><a href="data-access.html#web-applications"><i class="fa fa-check"></i><b>2.2</b> Web Applications</a></li>
+<li class="chapter" data-level="2.3" data-path="data-access.html"><a href="data-access.html#ftp-server"><i class="fa fa-check"></i><b>2.3</b> FTP Server</a></li>
+<li class="chapter" data-level="2.4" data-path="data-access.html"><a href="data-access.html#gis-plugins"><i class="fa fa-check"></i><b>2.4</b> GIS Plugins</a></li>
+<li class="chapter" data-level="2.5" data-path="data-access.html"><a href="data-access.html#r-packages"><i class="fa fa-check"></i><b>2.5</b> R Packages</a></li>
+<li class="chapter" data-level="2.6" data-path="data-access.html"><a href="data-access.html#python-packages"><i class="fa fa-check"></i><b>2.6</b> Python Packages</a></li>
+<li class="chapter" data-level="2.7" data-path="data-access.html"><a href="data-access.html#rest-api"><i class="fa fa-check"></i><b>2.7</b> REST API</a></li>
+<li class="chapter" data-level="" data-path="data-access.html"><a href="data-access.html#contribution-1"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="research-applications.html"><a href="research-applications.html"><i class="fa fa-check"></i><b>3</b> Research Applications</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="research-applications.html"><a href="research-applications.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-census"><i class="fa fa-check"></i><b>3.2</b> Population modelling to support census</a></li>
+<li class="chapter" data-level="3.3" data-path="research-applications.html"><a href="research-applications.html#population-modelling-to-support-vaccination-programmes"><i class="fa fa-check"></i><b>3.3</b> Population modelling to support vaccination programmes</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#contribution-2"><i class="fa fa-check"></i>Contribution</a></li>
+<li class="chapter" data-level="" data-path="research-applications.html"><a href="research-applications.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html"><i class="fa fa-check"></i><b>4</b> Settlement Data and Geospatial Covariates</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#settlement-data"><i class="fa fa-check"></i><b>4.1</b> Settlement Data</a></li>
+<li class="chapter" data-level="4.2" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#key-settlement-data-sources"><i class="fa fa-check"></i><b>4.2</b> Key Settlement Data Sources</a></li>
+<li class="chapter" data-level="4.3" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#use-of-settlement-data-in-population-modelling"><i class="fa fa-check"></i><b>4.3</b> Use of Settlement Data in Population Modelling</a></li>
+<li class="chapter" data-level="4.4" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#geospatial-covariates"><i class="fa fa-check"></i><b>4.4</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="" data-path="settlement-data-and-geospatial-covariates.html"><a href="settlement-data-and-geospatial-covariates.html#contribution-3"><i class="fa fa-check"></i>Contribution</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bottom-up-population-mapping-method.html"><a href="bottom-up-population-mapping-method.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Bottom-Up Population Mapping Method</i></a></li>
+<li class="chapter" data-level="5" data-path="bottom-up-models.html"><a href="bottom-up-models.html"><i class="fa fa-check"></i><b>5</b> Bottom-up Models</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#input-data"><i class="fa fa-check"></i><b>5.1</b> Input Data</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#population-data"><i class="fa fa-check"></i><b>5.1.1</b> Population Data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#settlement-map"><i class="fa fa-check"></i><b>5.1.2</b> Settlement Map</a></li>
+<li class="chapter" data-level="5.1.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geospatial-covariates-1"><i class="fa fa-check"></i><b>5.1.3</b> Geospatial Covariates</a></li>
+<li class="chapter" data-level="5.1.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#administrative-boundaries"><i class="fa fa-check"></i><b>5.1.4</b> Administrative Boundaries</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#statistical-models"><i class="fa fa-check"></i><b>5.2</b> Statistical Models</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="bottom-up-models.html"><a href="bottom-up-models.html#software"><i class="fa fa-check"></i><b>5.2.1</b> Software</a></li>
+<li class="chapter" data-level="5.2.2" data-path="bottom-up-models.html"><a href="bottom-up-models.html#simple-model-to-start"><i class="fa fa-check"></i><b>5.2.2</b> Simple Model to Start</a></li>
+<li class="chapter" data-level="5.2.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#bayesian-priors"><i class="fa fa-check"></i><b>5.2.3</b> Bayesian Priors</a></li>
+<li class="chapter" data-level="5.2.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-core-model"><i class="fa fa-check"></i><b>5.2.4</b> Hierarchical Core Model</a></li>
+<li class="chapter" data-level="5.2.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#age-sex-structure"><i class="fa fa-check"></i><b>5.2.5</b> Age-sex Structure</a></li>
+<li class="chapter" data-level="5.2.6" data-path="bottom-up-models.html"><a href="bottom-up-models.html#random-intercept"><i class="fa fa-check"></i><b>5.2.6</b> Random Intercept</a></li>
+<li class="chapter" data-level="5.2.7" data-path="bottom-up-models.html"><a href="bottom-up-models.html#hierarchical-variance"><i class="fa fa-check"></i><b>5.2.7</b> Hierarchical Variance</a></li>
+<li class="chapter" data-level="5.2.8" data-path="bottom-up-models.html"><a href="bottom-up-models.html#weighted-likelihood"><i class="fa fa-check"></i><b>5.2.8</b> Weighted-likelihood</a></li>
+<li class="chapter" data-level="5.2.9" data-path="bottom-up-models.html"><a href="bottom-up-models.html#geostatistical-models"><i class="fa fa-check"></i><b>5.2.9</b> Geostatistical Models</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="bottom-up-models.html"><a href="bottom-up-models.html#conclusion"><i class="fa fa-check"></i><b>5.3</b> Conclusion</a></li>
+<li class="chapter" data-level="5.4" data-path="bottom-up-models.html"><a href="bottom-up-models.html#contributing"><i class="fa fa-check"></i><b>5.4</b> Contributing</a></li>
+<li class="chapter" data-level="5.5" data-path="bottom-up-models.html"><a href="bottom-up-models.html#suggested-citation"><i class="fa fa-check"></i><b>5.5</b> Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html"><i class="fa fa-check"></i><b>6</b> Hierarchichal Bottom-Up Modelling Tutorial</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-i-how-to-think-about-population-as-a-bayesian"><i class="fa fa-check"></i><b>6.2</b> Part I: How to think about population as a Bayesian</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#set-up"><i class="fa fa-check"></i><b>6.2.1</b> Set-up</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#from-a-frequentist-to-a-bayesian-mindset"><i class="fa fa-check"></i><b>6.2.2</b> From a frequentist to a Bayesian mindset</a></li>
+<li class="chapter" data-level="6.2.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#how-to-choose-priors"><i class="fa fa-check"></i><b>6.2.3</b> How to choose priors</a></li>
+<li class="chapter" data-level="6.2.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#simulating-data"><i class="fa fa-check"></i><b>6.2.4</b> Simulating data</a></li>
+<li class="chapter" data-level="6.2.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-the-data"><i class="fa fa-check"></i><b>6.2.5</b> Modelling the data</a></li>
+<li class="chapter" data-level="6.2.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-in-stan"><i class="fa fa-check"></i><b>6.2.6</b> Implementing the model in <code>stan</code></a></li>
+<li class="chapter" data-level="6.2.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-the-data-for-stan"><i class="fa fa-check"></i><b>6.2.7</b> Preparing the data for stan</a></li>
+<li class="chapter" data-level="6.2.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#running-the-model"><i class="fa fa-check"></i><b>6.2.8</b> Running the model</a></li>
+<li class="chapter" data-level="6.2.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#checking-the-mcmc-simulations"><i class="fa fa-check"></i><b>6.2.9</b> Checking the MCMC simulations</a></li>
+<li class="chapter" data-level="6.2.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-estimated-parameters"><i class="fa fa-check"></i><b>6.2.10</b> Evaluating the estimated parameters</a></li>
+<li class="chapter" data-level="6.2.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#lets-try-with-real-data"><i class="fa fa-check"></i><b>6.2.11</b> Let’s try with real data</a></li>
+<li class="chapter" data-level="6.2.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#the-data"><i class="fa fa-check"></i><b>6.2.12</b> The data</a></li>
+<li class="chapter" data-level="6.2.13" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#response-variable-the-population-count"><i class="fa fa-check"></i><b>6.2.13</b> Response variable: the population count</a></li>
+<li class="chapter" data-level="6.2.14" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-distribution"><i class="fa fa-check"></i><b>6.2.14</b> Modelling Population count: a Poisson distribution</a></li>
+<li class="chapter" data-level="6.2.15" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model"><i class="fa fa-check"></i><b>6.2.15</b> Implementing the model</a></li>
+<li class="chapter" data-level="6.2.16" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimating-the-model"><i class="fa fa-check"></i><b>6.2.16</b> Estimating the model</a></li>
+<li class="chapter" data-level="6.2.17" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#evaluating-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>6.2.17</b> Evaluating the model goodness-of-fit</a></li>
+<li class="chapter" data-level="6.2.18" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#estimated-parameters"><i class="fa fa-check"></i><b>6.2.18</b> Estimated parameters</a></li>
+<li class="chapter" data-level="6.2.19" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicted-population-count"><i class="fa fa-check"></i><b>6.2.19</b> Predicted population count</a></li>
+<li class="chapter" data-level="6.2.20" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#modelling-population-count-a-poisson-lognormal-model"><i class="fa fa-check"></i><b>6.2.20</b> Modelling Population count: a Poisson Lognormal model</a></li>
+<li class="chapter" data-level="6.2.21" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#writing-the-model"><i class="fa fa-check"></i><b>6.2.21</b> Writing the model</a></li>
+<li class="chapter" data-level="6.2.22" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#defining-the-priors"><i class="fa fa-check"></i><b>6.2.22</b> Defining the priors</a></li>
+<li class="chapter" data-level="6.2.23" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-1"><i class="fa fa-check"></i><b>6.2.23</b> Implementing the model</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-ii-how-to-model-large-scale-spatial-variation"><i class="fa fa-check"></i><b>6.3</b> Part II: How to model large-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals"><i class="fa fa-check"></i><b>6.3.1</b> Goals</a></li>
+<li class="chapter" data-level="6.3.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings"><i class="fa fa-check"></i><b>6.3.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.3.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extra-packages"><i class="fa fa-check"></i><b>6.3.3</b> Extra packages</a></li>
+<li class="chapter" data-level="6.3.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#hierarchical-structure-in-the-data"><i class="fa fa-check"></i><b>6.3.4</b> Hierarchical structure in the data</a></li>
+<li class="chapter" data-level="6.3.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#full-picture-of-the-data-grouping"><i class="fa fa-check"></i><b>6.3.5</b> Full picture of the data grouping</a></li>
+<li class="chapter" data-level="6.3.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#hierarchical-structure-in-the-model"><i class="fa fa-check"></i><b>6.3.6</b> Hierarchical structure in the model</a></li>
+<li class="chapter" data-level="6.3.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#a-hierarchical-intercept-by-settlement-type"><i class="fa fa-check"></i><b>6.3.7</b> A hierarchical intercept by settlement type</a></li>
+<li class="chapter" data-level="6.3.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#no-pooling"><i class="fa fa-check"></i><b>6.3.8</b> No-pooling</a></li>
+<li class="chapter" data-level="6.3.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#partial-pooling"><i class="fa fa-check"></i><b>6.3.9</b> Partial pooling</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-iii-how-to-model-small-scale-spatial-variation"><i class="fa fa-check"></i><b>6.4</b> Part III: How to model small-scale spatial variation</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals-1"><i class="fa fa-check"></i><b>6.4.1</b> Goals</a></li>
+<li class="chapter" data-level="6.4.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings-1"><i class="fa fa-check"></i><b>6.4.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.4.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#formal-modelling"><i class="fa fa-check"></i><b>6.4.3</b> Formal modelling</a></li>
+<li class="chapter" data-level="6.4.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#review-of-the-covariates-used-in-worldpop"><i class="fa fa-check"></i><b>6.4.4</b> Review of the covariates used in WorldPop</a></li>
+<li class="chapter" data-level="6.4.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#covariates-engineering"><i class="fa fa-check"></i><b>6.4.5</b> Covariates engineering</a></li>
+<li class="chapter" data-level="6.4.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#including-covariates-in-the-model"><i class="fa fa-check"></i><b>6.4.6</b> Including covariates in the model</a></li>
+<li class="chapter" data-level="6.4.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#overview-of-the-covariates-in-nigeria-v1.2"><i class="fa fa-check"></i><b>6.4.7</b> Overview of the covariates in Nigeria, v1.2</a></li>
+<li class="chapter" data-level="6.4.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-the-data"><i class="fa fa-check"></i><b>6.4.8</b> Preparing the data</a></li>
+<li class="chapter" data-level="6.4.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#implementing-the-model-2"><i class="fa fa-check"></i><b>6.4.9</b> Implementing the model</a></li>
+<li class="chapter" data-level="6.4.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#a-note-on-initialisation"><i class="fa fa-check"></i><b>6.4.10</b> A note on initialisation</a></li>
+<li class="chapter" data-level="6.4.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#comparing-prediction-with-previous-model"><i class="fa fa-check"></i><b>6.4.11</b> Comparing prediction with previous model</a></li>
+<li class="chapter" data-level="6.4.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#grouping-and-covariates-effect-a-random-slope-model"><i class="fa fa-check"></i><b>6.4.12</b> Grouping and covariates effect: a random slope model</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#part-iv-model-diagnostics-and-predictions"><i class="fa fa-check"></i><b>6.5</b> Part IV: Model diagnostics and predictions</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#goals-2"><i class="fa fa-check"></i><b>6.5.1</b> Goals</a></li>
+<li class="chapter" data-level="6.5.2" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#supporting-readings-2"><i class="fa fa-check"></i><b>6.5.2</b> Supporting readings</a></li>
+<li class="chapter" data-level="6.5.3" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extra-packages-1"><i class="fa fa-check"></i><b>6.5.3</b> Extra packages</a></li>
+<li class="chapter" data-level="6.5.4" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#advanced-model-diagnostics"><i class="fa fa-check"></i><b>6.5.4</b> Advanced model diagnostics</a></li>
+<li class="chapter" data-level="6.5.5" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#assessing-convergence"><i class="fa fa-check"></i><b>6.5.5</b> Assessing convergence</a></li>
+<li class="chapter" data-level="6.5.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#checking-predicted-posterior"><i class="fa fa-check"></i><b>6.5.6</b> Checking predicted posterior</a></li>
+<li class="chapter" data-level="6.5.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#cross-validation-of-model-predictions"><i class="fa fa-check"></i><b>6.5.7</b> Cross-validation of model predictions</a></li>
+<li class="chapter" data-level="6.5.8" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-population-prediction"><i class="fa fa-check"></i><b>6.5.8</b> Gridded population prediction</a></li>
+<li class="chapter" data-level="6.5.9" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#preparing-data-for-prediction"><i class="fa fa-check"></i><b>6.5.9</b> Preparing data for prediction</a></li>
+<li class="chapter" data-level="6.5.10" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#extracting-estimated-parameters"><i class="fa fa-check"></i><b>6.5.10</b> Extracting estimated parameters</a></li>
+<li class="chapter" data-level="6.5.11" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicting-population-count-for-every-grid-cell"><i class="fa fa-check"></i><b>6.5.11</b> Predicting population count for every grid cell</a></li>
+<li class="chapter" data-level="6.5.12" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#predicting-distributions"><i class="fa fa-check"></i><b>6.5.12</b> Predicting distributions</a></li>
+<li class="chapter" data-level="6.5.13" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-population"><i class="fa fa-check"></i><b>6.5.13</b> Gridded population</a></li>
+<li class="chapter" data-level="6.5.14" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#gridded-uncertainty"><i class="fa fa-check"></i><b>6.5.14</b> Gridded uncertainty</a></li>
+<li class="chapter" data-level="6.5.15" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#aggregating-prediction"><i class="fa fa-check"></i><b>6.5.15</b> Aggregating prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#contribution-4"><i class="fa fa-check"></i><b>6.6</b> Contribution</a></li>
+<li class="chapter" data-level="6.7" data-path="hierarchichal-bottom-up-modelling-tutorial.html"><a href="hierarchichal-bottom-up-modelling-tutorial.html#suggested-citation-1"><i class="fa fa-check"></i><b>6.7</b> Suggested citation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><i class="fa fa-check"></i><b>7</b> Hierarchical Bottom-Up Modelling Extention: the Weighted Likelihood</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#introduction-3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#methods"><i class="fa fa-check"></i>Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-populations"><i class="fa fa-check"></i>Simulated Populations</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#simulated-survey-data"><i class="fa fa-check"></i>Simulated Survey Data</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#statistical-models-1"><i class="fa fa-check"></i>Statistical Models</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#population-totals"><i class="fa fa-check"></i>Population Totals</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#results"><i class="fa fa-check"></i>Results</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#discussion"><i class="fa fa-check"></i>Discussion</a></li>
+<li class="chapter" data-level="7.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#contributing-1"><i class="fa fa-check"></i><b>7.1</b> Contributing</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#suggested-citation-2"><i class="fa fa-check"></i><b>7.1.1</b> Suggested Citation</a></li>
+<li class="chapter" data-level="7.1.2" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#license-1"><i class="fa fa-check"></i><b>7.1.2</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#references-1"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#tables"><i class="fa fa-check"></i>Tables</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#figures"><i class="fa fa-check"></i>Figures</a></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html"><a href="hierarchical-bottom-up-modelling-extention-the-weighted-likelihood.html#appendix-a-supplementary-files"><i class="fa fa-check"></i>Appendix A: Supplementary Files</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="hierarchical-bottom-up-modelling-use-cases.html"><a href="hierarchical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">Hierarchical Bottom-Up Modelling Use Cases</i></a></li>
+<li class="chapter" data-level="8" data-path="nigeria-v1.html"><a href="nigeria-v1.html"><i class="fa fa-check"></i><b>8</b> Nigeria (v1)</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="nigeria-v1.html"><a href="nigeria-v1.html#introduction-4"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="nigeria-v1.html"><a href="nigeria-v1.html#materials-and-methods"><i class="fa fa-check"></i><b>8.2</b> Materials and Methods</a></li>
+<li class="chapter" data-level="8.3" data-path="nigeria-v1.html"><a href="nigeria-v1.html#results-1"><i class="fa fa-check"></i><b>8.3</b> Results</a></li>
+<li class="chapter" data-level="8.4" data-path="nigeria-v1.html"><a href="nigeria-v1.html#discussion-1"><i class="fa fa-check"></i><b>8.4</b> Discussion</a></li>
+<li class="chapter" data-level="8.5" data-path="nigeria-v1.html"><a href="nigeria-v1.html#conclusions"><i class="fa fa-check"></i><b>8.5</b> Conclusions</a></li>
+<li class="chapter" data-level="8.6" data-path="nigeria-v1.html"><a href="nigeria-v1.html#contribution-5"><i class="fa fa-check"></i><b>8.6</b> Contribution</a></li>
+<li class="chapter" data-level="8.7" data-path="nigeria-v1.html"><a href="nigeria-v1.html#funding"><i class="fa fa-check"></i><b>8.7</b> Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html"><i class="fa fa-check"></i><b>9</b> Democratic Republic of Congo - DRC (v2)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#introduction-5"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#methods-1"><i class="fa fa-check"></i><b>9.2</b> Methods</a></li>
+<li class="chapter" data-level="9.3" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#results-2"><i class="fa fa-check"></i><b>9.3</b> Results</a></li>
+<li class="chapter" data-level="9.4" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#discussion-2"><i class="fa fa-check"></i><b>9.4</b> Discussion</a></li>
+<li class="chapter" data-level="9.5" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#contribution-6"><i class="fa fa-check"></i><b>9.5</b> Contribution</a>
+<ul>
+<li class="chapter" data-level="" data-path="democratic-republic-of-congo---drc-v2.html"><a href="democratic-republic-of-congo---drc-v2.html#funding-1"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ghana-v1.html"><a href="ghana-v1.html"><i class="fa fa-check"></i><b>10</b> Ghana (v1)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ghana-v1.html"><a href="ghana-v1.html#introduction-6"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="ghana-v1.html"><a href="ghana-v1.html#methods-2"><i class="fa fa-check"></i><b>10.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="ghana-v1.html"><a href="ghana-v1.html#data"><i class="fa fa-check"></i><b>10.2.1</b> Data</a></li>
+<li class="chapter" data-level="10.2.2" data-path="ghana-v1.html"><a href="ghana-v1.html#statistical-model"><i class="fa fa-check"></i><b>10.2.2</b> Statistical Model</a></li>
+<li class="chapter" data-level="10.2.3" data-path="ghana-v1.html"><a href="ghana-v1.html#model-implementation-and-diagnostics"><i class="fa fa-check"></i><b>10.2.3</b> Model Implementation and Diagnostics</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="ghana-v1.html"><a href="ghana-v1.html#results-3"><i class="fa fa-check"></i><b>10.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="ghana-v1.html"><a href="ghana-v1.html#people-per-household"><i class="fa fa-check"></i><b>10.3.1</b> People per household</a></li>
+<li class="chapter" data-level="10.3.2" data-path="ghana-v1.html"><a href="ghana-v1.html#age-sex-structure-1"><i class="fa fa-check"></i><b>10.3.2</b> Age-sex structure</a></li>
+<li class="chapter" data-level="10.3.3" data-path="ghana-v1.html"><a href="ghana-v1.html#census-projections"><i class="fa fa-check"></i><b>10.3.3</b> Census projections</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="ghana-v1.html"><a href="ghana-v1.html#discussion-3"><i class="fa fa-check"></i><b>10.4</b> Discussion</a></li>
+<li class="chapter" data-level="10.5" data-path="ghana-v1.html"><a href="ghana-v1.html#contribution-7"><i class="fa fa-check"></i><b>10.5</b> Contribution</a></li>
+<li class="chapter" data-level="10.6" data-path="ghana-v1.html"><a href="ghana-v1.html#suggested-citation-3"><i class="fa fa-check"></i><b>10.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="10.7" data-path="ghana-v1.html"><a href="ghana-v1.html#appendices-and-supplements"><i class="fa fa-check"></i><b>10.7</b> Appendices and Supplements</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html"><i class="fa fa-check"></i><b>11</b> Burkina Faso (v1)</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#introduction-7"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-missed-communes"><i class="fa fa-check"></i><b>11.2</b> Estimating Missed <em>Communes</em></a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method"><i class="fa fa-check"></i><b>11.2.1</b> Model Method</a></li>
+<li class="chapter" data-level="11.2.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation"><i class="fa fa-check"></i><b>11.2.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results"><i class="fa fa-check"></i><b>11.3</b> Model results</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-3"><i class="fa fa-check"></i><b>11.3.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="11.3.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit"><i class="fa fa-check"></i><b>11.3.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#estimating-gridded-population-for-the-entire-country"><i class="fa fa-check"></i><b>11.4</b> Estimating Gridded Population for the Entire Country</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-method-1"><i class="fa fa-check"></i><b>11.4.1</b> Model Method</a></li>
+<li class="chapter" data-level="11.4.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-implementation-1"><i class="fa fa-check"></i><b>11.4.2</b> Model Implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#model-results-1"><i class="fa fa-check"></i><b>11.5</b> Model Results</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#implementing-the-model-4"><i class="fa fa-check"></i><b>11.5.1</b> Implementing the model</a></li>
+<li class="chapter" data-level="11.5.2" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#assessing-the-model-goodness-of-fit-1"><i class="fa fa-check"></i><b>11.5.2</b> Assessing the model goodness-of-fit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#discussion-4"><i class="fa fa-check"></i><b>11.6</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#contributions"><i class="fa fa-check"></i>Contributions</a></li>
+<li class="chapter" data-level="" data-path="burkina-faso-v1.html"><a href="burkina-faso-v1.html#suggested-citation-4"><i class="fa fa-check"></i>Suggested Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html"><i class="fa fa-check"></i><b>12</b> South Sudan (v2)</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#introduction-8"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#methods-3"><i class="fa fa-check"></i><b>12.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#boundaries-settled-area-and-unadjusted-baseline-county-population-totals"><i class="fa fa-check"></i><b>12.2.1</b> Boundaries, settled area and unadjusted (baseline) county population totals</a></li>
+<li class="chapter" data-level="12.2.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons"><i class="fa fa-check"></i><b>12.2.2</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="12.2.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement"><i class="fa fa-check"></i><b>12.2.3</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="12.2.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-locations-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>12.2.4</b> Mapping locations where people have been displaced from</a></li>
+<li class="chapter" data-level="12.2.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement"><i class="fa fa-check"></i><b>12.2.5</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#results-4"><i class="fa fa-check"></i><b>12.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-internally-displaced-persons-1"><i class="fa fa-check"></i><b>12.3.1</b> Mapping of internally displaced persons</a></li>
+<li class="chapter" data-level="12.3.2" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-unadjusted-population-population-distribution-in-the-absence-of-displacement-1"><i class="fa fa-check"></i><b>12.3.2</b> Mapping of unadjusted population (population distribution in the absence of displacement)</a></li>
+<li class="chapter" data-level="12.3.3" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#mapping-of-where-people-have-been-displaced-from"><i class="fa fa-check"></i><b>12.3.3</b> Mapping of where people have been displaced from</a></li>
+<li class="chapter" data-level="12.3.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#final-population-distribution-accounting-for-displacement-1"><i class="fa fa-check"></i><b>12.3.4</b> Final population distribution accounting for displacement</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#discussion-5"><i class="fa fa-check"></i><b>12.4</b> Discussion</a></li>
+<li class="chapter" data-level="12.5" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#contribution-8"><i class="fa fa-check"></i><b>12.5</b> Contribution</a></li>
+<li class="chapter" data-level="12.6" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#suggested-citation-5"><i class="fa fa-check"></i><b>12.6</b> Suggested Citation</a></li>
+<li class="chapter" data-level="" data-path="south-sudan-v2.html"><a href="south-sudan-v2.html#funding-2"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="zambia-v1.html"><a href="zambia-v1.html"><i class="fa fa-check"></i><b>13</b> Zambia (v1)</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="zambia-v1.html"><a href="zambia-v1.html#introduction-9"><i class="fa fa-check"></i><b>13.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="zambia-v1.html"><a href="zambia-v1.html#background"><i class="fa fa-check"></i><b>13.1.1</b> Background</a></li>
+<li class="chapter" data-level="13.1.2" data-path="zambia-v1.html"><a href="zambia-v1.html#zambia-context"><i class="fa fa-check"></i><b>13.1.2</b> Zambia Context</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="zambia-v1.html"><a href="zambia-v1.html#methods-4"><i class="fa fa-check"></i><b>13.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="zambia-v1.html"><a href="zambia-v1.html#data-1"><i class="fa fa-check"></i><b>13.2.1</b> Data</a></li>
+<li class="chapter" data-level="13.2.2" data-path="zambia-v1.html"><a href="zambia-v1.html#statistical-modelling"><i class="fa fa-check"></i><b>13.2.2</b> Statistical Modelling</a></li>
+<li class="chapter" data-level="13.2.3" data-path="zambia-v1.html"><a href="zambia-v1.html#predictions-and-final-dataset"><i class="fa fa-check"></i><b>13.2.3</b> Predictions and Final Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="zambia-v1.html"><a href="zambia-v1.html#results-5"><i class="fa fa-check"></i><b>13.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="zambia-v1.html"><a href="zambia-v1.html#assessment-of-building-footprints-data"><i class="fa fa-check"></i><b>13.3.1</b> Assessment of Building Footprints Data</a></li>
+<li class="chapter" data-level="13.3.2" data-path="zambia-v1.html"><a href="zambia-v1.html#model-fit"><i class="fa fa-check"></i><b>13.3.2</b> Model Fit</a></li>
+<li class="chapter" data-level="13.3.3" data-path="zambia-v1.html"><a href="zambia-v1.html#summary-of-population-estimates"><i class="fa fa-check"></i><b>13.3.3</b> Summary of Population Estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="zambia-v1.html"><a href="zambia-v1.html#discussion-6"><i class="fa fa-check"></i><b>13.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="zambia-v1.html"><a href="zambia-v1.html#contributing-2"><i class="fa fa-check"></i>Contributing</a></li>
+<li class="chapter" data-level="13.5" data-path="zambia-v1.html"><a href="zambia-v1.html#references-2"><i class="fa fa-check"></i><b>13.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html"><i class="fa fa-check"></i><b>14</b> Geostatistical Bottom-Up Modelling</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="geostatistical-bottom-up-modelling.html"><a href="geostatistical-bottom-up-modelling.html#introduction-and-model-presentation"><i class="fa fa-check"></i><b>14.1</b> Introduction and Model Presentation</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html"><i class="fa fa-check"></i><b>15</b> Geostatistical Bottom-up Modelling Use Cases</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#cameroon"><i class="fa fa-check"></i><b>15.1</b> Cameroon</a></li>
+<li class="chapter" data-level="15.2" data-path="geostatistical-bottom-up-modelling-use-cases.html"><a href="geostatistical-bottom-up-modelling-use-cases.html#papua-new-guinea"><i class="fa fa-check"></i><b>15.2</b> Papua New Guinea</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-3.html"><a href="references-3.html"><i class="fa fa-check"></i><i style="font-size: 110%; padding:1.5em 0 0 0; font-weight:bold;">References</i></a></li>
+<li class="divider"></li>
+<li><a href="https://www.worldpop.org" target="_blank"><img src="dat/wp_logotype.png" width="110" alt="WorldPop"/></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">WorldPop Book of Methods, Vol. I: Gridded Population Estimates</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ghana-v1" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> Ghana (v1)<a href="ghana-v1.html#ghana-v1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h2>
+A Bayesian approach to produce 100 m gridded population estimates using census microdata and recent building footprints
+</h2>
+<blockquote>
+<p><strong>Note:</strong> Supplemental data for this chapter are available from <a href="http://doi.org/10.5258/SOTON/WP00686" target="_blank">http://doi.org/10.5258/SOTON/WP00686</a>. The gridded population estimates for Ghana that were produced using the methods described in this chapter are available from the <a href="https://wopr.worldpop.org/?GHA/Population/v1.0" target="_blank">WorldPop Open Population Repository</a> and they can be explored on a map using the <a href="https://apps.worldpop.org/woprVision" target="_blank">woprVision web application</a> (select “GHA v1.0”).</p>
+</blockquote>
+<div id="introduction-6" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Introduction<a href="ghana-v1.html#introduction-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Gridded population estimates can provide an important resource for planning government services, housing and population censuses, health and education initiatives, household surveys and other programes in situations when their are no recent census data available. Gridded population estimates can be aggregated to estimate total populations for custom areas suited to individual project goals. WorldPop uses two general approaches for producing gridded population estimates: bottom-up and top-down <span class="citation">(<a href="#ref-wardrop2018spatially">Wardrop et al. 2018a</a>)</span>.</p>
+<p>Top-down methods <span class="citation">(<a href="#ref-stevens2015disaggregating">Stevens et al. 2015a</a>)</span> dissaggregate known population totals for administrative units into gridded population estimates at higher spatial resolution (e.g. 100 m). This approach is best for situations when reliable population totals for administrative units are available from a recent census or census projections. The population totals are dissaggregated based on relationships with gridded geospatial covariates that are mapped consistently across an entire study area or region of interest such as nighttime lights, impervious surfaces, and distance to city centers. Top-down approaches are not reliable when population totals from a recent census are not available and population projections are not reliable due to population displacement, time since the last census, or other reasons.</p>
+<p>Bottom-up methods <span class="citation">(<a href="#ref-leasure2020national">Leasure et al. 2020d</a>)</span> use population counts from a sample of locations (e.g. from household surveys) to produce gridded population estimates with full national coverage. This approach is best for situations when population totals from census are not available but recent household survey data are available with full enumeration of people in a sample of clearly defined survey locations. Like the top-down method, populations are estimated based on relationships with gridded geospatial covariates. Bottom-up methods are often based on Bayesian statistical models that provide robust estimates of uncertainty, whereas top-down models based on machine learning models <span class="citation">(<a href="#ref-stevens2015disaggregating">Stevens et al. 2015a</a>)</span> do not provide any confidence bounds on population estimates. One challenge with the bottom-up approach is that it requires geolocated household survey data that can be difficult to access due to privacy safeguards that must be put in place.</p>
+<p>A method is needed that can produce robust gridded population estimates in situations when recent census data and geolocated household survey data are both unavailable. There are publicly available anonymized household survey data without specific location information that could be used for this purpose (e.g. IPUMS, DHS). Increasing availability of building footprints mapped from satellite imagery also provide a valuable source of information. A statistical method that measures statistical uncertainty for population estimates would be needed because the inherent uncertainty in population data that are not geolocated will likely produce population estimates with wide confidence intervals that would be important for end users to be aware of.</p>
+<p>Our goal here was to develop a new Bayesian statistical model to estimate the number of <i>households per building</i> and <i>people per household</i> at sub-national spatial scales. We prioritized the use of publicly available data so that the method could be replicated across countries more easily. We demonstrated this new approach with a case study to produce gridded population estimates for Ghana. Our aim was to produce:</p>
+<ol style="list-style-type: decimal">
+<li>100 meter gridded population estimates with national coverage,</li>
+<li>Estimates of age-sex structure by region and settlement type,</li>
+<li>Estimates of people per household by geographic unit and settlement type,</li>
+<li>Estimates of households per building by geographic unit and settlement type, and</li>
+<li>Robust estimates of uncertainty for population estimates (and other parameters) at any spatial scale.</li>
+</ol>
+</div>
+<div id="methods-2" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Methods<a href="ghana-v1.html#methods-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The total population for an area can be described as a function of the number of buildings:</p>
+<p><span class="math display">\[
+population = buildings \times \frac{households}{building} \times \frac{people}{household}
+\]</span>
+We develop this equation into a hierarchical statistical model below, but first we will describe the sources of information needed to inform the parameters on the right side of the equation.</p>
+<div id="data" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Data<a href="ghana-v1.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Building footprints.</strong> We used rasterized counts of buildings within approximately 100 m grid cells across Ghana <span class="citation">(<a href="#ref-dooley2020gridded">Dooley et al. 2020a</a>)</span>. These were derived from building footprints for sub-saharan Africa that were extracted from from recent high-resolution satellite imagery <span class="citation">(<a href="#ref-ecopia2020digitize">Ecopia.AI &amp; Maxar Technologies, Inc. 2019-2021</a>)</span> (modal year = 2018, range = 2009 to 2019).</p>
+<p><strong>Census microdata.</strong> We used microdata samples from the 2010 Ghana census that were publicly available from IPUMS International <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span>. This provides a count of the number of people from thousands of housing units with representative national coverage. Each household record is geo-tagged to geographic areas nested within larger regions. These level 1 and level 2 geographic boundaries (Fig. <a href="ghana-v1.html#fig:map">10.1</a>) were available for download from IPUMS International <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span>.</p>
+<p>There were no GPS coordinates associated with these household-level survey data for privacy reasons. The absence of specific location information is one of the primary challenges to overcome with the statistical model. Geospatial covariates that are usually fundamental for bottom-up statistical models <span class="citation">(<a href="#ref-wardrop2018spatially">Wardrop et al. 2018a</a>, <a href="#ref-leasure2020national">Leasure et al. 2020d</a>)</span> cannot be used here because we do not know the exact locations of the household surveys.</p>
+<p>We used this to estimate the average number of people per household within sub-national geographic units. We also used these data to estimate the demographic composition of the populations in these areas by age and sex. We will assume that these parameters have not changed since 2010 when the census was conducted.</p>
+<p><strong>Population totals.</strong> We used population totals for level 3 administrative units that were projected to the year 2018 from the last census <span class="citation">(<a href="#ref-worldpop2018globala">WorldPop &amp; CIESIN 2018a</a>)</span>. We also used the level 3 administrative boundaries used for those projections <span class="citation">(<a href="#ref-worldpop2018globalb">WorldPop &amp; CIESIN 2018b</a>)</span> (Fig. <a href="ghana-v1.html#fig:map">10.1</a>).</p>
+<p>We used this to estimate the average number of housing units per building. We used projections to the year 2018 to match the year of the building footprints.</p>
+<p><strong>Settlement type.</strong> We used the urban and rural classifications of enumeration areas from the 2010 Ghana census <span class="citation">(<a href="#ref-gss2010census">Ghana Statistical Services 2010</a>)</span>. We summarized the original three settlement types into urban and rural classes based on guidance from Ghana Statistical Services. We assumed that this was the same urban and rural classification reported in the census microdata from IPUMS International <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span>.</p>
+<p>Maps of settlement types, administrative boundaries, and IPUMS geographic regions (Fig. <a href="ghana-v1.html#fig:map">10.1</a>) were rasterized to a 100 m mastergrid matching the building footprints rasters <span class="citation">(<a href="#ref-dooley2020gridded">Dooley et al. 2020a</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:map"></span>
+<img src="dat/GHAv1/map.jpg" alt="Geographic units used for modelling." width="60%"  />
+<p class="caption">
+Figure 10.1: Geographic units used for modelling.
+</p>
+</div>
+</div>
+<div id="statistical-model" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Statistical Model<a href="ghana-v1.html#statistical-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We developed a Bayesian statistical model to estimate the average number of <em>people per housing unit</em> and the average number of <em>housing units per building</em> from these data.</p>
+<div id="indexing" class="section level4 unnumbered hasAnchor">
+<h4>Indexing<a href="ghana-v1.html#indexing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The indexing used throughout the model description (below) is as follows:</p>
+<p><em>Households (h)</em> contained within the IPUMS data. There were a total of 570,234 households from the Ghana census microdata and we used a representative 70% sample to fit our model (selected at random using the SAMPLE attribute of the IPUMS data). The remaining 30% was used for out-of-sample model validation.</p>
+<p><em>Age-sex groups (k)</em> that included 36 bins: under 1 year, 1 to 5 years, 80+ years, and 5 year intervals in between for both males and females.</p>
+<p><em>Settlement type (t)</em> for each enumeration area from the 2010 Ghana census. We summarized these as either urban (1) or rural (2).</p>
+<p><em>Age-sex regions (r)</em> were defined by the level 1 geographic boundaries from IPUMS <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span>. We estimated the proportion of the population in each age-sex group for urban and rural areas within each of these 10 regions.</p>
+<p><em>Household geographies (g)</em> were defined by the level 2 geographic boundaries from IPUMS <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span>. We estimated <i>people per household</i> for urban and rural areas within each of these 102 geographies.</p>
+<p><em>Population units (u)</em> were defined by the level 3 administrative boundaries from census projections <span class="citation">(<a href="#ref-worldpop2018globalb">WorldPop &amp; CIESIN 2018b</a>)</span>. We estimated <i>households per building</i> for urban and rural areas within each of these 170 population units.</p>
+<p><em>Locations (i)</em> are 100 meter grid cells that were used for model predictions.</p>
+</div>
+<div id="population-estimates" class="section level4 unnumbered hasAnchor">
+<h4>Population Estimates<a href="ghana-v1.html#population-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To estimate the population for a given location <span class="math inline">\(i\)</span>, we used the following model:</p>
+<p><span class="math display" id="eq:predict">\[\begin{equation}
+pop_i \sim \textsf{Poisson}(bldg_i \times hpb_{t_i,u_i} \times pph_{t_i, g_i}) \\
+pop_{i,k} \sim \textsf{Multinomial}(pop_i, \theta_{t_i,r_i,k})
+\tag{6.5}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(pop_i\)</span> is the total population estimated for location <span class="math inline">\(i\)</span>, and <span class="math inline">\(pop_{i,k}\)</span> is the number of people within age-sex group <span class="math inline">\(k\)</span>. <span class="math inline">\(bldg_i\)</span> is the observed number of building footprints at this location. <span class="math inline">\(hpb\)</span> and <span class="math inline">\(pph\)</span> are estimated parameters measuring households per building and people per household, respectively. In this portion of the model, the only observed data are the building counts <span class="math inline">\(bldg_i\)</span>, settlement type <span class="math inline">\(t_i\)</span>, and the three spatial unit IDs (<span class="math inline">\(g_i\)</span>, <span class="math inline">\(u_i\)</span>, and <span class="math inline">\(r_i\)</span>). Note that we are assuming that the count of building footprints is equivalent to the true count of buildings.</p>
+<p>Estimating the parameters <span class="math inline">\(hpb_{t,u}\)</span>, <span class="math inline">\(pph_{t,g}\)</span>, and <span class="math inline">\(\theta_{t,r,k}\)</span> is the focus of the statistical model developed below.</p>
+</div>
+<div id="people-per-household-pph" class="section level4 unnumbered hasAnchor">
+<h4>People per Household (pph)<a href="ghana-v1.html#people-per-household-pph" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Single-person households are more common in the Ghana microdata than could be accounted for by a simple Poison distribution to model household sizes, so we used a Hurdle model <span class="citation">(<a href="#ref-stan2019stan">Stan Development Team 2019a</a>)</span> to account for the one-inflated distribution. This involves two processes:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\alpha_{t,g}\)</span> the probability that a household has only a single-person , and</p></li>
+<li><p><span class="math inline">\(\lambda_{t,g}\)</span> the number of additional people in multi-person households other than the head of household.</p></li>
+</ol>
+<p>These two parameters are the basis for estimating people per household <span class="math inline">\(pph_{t,g}\)</span> by type and household geographic unit. The Ghana census microdata (IPUMS 2020) provided the data that we needed to fit this part of the model. This included a count of people and their ages from a representative sample of households across the country.</p>
+<p>We used a beta-binomial model to estimate the probability of a single-person household <span class="math inline">\(\alpha_{t,g}\)</span> in urban and rural settlement types <span class="math inline">\(t\)</span> in each geographic area <span class="math inline">\(g\)</span>:</p>
+<p><span class="math display" id="eq:alpha">\[\begin{equation}
+single_{t,g} \sim \textsf{Binomial}(hh_{t,g}, \alpha_{t,g}) \\
+\alpha_{t,g} \sim \textsf{Beta}(\frac{\bar{\alpha}_{t}}{\tilde{\alpha}}, \frac{1-\bar{\alpha}_{t}}{\tilde{\alpha}})
+\tag{10.1}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(hh_{t,g}\)</span> is the total number of households surveyed from settlement type <span class="math inline">\(t\)</span> in geography <span class="math inline">\(g\)</span>, and <span class="math inline">\(single_{t,g}\)</span> is the total number of single-person households surveyed. <span class="math inline">\(\alpha_{t,g}\)</span> is the probability that a household contains only a single person. <span class="math inline">\(\bar{\alpha}_{t}\)</span> is the mean of <span class="math inline">\(\alpha_{t,g}\)</span> among geographies within settlement type <span class="math inline">\(t\)</span> and <span class="math inline">\(\tilde{\alpha}\)</span> quantifies variance among geographies.</p>
+<p>We used a Poisson model with LogNormal overdispersion to estimate the number of people in multi-person households <span class="math inline">\(\lambda_{t,g}\)</span> (excluding the head of household):</p>
+<p><span class="math display" id="eq:lambda">\[\begin{equation}
+N_h-1 \sim \textsf{Poisson}(\lambda_{h}) T(1,) \\
+\lambda_{h} \sim \textsf{LogNormal}(\mu_{t,g}, \sigma_{t,g})
+\tag{10.2}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(N_h\)</span> is the observed number of people in each multi-person household <span class="math inline">\(h\)</span> from the IPUMS census microdata and <span class="math inline">\(\lambda_{h}\)</span> is the expected count of household members other than the head of household. We used <span class="math inline">\(N_h - 1\)</span> as the response variable so we could use zero-inflation to account for one-inflated distributions of <span class="math inline">\(N_h\)</span>. The Poisson distribution is truncated below 1 (notated as T) because the beta-binomial model (Eq. <a href="ghana-v1.html#eq:alpha">(10.1)</a>) already accounts for single-person households. <span class="math inline">\(\mu_{t,g}\)</span> is the mean of <span class="math inline">\(\lambda_h\)</span> (on the log scale) among households from settlement type <span class="math inline">\(t\)</span> in geography <span class="math inline">\(g\)</span>, and <span class="math inline">\(\sigma_{t,g}\)</span> is the variance (on the log scale) among households in settlement type <span class="math inline">\(t\)</span>. We modelled <span class="math inline">\(\mu_{t,g}\)</span> and <span class="math inline">\(\sigma_{t,g}\)</span> hierarchically to share information among geographies:</p>
+<p><span class="math display" id="eq:mu">\[\begin{equation}
+\mu_{t,g} \sim \textsf{Normal}(\bar{\mu}_t, \tilde{\mu}) \\
+\sigma_{t,g} \sim \textsf{Half-Normal}(\bar{\sigma}_t, \tilde{\sigma})
+\tag{10.3}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\bar{\mu}_t\)</span> is the mean value of <span class="math inline">\(\mu_{t,g}\)</span> among geographies within settlement type <span class="math inline">\(t\)</span>, and <span class="math inline">\(\tilde{\mu}\)</span> is the variance among geographies in both settlement types combined. We used these parameters to estimate a version of <span class="math inline">\(\lambda\)</span> that was not constrained by household-level observations:</p>
+<p><span class="math display" id="eq:lambdahat">\[\begin{equation}
+\hat{\lambda}_{t,g} \sim \textsf{LogNormal}(\mu_{t,g}, \sigma_{t,g})
+\tag{10.4}
+\end{equation}\]</span></p>
+<p>When we say that <span class="math inline">\(\hat{\lambda}_{t,g}\)</span> was not constrained by household-level observations, we mean that it is constant among households within a settlement type in a given geography. This is neccessary to derive the expected values (i.e. the means) of people per household to use for population predictions:</p>
+<p><span class="math display">\[\begin{equation}
+E(pph_{t,g}) = 1 + (1 - \alpha_{t,g}) \hat{\lambda}_{t,g}
+\end{equation}\]</span></p>
+<p>The priors that we used for parameters in this part of the model were:</p>
+<p><span class="math display">\[\begin{equation}
+\bar{\alpha_t} \sim \textsf{Uniform}(0, 1) \\
+\tilde{\alpha} \sim \textsf{Uniform}(0, 1) \\
+\bar{\mu_t} \sim \textsf{Normal}(0, 5) \\
+\tilde{\mu} \sim \textsf{Uniform}(0, 5) \\
+\bar{\sigma}_t \sim \textsf{Uniform}(0, 5) \\
+\tilde{\sigma} \sim \textsf{Uniform}(0, 5) \\
+\end{equation}\]</span></p>
+<p>Our aim was to use relatively uninformative priors that provided information about the range of possible values but were not influential on parameter estimates relative to the data.</p>
+<p>Just for comparison purposes, another way to write the Hurdle model from Eqs. <a href="ghana-v1.html#eq:alpha">(10.1)</a> and <a href="ghana-v1.html#eq:lambda">(10.2)</a> is:</p>
+<p><span class="math display">\[\begin{equation}
+p(N_h - 1 \mid \alpha_{t,g}, \lambda_h)
+=
+\begin{cases}
+\alpha_{t,g} &amp;\quad \text{if } N_h - 1 = 0, \text{ and} \\
+(1 - \alpha_{t,g})
+   \frac{\displaystyle \textsf{Poisson}(N_h - 1 \mid \lambda_h)}
+        {\displaystyle  1 - \textsf{PoissonCDF}(0 \mid \lambda_h)}
+&amp;\quad\text{if } N_h - 1 &gt; 0,
+\end{cases}
+\end{equation}\]</span></p>
+<p>See the <a href="https://mc-stan.org/docs/2_23/stan-users-guide/zero-inflated-section.html">Stan User’s Guide</a> <span class="citation">(<a href="#ref-stan2019stan">Stan Development Team 2019a</a>)</span> for more details about the Hurdle model specification.</p>
+</div>
+<div id="demographic-groups" class="section level4 unnumbered hasAnchor">
+<h4>Demographic Groups<a href="ghana-v1.html#demographic-groups" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We used a multinomial-Dirichlet model to account for demographic structure in the population:</p>
+<p><span class="math display">\[\begin{equation}
+M_{t,r,k} \sim \textsf{Multinomial}(\dot{M}_{t,r}, \theta_{t,r,k}) \\
+\theta_{t,r,k} \sim \textsf{Dirichlet}(rep(1, K))
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\dot{M}_{t,r}\)</span> is the total number of survey respondents from our IPUMS sample in settlement type <span class="math inline">\(t\)</span> within region <span class="math inline">\(r\)</span>, and <span class="math inline">\(M_{t,r,k}\)</span> is the number of respondents within age-sex group <span class="math inline">\(k\)</span> observed in the census microdata. In this model, the age-sex structure <span class="math inline">\(\theta_{t,r,k}\)</span> (i.e. proportion of population in each group) is a parameter that is estimated independently for each region and settlement type. The Dirichlet prior is an uninformative flat prior. <span class="math inline">\(K\)</span> is the total number of age-sex groups (i.e. <span class="math inline">\(K = 36\)</span>). The Dirichlet distribution produces a vector of probabilities (i.e. one for each age-sex group) that must sum to one (i.e. to represent the total population).</p>
+</div>
+<div id="households-per-building-hpb" class="section level4 unnumbered hasAnchor">
+<h4>Households per Building (hpb)<a href="ghana-v1.html#households-per-building-hpb" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For each population unit <span class="math inline">\(u\)</span> we know the total count of buildings and the estimated total population from census projections. From the previous model components we also have an estimate of the average number of people per household for household geographies <span class="math inline">\(g\)</span> and settlement types <span class="math inline">\(t\)</span> within the population unit. Our goal now is to use these pieces of information to estimate the average number of housing units per building for urban and rural areas within each population unit <span class="math inline">\(u\)</span>. We accomplished this using the following model:</p>
+<p><span class="math display" id="eq:poptotal">\[\begin{equation}
+\dot{N}_u \sim \textsf{LogNormal}(log(\bar{N}_u), \tilde{N}_u) \\
+\bar{N}_u = \sum_{t=1}^{T} \sum_{g=1}^{G} (B_{t,u,g} \times hpb_{t,u} \times pph_{t,g})
+\tag{10.5}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\dot{N}_u\)</span> are the estimated total population sizes for unit <span class="math inline">\(u\)</span> that were provided as input data from census projections <span class="citation">(<a href="#ref-worldpop2018globala">WorldPop &amp; CIESIN 2018a</a>)</span>. <span class="math inline">\(B_{t,u,g}\)</span> is the observed number of building footprints within the intersection of geography <span class="math inline">\(g\)</span>, population unit <span class="math inline">\(u\)</span>, and settlement type <span class="math inline">\(t\)</span>. We modelled <span class="math inline">\(hpb_{t,u}\)</span> hierarchically using a log-normal distribution to share information among population units:</p>
+<p><span class="math display">\[\begin{equation}
+hpb_{t,u} \sim \textsf{LogNormal}(\bar{hpb}_{t}, \tilde{hpb})
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\bar{hpb}_{t}\)</span> is the mean of <span class="math inline">\(hpb_{t,u}\)</span> among population units within settlement type <span class="math inline">\(t\)</span>, and <span class="math inline">\(\tilde{hpb}\)</span> is the variance among population units including both settlement types. These variance terms did not differ significantly among settlement types, so estimating a single variance parameter produced similar results to estimating them seperately.</p>
+</div>
+<div id="measurement-error-in-census-projections" class="section level4 unnumbered hasAnchor">
+<h4>Measurement Error in Census Projections<a href="ghana-v1.html#measurement-error-in-census-projections" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We treated the parameter <span class="math inline">\(\tilde{N}_u\)</span> from Eq. <a href="ghana-v1.html#eq:poptotal">(10.5)</a> as measurement error in the projected census totals <span class="math inline">\(\dot{N}_u\)</span> that were used as input data. We provided estimates of measurement error as an informative prior:</p>
+<p><span class="math display">\[\begin{equation}
+\tilde{N}_u \sim \textsf{LogNormal}(log(0.15), 0.5)
+\end{equation}\]</span></p>
+<p>Because we did not have information about the uncertainty of the census projections, we designed this prior to be as vague as possible while still resulting in model convergence. The mean of log(0.15) represents our prior belief that the projected census totals were within about 25% of the true population totals, on average across population units <span class="math inline">\(u\)</span>. The standard deviation of 0.5 represents our prior belief that there may have been significantly more measurement error in some population units (e.g. 100% or more). Because the model is estimating this parameter for every population unit, the model has the freedom to identify which units have more or less measurement error, based on information from the rest of the model.</p>
+</div>
+</div>
+<div id="model-implementation-and-diagnostics" class="section level3 hasAnchor" number="10.2.3">
+<h3><span class="header-section-number">10.2.3</span> Model Implementation and Diagnostics<a href="ghana-v1.html#model-implementation-and-diagnostics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We implemented this Bayesian model using the R statistical programming language <span class="citation">(<a href="#ref-r2020r">R Core Team 2020a</a>)</span> and the rstan package <span class="citation">(<a href="#ref-stan2020rstan">Stan Development Team 2020</a>)</span>. The model code and input data are provided as supplementary files that are described in Appendix A. Convergence of MCMC chains (i.e. Markov chain Monte Carlo) was evaluated using the <a href="https://mc-stan.org/rstan/reference/Rhat.html">Rhat</a> metric from the Stan software <span class="citation">Stan Development Team (<a href="#ref-stan2020rstan">2020</a>)</span>. We used four MCMC chains with a warmup period of 250 iterations followed by a sampling period of 2500 MCMC iterations per chain.</p>
+<p>We have three types of population data that we can use to evaluate model fit: people per household and people per age-sex group from the household-level census microdata <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span> and estimates of total population per region from projected census totals <span class="citation">(<a href="#ref-worldpop2018globalb">WorldPop &amp; CIESIN 2018b</a>)</span>.</p>
+<p>In general, we assessed model fit using model residuals <code>(observed - predicted)</code> to calculate bias <code>mean(residuals)</code>, imprecision <code>sd(residuals)</code>, inaccuracy <code>mean(abs(residuals))</code>, and r-squared percent variance explained (squared Pearson correlation coefficient). The mean values from posterior predictions were used for these assessments.
+We assessed the model’s prediction intervals by calculating the proportion of out-of-sample observations that were within the prediction intervals. If the prediction intervals were robust, we expected about 95% of out-of-sample observations to fall inside the 95% prediction intervals and 50% of observations fall inside of 50% prediction intervals.</p>
+<p>We assessed model fit at the household-level using the 30% out-of-sample subset from the census microdata <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span>. We analyzed residuals for the following parameters:</p>
+<ul>
+<li><span class="math inline">\(\alpha_{t,g}\)</span> probability of a single-person household,</li>
+<li><span class="math inline">\(\lambda_{t,g}\)</span> additional household members in multi-person households,</li>
+<li><span class="math inline">\(pph_{t,g}\)</span> number of people per household,</li>
+<li><span class="math inline">\(\theta_{t,r,k}\)</span> proportion of the population in each age-sex group, and</li>
+<li><span class="math inline">\(\dot{N}_u\)</span> total population per population unit <span class="math inline">\(u\)</span>.</li>
+</ul>
+<p>We assessed model fit at the region-level using in-sample data from the projected census totals <span class="citation">(<a href="#ref-worldpop2018globala">WorldPop &amp; CIESIN 2018a</a>)</span>. We generated a posterior predictions for the total population in unit <span class="math inline">\(u\)</span> as:</p>
+<p><span class="math display">\[\begin{equation}
+\hat{\dot{N}}_u \sim \textsf{LogNormal}(\bar{N}_u, \tilde{N}_u)
+\end{equation}\]</span></p>
+<p>Spatial units <span class="math inline">\(u\)</span> where there was a large difference between the modelled population total <span class="math inline">\(\hat{\dot{N}}\)</span> and the projected census totals <span class="math inline">\(\dot{N}\)</span> likely indicates that census projections were inaccurate in those units, but it could also indicate a lack of model fit for that location (i.e. biased estimates of <span class="math inline">\(hpb_{t,u}\)</span> or <span class="math inline">\(pph_{t,g}\)</span>).</p>
+</div>
+</div>
+<div id="results-3" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Results<a href="ghana-v1.html#results-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The model reached full convergence for all parameters based on the Rhat metric used by Stan and there were no additional warnings about instabilities of means, medians, or tails of posteriors.</p>
+<p>Full model results can be downloaded from the <a href="https://wopr.worldpop.org/?GHA/Population/v1.0">WorldPop Open Population Repository</a> <span class="citation">(<a href="#ref-leasure2020bayesian">Leasure &amp; Tatem 2020b</a>)</span>. This included 100 m gridded estimates with national coverage for:</p>
+<ol style="list-style-type: decimal">
+<li>The number of people,</li>
+<li>The number of people in each age-sex group,</li>
+<li>The number of households,</li>
+<li>The average number of people per household,</li>
+<li>The average number of households per building footprint, and</li>
+<li>The average number of people per building footprint.</li>
+</ol>
+<p>Posterior estimates for total number of people and people per age-sex group can be explored on an interactive map using the <a href="https://github.com/wpgp/wopr">wopr R package</a> and the <a href="https://apps.worldpop.org/woprVision">woprVision web application</a> (Fig. <a href="ghana-v1.html#fig:woprVision">10.2</a>) <span class="citation">(<a href="#ref-leasure2020wopr">Leasure et al. 2020a</a>)</span>. It is not possible to validate the model predictions at the 100 m grid cell level because we do not have geolocated population data. The posterior predictions have wide confidence intervals that accurately reflect this uncertainty.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:woprVision"></span>
+<img src="dat/GHAv1/woprVision.jpg" alt="woprVision web application providing access to posterior predictions on an interactive web map (https://apps.worldpop.org/woprVision; select data 'GHA v1.0')." width="100%"  />
+<p class="caption">
+Figure 10.2: woprVision web application providing access to posterior predictions on an interactive web map (<a href="https://apps.worldpop.org/woprVision" class="uri">https://apps.worldpop.org/woprVision</a>; select data ‘GHA v1.0’).
+</p>
+</div>
+<div id="people-per-household" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> People per household<a href="ghana-v1.html#people-per-household" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Analysis of residuals indicated that estimates of people per household were relatively unbiased (-6.4%) but predictoins were very imprecise (76%) for individual households (r-squared = 0.05). This was expected due to the lack of location information from the household data. Despite imprecise household-specific predictions, the overall distributions of predicted household sizes were representative of household sizes within geographic units and settlement types (Fig. <a href="ghana-v1.html#fig:pph">10.3</a>). The prediction intervals for people per household were robust with 96.8% of out-of-sample data falling within the 95% prediction interval and 69% falling within the 50% prediction interval.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pph"></span>
+<img src="dat/GHAv1/N/Nhat_1_1.jpg" alt="Distribution of people per household in geographic unit  no. 1 for urban areas (left; t=1, g=1) and rural areas (right; t=2, g=1)." width="50%"  /><img src="dat/GHAv1/N/Nhat_2_1.jpg" alt="Distribution of people per household in geographic unit  no. 1 for urban areas (left; t=1, g=1) and rural areas (right; t=2, g=1)." width="50%"  />
+<p class="caption">
+Figure 10.3: Distribution of people per household in geographic unit no. 1 for urban areas (left; t=1, g=1) and rural areas (right; t=2, g=1).
+</p>
+</div>
+<p>Estimates of <span class="math inline">\(\alpha_{t,g}\)</span> (bias = 1.3%, imprecision = 19.2%) and <span class="math inline">\(\lambda_{t,g}\)</span> (bias = -1.3%, imprecision = 8.3%) were much more accurate because they were estimated for larger spatial scales (geographic units <span class="math inline">\(g\)</span>) with r-squared values of 0.88 and 0.93, respectively (Fig. <a href="ghana-v1.html#fig:alphalambda">10.4</a>). Remember that <span class="math inline">\(\alpha_{t,g}\)</span> is the probability that a household contains only a single person and <span class="math inline">\(\lambda_{t,g}\)</span> is the average number of people in a household other than the head of household. We did not assess the coverage of the prediction intervals for each of these parameters individually because they are component parts of a mixture distribution representing people per household, which was assessed above.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:alphalambda"></span>
+<img src="dat/GHAv1/fit_alpha.jpg" alt="Observed versus predicted parameters for estimating people per household." width="50%"  /><img src="dat/GHAv1/fit_lambda.jpg" alt="Observed versus predicted parameters for estimating people per household." width="50%"  />
+<p class="caption">
+Figure 10.4: Observed versus predicted parameters for estimating people per household.
+</p>
+</div>
+</div>
+<div id="age-sex-structure-1" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Age-sex structure<a href="ghana-v1.html#age-sex-structure-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Estimates of <span class="math inline">\(\theta_{t,r,k}\)</span> (i.e. proportion of population in each age-sex group) had an r-squared of 0.98 compared to out-of-sample data (Fig. <a href="ghana-v1.html#fig:theta">10.5</a>; bias = -6.6%, imprecision = 18%). The slight negative bias was particularly apparent for estimates of adult males in some geographic units (see Appendix B). The 95% prediction intervals contained only 48% of out-of-sample data and the 50% prediction intervals contained only 21% of out-of-sample data. The underestimated prediction intervals may have resulted from the strong constraints of the Dirichlet distribution requiring the proportions to sum to one.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:theta"></span>
+<img src="dat/GHAv1/fit_theta.jpg" alt="Observed versus predicted proportion of the population in each age-sex group. The plot shows all age-sex groups across all regions." width="50%"  />
+<p class="caption">
+Figure 10.5: Observed versus predicted proportion of the population in each age-sex group. The plot shows all age-sex groups across all regions.
+</p>
+</div>
+<p>The population pyramids that resulted from the estimates of theta differed slightly between urban areas and rural areas (Fig. <a href="ghana-v1.html#fig:pyramid">10.6</a>). Urban areas had a wider base indicating a higher proportion of children. Within settlement types, there were slight differences in population pyramids among geographic units (see Appendix B).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pyramid"></span>
+<img src="dat/GHAv1/theta/agesex_1_1.jpg" alt="Population pyramid in region no. 1 for urban areas (left, t=1, r=1) and rural areas (right, t=2, r=1). Dots are observed out-of-sample data, while bars and their credible intervals are posterior predictions from the model." width="50%"  /><img src="dat/GHAv1/theta/agesex_2_1.jpg" alt="Population pyramid in region no. 1 for urban areas (left, t=1, r=1) and rural areas (right, t=2, r=1). Dots are observed out-of-sample data, while bars and their credible intervals are posterior predictions from the model." width="50%"  />
+<p class="caption">
+Figure 10.6: Population pyramid in region no. 1 for urban areas (left, t=1, r=1) and rural areas (right, t=2, r=1). Dots are observed out-of-sample data, while bars and their credible intervals are posterior predictions from the model.
+</p>
+</div>
+<p>Figures comparing model estimates of people per household and age-sex structure to out-of-sample observations (like Figs. <a href="ghana-v1.html#fig:pph">10.3</a> and <a href="ghana-v1.html#fig:pyramid">10.6</a>) are provided in Appendix A for all geographic units.</p>
+</div>
+<div id="census-projections" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Census projections<a href="ghana-v1.html#census-projections" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Model estimates of total population in each population unit <span class="math inline">\(u\)</span> were comparable to the projected census totals used as input data for most areas (r-squared = 0.98), but there were significant divergences in two units (Fig. <a href="ghana-v1.html#fig:projections">10.7</a>) where the census projections were likely significant underestimates that did not account for urban growth into these suburban/rural areas. One of the areas was on the north side of the city of Kumasi and the other was west of the city of Tamale (see results at <a href="https://apps.worldpop.org/woprVision" class="uri">https://apps.worldpop.org/woprVision</a>; select data “GHA v1.0”).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:projections"></span>
+<img src="dat/GHAv1/totpop.jpg" alt="Census projections versus model predictions of total population sizes in 170 spatial units. The panel on the right is zoomed in to units with less than 250,000 people." width="50%"  /><img src="dat/GHAv1/totpop_zoom.jpg" alt="Census projections versus model predictions of total population sizes in 170 spatial units. The panel on the right is zoomed in to units with less than 250,000 people." width="50%"  />
+<p class="caption">
+Figure 10.7: Census projections versus model predictions of total population sizes in 170 spatial units. The panel on the right is zoomed in to units with less than 250,000 people.
+</p>
+</div>
+</div>
+</div>
+<div id="discussion-3" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Discussion<a href="ghana-v1.html#discussion-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The model is a hybrid between commonly used top-down and bottom-up approaches <span class="citation">(<a href="#ref-wardrop2018spatially">Wardrop et al. 2018a</a>)</span> that are often used to map populations when complete census results are not available. It is like bottom-up approaches because it uses household-level survey data that do not have full coverage of the country. It is like top-down approaches because it uses projected census totals to constrain population estimates. Unlike other top-down approaches <span class="citation">(<a href="#ref-stevens2015disaggregating">Stevens et al. 2015a</a>)</span>, this model enforces a “soft constraint” in which the population totals can deviate significantly from the census projections provided as input data if the weight of evidence from the rest of the model suggests the projections are inaccurate. This approach is unlike top-down and bottom-up approaches because it cannot use high-resolution geospatial covariates other than the count of buildings in each 100 m pixel.</p>
+<p>This modelling approach produces high resolution gridded population estimates from publicly available census microdata that have been standardized across countries by IPUMS International <span class="citation">(<a href="#ref-mpc2019integrated">Minnesota Population Center 2019</a>)</span>. The building footprints that are the other critical piece of data have been produced for 51 countries in sub-Saharan Africa <span class="citation">(<a href="#ref-ecopia2020digitize">Ecopia.AI &amp; Maxar Technologies, Inc. 2019-2021</a>, <a href="#ref-dooley2020gridded">Dooley et al. 2020a</a>)</span>. This provides an opportunity to produce rapid population estimates for countries where both data sets are available. We achieved this by estimating the average number of <em>households per building</em> and the average number of <em>people per household</em> for urban and rural sub-national geographic units using a hierarchical Bayesian modelling approach. Importantly, the method accounts for uncertainty which can be significant for approaches like this that do not have detailed spatial information associated with the population data, which is the usual situation when using publicly available data.</p>
+<p>This method cannot map variation in people per household or households per building with precision at the 100 m spatial scale because specific locations of households are not available for the census microdata. The model estimates these parameters for urban and rural settlements in over 100 geographic units across the country, but it does not attempt to map variation within those units. It accounts for that variation as statistical uncertainty which results in the population estimates having fairly wide credible intervals. Because we used data from the 2010 Ghana census to estimate the number of people per household and the proportion of the population in each age-sex group for urban and rural settlements in various regions, we have assumed that the patterns of people per household and age-sex structure have not changed in these areas since 2010. This was a necessary assumption in the absence of more recent survey data, but the model can be updated when newer data become available.</p>
+<p>We suggest labelling the population estimates as 2018 because this was the most common satellite image acquisition year (Fig. <a href="ghana-v1.html#fig:imageryyear">10.8</a>) for imagery used by Maxar Technologies and Ecopia.AI <span class="citation">(<a href="#ref-ecopia2020digitize">Ecopia.AI &amp; Maxar Technologies, Inc. 2019-2021</a>)</span> to derive the building footprints. The year of satellite images varied across the country from 2009 to 2019, depending on the exact location. Refer to the raster GHA_buildings_v1_1_imagery_year.tif <span class="citation">(<a href="#ref-dooley2020gridded">Dooley et al. 2020a</a>)</span> for a map of the imagery years of building footprints. We assumed that the building footprints represented all potentially residential buildings. We did not account for buildings that were missing from the building footprints or that have since been removed. We did not have quantitative measures of building footprint accuracy available to us.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:imageryyear"></span>
+<img src="dat/GHAv1/foot_year.jpg" alt="Distribution across Ghana of the year of building footprints (Ecopia.AI and Maxar Technologies 2020, Dooley et al. 2020)." width="50%"  />
+<p class="caption">
+Figure 10.8: Distribution across Ghana of the year of building footprints (Ecopia.AI and Maxar Technologies 2020, Dooley et al. 2020).
+</p>
+</div>
+<p>We identified a few areas for improvement in this model. The credible intervals for the age-sex structure are not capturing the full range of variation. One potential solution may be to apply a hierarchical Dirichlet prior to constrain the population pyramids to share information among regions. The estimated distributions of people per household appeared not to fit the out-of-sample data for a few geographic units and this warrants further investigation, particularly to understand the effects of outliers on the one-inflated Hurdle model. It would also be helpful to conduct a formal sensitivity analysis to assess the influence of the informative prior that we used to quantify measurement error in the census projections.</p>
+<p>In addition to these next steps to improve the method and better understand its nuances, it will be important to apply it across countries to understand how generalizable it is. Our intention for this approach is to apply it rapidly as a gap-filling measure while efforts are underway to acquire geolocated population data for population modelling to support development projects, planning for programs, and census preperations. The model’s estimates of people per household and households per building may also serve as a guide for setting these parameters in the peanutButter application <span class="citation">(<a href="#ref-leasure2020peanutbutter">Leasure et al. 2020b</a>)</span> for countries where census microdata or other household surveys are not publically available.</p>
+</div>
+<div id="contribution-7" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Contribution<a href="ghana-v1.html#contribution-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter and the methods it describes were developed by Doug Leasure from the WorldPop Research Group at the University of Southampton with oversight from Andy Tatem. The work was funded by the Bill and Melinda Gates Foundation to provide critical spatial data and population estimates to support polio surveillance and eradication (INV-002697). We want to acknowledge Vince Seaman from the Bill and Melinda Gates Foundation and Kebba Touray from the World Health Organization (AFRO-Polio GIS centre) for facilitating access to data for this project. We want to thank Edith Darin, Chris Jochem, and Attila Lazar for thoughtful internal reviews that helped improve the work.</p>
+</div>
+<div id="suggested-citation-3" class="section level2 hasAnchor" number="10.6">
+<h2><span class="header-section-number">10.6</span> Suggested Citation<a href="ghana-v1.html#suggested-citation-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Leasure DR, Tatem AJ. 2020. A Bayesian approach to produce 100 m gridded population estimates using census microdata and recent building footprints. WorldPop, University of Southampton. <span><a href="doi:10.5258/SOTON/WP00686" class="uri">doi:10.5258/SOTON/WP00686</a></span></p>
+</div>
+<div id="appendices-and-supplements" class="section level2 hasAnchor" number="10.7">
+<h2><span class="header-section-number">10.7</span> Appendices and Supplements<a href="ghana-v1.html#appendices-and-supplements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Appendices and supplementary data for this chapter are available from <a href="http://doi.org/10.5258/SOTON/WP00686" target="_blank">http://doi.org/10.5258/SOTON/WP00686</a> and can also be downloaded from the <a href="https://wopr.worldpop.org/?GHA/Population/v1.0" target="_blank">WorldPop Open Population Repository</a> (file = GHA_population_v1_0_methods.zip).</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-dooley2020gridded" class="csl-entry">
+Dooley CA, Boo G, Leasure DR, Tatem AJ. 2020a. <em><span class="nocase">Gridded maps of building patterns throughout sub-Saharan Africa, version 1.1.</span></em> WorldPop, University of Southampton. doi:<a href="https://doi.org/10.5258/SOTON/WP00677">10.5258/SOTON/WP00677</a>.
+</div>
+<div id="ref-ecopia2020digitize" class="csl-entry">
+Ecopia.AI, Maxar Technologies, Inc. 2019-2021. Digitize africa data. <a href="http://digitizeafrica.ai/">http://digitizeafrica.ai/</a>.
+</div>
+<div id="ref-gss2010census" class="csl-entry">
+Ghana Statistical Services. 2010. <em>Census enumeration area boundaries and urban/rural classification.</em> Accra, Ghana: Ghana Statistical Services.
+</div>
+<div id="ref-leasure2020wopr" class="csl-entry">
+Leasure DR, Bondarenko M, Tatem AJ. 2020a. <em><span class="nocase">wopr: An R package to query the WorldPop Open Population Repository, version 0.3.4</span></em>. WorldPop, University of Southampton. doi:<a href="https://doi.org/10.5258/SOTON/WP00679">10.5258/SOTON/WP00679</a>. <a href="https://apps.worldpop.org/woprVision">https://apps.worldpop.org/woprVision</a>.
+</div>
+<div id="ref-leasure2020peanutbutter" class="csl-entry">
+Leasure DR, Dooley CA, Bondarenko M, Tatem AJ. 2020b. <span class="nocase">peanutButter: An R package to produce rapid-response gridded population estimates from building footprints, version 0.3.0</span>. doi:<a href="https://doi.org/10.5258/SOTON/WP00681">10.5258/SOTON/WP00681</a>.
+</div>
+<div id="ref-leasure2020national" class="csl-entry">
+Leasure DR, Jochem WC, Weber EM, Seaman V, Tatem AJ. 2020d. <span class="nocase">National population mapping from sparse survey data: A hierarchical Bayesian modeling framework to account for uncertainty</span>. <em>Proceedings of the National Academy of Sciences</em> 117:24173–24179. doi:<a href="https://doi.org/10.1073/pnas.1913050117">10.1073/pnas.1913050117</a>.
+</div>
+<div id="ref-leasure2020bayesian" class="csl-entry">
+Leasure DR, Tatem AJ. 2020b. <em>Bayesian gridded population estimates for ghana 2018, version 1.0</em>. WorldPop, University of Southampton. doi:<a href="https://doi.org/10.5258/SOTON/WP00680">10.5258/SOTON/WP00680</a>. <a href="https://wopr.worldpop.org/?GHA/Population/v1.0">https://wopr.worldpop.org/?GHA/Population/v1.0</a>.
+</div>
+<div id="ref-mpc2019integrated" class="csl-entry">
+Minnesota Population Center. 2019. <em><span>Integrated Public Use Microdata Series, International: Version 7.2</span></em>. Minneapolis, MN: IPUMS.
+</div>
+<div id="ref-r2020r" class="csl-entry">
+R Core Team. 2020a. <em><span class="nocase">R: A language and environment for statistical computing</span></em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-stan2019stan" class="csl-entry">
+Stan Development Team. 2019a. <em><span class="nocase">Stan User’s Guide</span></em>. <a href="https://mc-stan.org/docs/2_26/stan-users-guide">https://mc-stan.org/docs/2_26/stan-users-guide</a>.
+</div>
+<div id="ref-stan2020rstan" class="csl-entry">
+Stan Development Team. 2020. <em><span class="nocase">RStan: the R interface to Stan. R package version 2.19.3.</span></em> <a href="http://mc-stan.org/">http://mc-stan.org/</a>.
+</div>
+<div id="ref-stevens2015disaggregating" class="csl-entry">
+Stevens FR, Gaughan AE, Linard C, Tatem AJ. 2015a. Disaggregating census data for population mapping using random forests with remotely-sensed and ancillary data. <em>PloS one</em> 10:e0107042.
+</div>
+<div id="ref-wardrop2018spatially" class="csl-entry">
+Wardrop NA, Jochem WC, Bird TJ, Chamberlain HR, Clarke D, Kerr D, Bengtsson L, Juran S, Seaman V, Tatem AJ. 2018a. Spatially disaggregated population estimates in the absence of national population and housing census data. <em><a href="Proceedings of the National Academy of Sciences" class="uri">Proceedings of the National Academy of Sciences</a></em> 115:3529–3537. doi:<a href="https://doi.org/10.1073/pnas.1715305115">10.1073/pnas.1715305115</a>. <a href="\url{https://www.pnas.org/content/115/14/3529}">\url{https://www.pnas.org/content/115/14/3529}</a>.
+</div>
+<div id="ref-worldpop2018globala" class="csl-entry">
+WorldPop, CIESIN. 2018a. <em><span class="nocase">Global High Resolution Population Denominators Project - Funded by The Bill and Melinda Gates Foundation (OPP1134076)</span></em>. WorldPop, University of Southampton. doi:<a href="https://doi.org/10.5258/SOTON/WP00651">10.5258/SOTON/WP00651</a>.
+</div>
+<div id="ref-worldpop2018globalb" class="csl-entry">
+WorldPop, CIESIN. 2018b. <em><span class="nocase">Global High Resolution Population Denominators Project - Funded by The Bill and Melinda Gates Foundation (OPP1134076)</span></em>. WorldPop, University of Southampton. <a href="ftp://ftp.worldpop.org/GIS/Population/Global_2000_2020/CensusTables/">ftp://ftp.worldpop.org/GIS/Population/Global_2000_2020/CensusTables/</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="democratic-republic-of-congo---drc-v2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="burkina-faso-v1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
